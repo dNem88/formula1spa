@@ -1,6 +1,6 @@
 import userContext from '../context/userContext'
 import React, {useContext, useState, useEffect} from 'react'
-
+import auth from '../utils/api/heroku_api/auth'
 function useAuth() {
     const context = useContext(userContext)
     context.login = login;
@@ -8,16 +8,34 @@ function useAuth() {
     context.verify = verify;
     // console.log('from useAuth')
     const [user, setUser] = useState(context)
-    function login() {
+    async function login() {
         setUser({...user, user:{username: 'Daniel', id: '123'}, isLogged: true})
     }
-    function logout() {
-        setUser({...user, user: null, isLogged: false})
+    async function register() {
+        /*To do*/
     }
-    function verify() {
-        setTimeout(() => {
-            setUser({...user, user: null, isLogged: false})
-        }, 2000);
+    async function logout() {
+        try {
+            let response = await auth.logoutUser();
+            if (response.logout === true && response.message) {
+                return setUser({...user, user: null, isLogged: false})
+            }
+        } catch(e) {
+            return e
+        }
+    }
+    async function verify() {
+        try {
+            let response = await auth.verifyUser();
+            if (response.isAuthorized === true) {
+                return setUser({...user, user: response.user, isLogged: true})
+            } else if (response.isAuthorized === false) {
+                return setUser({...user, user: null, isLogged: false})
+            }
+        } catch(e) {
+            console.log(e)
+            return setUser({...user, user: null, isLogged: false})
+        }
     }
     console.log('render')
     return user;
