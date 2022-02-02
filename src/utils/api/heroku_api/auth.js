@@ -34,5 +34,4 @@ async function verifyUser() {
     const data = await response.json()
     return data
 }
-const auth = {registerUser,loginUser,logoutUser, verifyUser}
-export default auth
+export default {registerUser,loginUser,logoutUser, verifyUser}

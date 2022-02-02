@@ -1,9 +1,60 @@
 nav{
+    box-sizing: border-box;
     width: 100%;
-    height: 10wh;
+    height: 10vh;
     display: flex;
+    padding: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
+    background-color: #e10600;
+}
+
+.links-container {
+    box-sizing: border-box;
+    width: max(60%, 13rem);
+    height: max(100%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.links-container > a{
+    box-sizing: border-box;
+    width: min(16.6%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.links-container > a:hover{
+    background-color: #1F1F27;
+}
+.auth-container {
+    margin-right: 2rem;
+    width: 14vw;
+    height: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 15%;
+    height: 65%;
+}
+.logo-container > img{
+    width: 80%;
+    height: 100%;
 }
