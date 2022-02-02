@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Navigation component Should render guest user navigation 1`] = `
+<nav>
+  <div
+    className="logo-container"
+  >
+    <p>
+      Some logo here
+    </p>
+  </div>
+  <div
+    className="links-container"
+  >
+    <a
+      href="/latest"
+      onClick={[Function]}
+    >
+      Latest
+    </a>
+    <a
+      href="/video"
+      onClick={[Function]}
+    >
+      Video
+    </a>
+    <a
+      href="/schedule"
+      onClick={[Function]}
+    >
+      Schedule
+    </a>
+    <a
+      href="/standings"
+      onClick={[Function]}
+    >
+      Standings
+    </a>
+    <a
+      href="/drivers"
+      onClick={[Function]}
+    >
+      Drivers
+    </a>
+    <a
+      href="/teams"
+      onClick={[Function]}
+    >
+      Teams
+    </a>
+  </div>
+  <div
+    className="auth-container"
+  >
+    <button>
+      SIGN IN
+    </button>
+  </div>
+</nav>
+`;
+
+exports[`test Navigation component Should render logged in user Navigation 1`] = `
+<nav>
+  <div
+    className="logo-container"
+  >
+    <p>
+      Some logo here
+    </p>
+  </div>
+  <div
+    className="links-container"
+  >
+    <a
+      href="/latest"
+      onClick={[Function]}
+    >
+      Latest
+    </a>
+    <a
+      href="/video"
+      onClick={[Function]}
+    >
+      Video
+    </a>
+    <a
+      href="/schedule"
+      onClick={[Function]}
+    >
+      Schedule
+    </a>
+    <a
+      href="/standings"
+      onClick={[Function]}
+    >
+      Standings
+    </a>
+    <a
+      href="/drivers"
+      onClick={[Function]}
+    >
+      Drivers
+    </a>
+    <a
+      href="/teams"
+      onClick={[Function]}
+    >
+      Teams
+    </a>
+  </div>
+  <div
+    className="auth-container"
+  >
+    <button>
+      Profile
+    </button>
+  </div>
+</nav>
+`;

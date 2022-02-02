@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test App component Should render app compoent 1`] = `
+Array [
+  <nav>
+    <p>
+      Loading....
+    </p>
+  </nav>,
+  <main>
+    <p>
+      Home Page
+    </p>
+  </main>,
+  <footer />,
+]
+`;
