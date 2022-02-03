@@ -4,6 +4,8 @@ import './App.module.css';
 import Navigation from './components/common/navigation/Navigation'
 import userContext from './context/userContext'
 import useAuth from './hooks/useAuth'
+import AuthLayout from './components/register/Layout/AuthLayout';
+import Register from './components/register/Register/Register';
 
 function App() {
   let context = useAuth()
@@ -24,6 +26,12 @@ function App() {
           <Route path={'/standings'} element={<p>Standings Page</p>}/>
           <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
+          <Route path={'/auth'} element={<AuthLayout/>}>
+              <Route path={'login'} element={<p>LoginPage</p>}/>
+              <Route path={'register'} element={<Register/>}/>
+              <Route index element={<p>IndexPage</p>}/>
+          </Route>
+          <Route path={'/profile'} element={<p>Profile Page</p>}/>
         </Routes>
       </main>
       <footer></footer>

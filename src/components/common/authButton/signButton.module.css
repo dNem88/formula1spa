@@ -13,7 +13,7 @@
     color: white;
     background-color: #1F1F27;
     border-color: #1F1F27;
-    font-size: .9vw;
+    font-size: clamp(.8rem, .9vw, 1.6rem)
 }
 .link:hover{
     background-color: white;

@@ -13,13 +13,12 @@ describe('test Navigation component', () => {
             </userContext.Provider>
         </Router>
     ).toJSON()
-    console.log(loggedInNavigation)
     expect(loggedInNavigation).toMatchSnapshot()
     expect(loggedInNavigation.type).toBe('nav')
     expect(loggedInNavigation.children[0].type).toBe('div')
     expect(loggedInNavigation.children[1].type).toBe('div')
     expect(loggedInNavigation.children[2].type).toBe('div')
-     expect(loggedInNavigation.children[2].children[0].type).toBe('button')
+     expect(loggedInNavigation.children[2].children[0].type).toBe('a')
      expect(loggedInNavigation.children[2].children[0].children[0]).toBe('Profile')
   })
   it('Should render guest user navigation', () => {
@@ -35,7 +34,7 @@ describe('test Navigation component', () => {
     expect(guestNavigation.children[0].type).toBe('div')
     expect(guestNavigation.children[1].type).toBe('div')
     expect(guestNavigation.children[2].type).toBe('div')
-    expect(guestNavigation.children[2].children[0].type).toBe('button')
-    expect(guestNavigation.children[2].children[0].children[0]).toBe('SIGN IN')
+    expect(guestNavigation.children[2].children[0].type).toBe('a')
+    expect(guestNavigation.children[2].children[0].children[0]).toBe('Sign in')
   })
 })

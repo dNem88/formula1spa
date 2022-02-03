@@ -5,9 +5,9 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
   <div
     className="logo-container"
   >
-    <p>
-      Some logo here
-    </p>
+    <img
+      src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg"
+    />
   </div>
   <div
     className="links-container"
@@ -52,9 +52,20 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
   <div
     className="auth-container"
   >
-    <button>
-      SIGN IN
-    </button>
+    <a
+      className="link"
+      href="/login"
+      onClick={[Function]}
+    >
+      Sign in
+    </a>
+    <a
+      className="link"
+      href="/register"
+      onClick={[Function]}
+    >
+      Register
+    </a>
   </div>
 </nav>
 `;
@@ -64,9 +75,9 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
   <div
     className="logo-container"
   >
-    <p>
-      Some logo here
-    </p>
+    <img
+      src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg"
+    />
   </div>
   <div
     className="links-container"
@@ -111,9 +122,13 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
   <div
     className="auth-container"
   >
-    <button>
+    <a
+      className="link"
+      href="/profile"
+      onClick={[Function]}
+    >
       Profile
-    </button>
+    </a>
   </div>
 </nav>
 `;

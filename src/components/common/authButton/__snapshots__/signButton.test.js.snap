@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign up /Sign in in button test  Should redirect to Login Page 1`] = `
+<a
+  className="link"
+  href="/login"
+  onClick={[Function]}
+>
+  Sign in
+</a>
+`;
+
+exports[`Sign up /Sign in in button test  Should redirect to Login Page 2`] = `
+<a
+  className="link"
+  href="/register"
+  onClick={[Function]}
+>
+  Sign up
+</a>
+`;
