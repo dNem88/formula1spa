@@ -6,6 +6,7 @@ import userContext from './context/userContext'
 import useAuth from './hooks/useAuth'
 import AuthLayout from './components/register/Layout/AuthLayout';
 import Register from './components/register/Register/Register';
+import Login from './components/register/Login/Login';
 
 function App() {
   let context = useAuth()
@@ -27,9 +28,9 @@ function App() {
           <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
-              <Route path={'login'} element={<p>LoginPage</p>}/>
+              <Route path={'login'} element={<Login/>}/>
               <Route path={'register'} element={<Register/>}/>
-              <Route index element={<Register/>}/>
+              <Route index element={<Login/>}/>
           </Route>
           <Route path={'/profile'} element={<p>Profile Page</p>}/>
         </Routes>
