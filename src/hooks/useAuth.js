@@ -6,12 +6,22 @@ function useAuth() {
     context.login = login;
     context.logout = logout;
     context.verify = verify;
+    context.register = register;
     const [user, setUser] = useState(context)
     async function login() {
         setUser({...user, user:{username: 'Daniel', id: '123'}, isLogged: true})
     }
-    async function register() {
-        /*To do*/
+    async function register(formdata) {
+        try {
+            let response = await auth.registerUser(formdata);
+            if (response.error) {
+                return response
+            } else if (response.acknowledged && response.insertedId) {
+                return response
+            }
+        } catch (e) {
+            return {error: {message: 'Server error'}}
+        }
     }
     async function logout() {
         try {

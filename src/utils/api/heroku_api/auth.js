@@ -3,8 +3,12 @@ const heroku_api_url = 'https://boiling-brushlands-51072.herokuapp.com'
 async function registerUser(formInput) {
     const response = await fetch(`${heroku_api_url}/users/register`, {
         method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
         body: JSON.stringify(formInput),
-        credentials: 'include'
+        credentials: 'include',
+        
     })
     const data = await response.json()
     return data
@@ -12,6 +16,9 @@ async function registerUser(formInput) {
 async function loginUser(formInput) {
     const response = await fetch(`${heroku_api_url}/users/login`, {
         method: 'POST',
+         headers: {
+             'content-type': 'application/json'
+         },
         body: JSON.stringify(formInput),
         credentials: 'include'
     })
@@ -29,6 +36,9 @@ async function logoutUser() {
 async function verifyUser() {
     const response = await fetch(`${heroku_api_url}/users/verify`, {
         method: 'POST',
+         headers: {
+             'content-type': 'application/json'
+         },
         credentials: 'include'
     })
     const data = await response.json()

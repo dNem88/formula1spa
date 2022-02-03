@@ -1,30 +1,62 @@
-import React, { useState, useContext, Fragment } from 'react';
+import React, { useState, useRef, useContext, Fragment } from 'react';
 import userContext from '../../../context/userContext'
+import {useNavigate} from 'react-router-dom'
+import styles from './register.module.css'
 
-
-function Register(props) {
+function Register() {
+    let context = useContext(userContext);
+    const navigate = useNavigate()
     const [formdata, setFormdata] = useState({
         username: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        errorMessage: ''
     })
-
+    const submitButton = useRef()
+    function changeHandler(e) {
+        setFormdata({
+            ...formdata, [e.target.id]: e.target.value
+        })
+    }
+    async function submitHandler(e) {
+        e.preventDefault();
+        submitButton.current.disabled = true;
+        try {
+            let response = await context.register(formdata)
+            console.log(response)
+        if (response.error) {
+            setFormdata({...formdata, errorMessage: response.error.message})
+            submitButton.current.disabled = false;
+        } 
+        if (response.acknowledged && response.insertedId) {
+            navigate('/auth/login')
+        }
+        } catch(e) {
+            setFormdata({
+                ...formdata,
+                errorMessage: 'Unexpected ServerError'
+            })
+        }
+    }
     return (
-        <form>
+        <form onSubmit = {
+            submitHandler
+        } >
             <div>
-                <h4>CREATE ACCOUNT</h4>
+                <h2>CREATE ACCOUNT</h2>
             </div>
             <label htmlFor={'username'}>Username</label>
-            <input type='text' id='username' placeholder='username' value=''></input>
+            <input type='text' id='username' placeholder='username' value={formdata.username} onChange={changeHandler}></input>
             <label htmlFor={'email'}>Email address</label>
-            <input type='text' id='email' placeholder='email' value=''></input>
+            <input type='text' id='email' placeholder='email' value={formdata.email} onChange={changeHandler}></input>
             <label htmlFor={'password'}>Password</label>
-            <input type='password' id='password' placeholder='password' value=''></input>
-            <label htmlFor={'confirm password'}>Confirm password</label>
-            <input type='text' id='confirm password' placeholder='confirm password' value=''></input>
+            <input type='password' id='password' placeholder='password' value={formdata.password} onChange={changeHandler}></input>
+            <label htmlFor={'confirmPassword'}>Confirm password</label>
+            <input type='password' id='confirmPassword' placeholder='confirm password' value={formdata.confirmPassword} onChange={changeHandler}></input>
             <section>
-                <p>Password must contain</p>
+                <p class={styles.error}>{formdata.errorMessage}</p>
+                <p >Password must contain</p>
                 <ul>
                     <li>Uppercase</li>
                     <li>Lowercase (at least 2)</li>
@@ -32,10 +64,7 @@ function Register(props) {
                     <li>Number</li>
                 </ul>
             </section>
-            <button type='submit' onSubmit={(e) => {
-                e.preventDefault()
-                console.log('submit reg form')
-            }}>Register</button>
+            <button type='submit' ref={submitButton}>REGISTER</button>
         </form>
     )
 }
