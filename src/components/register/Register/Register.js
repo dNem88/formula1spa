@@ -16,7 +16,7 @@ function Register() {
     const submitButton = useRef()
     function changeHandler(e) {
         setFormdata({
-            ...formdata, [e.target.id]: e.target.value
+            ...formdata, [e.target.id]: e.target.value, errorMessage: ''
         })
     }
     async function submitHandler(e) {

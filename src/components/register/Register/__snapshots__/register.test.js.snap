@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test  Register component Should render Register form 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <h2>
+      CREATE ACCOUNT
+    </h2>
+  </div>
+  <label
+    htmlFor="username"
+  >
+    Username
+  </label>
+  <input
+    id="username"
+    onChange={[Function]}
+    placeholder="username"
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="email"
+  >
+    Email address
+  </label>
+  <input
+    id="email"
+    onChange={[Function]}
+    placeholder="email"
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="password"
+  >
+    Password
+  </label>
+  <input
+    id="password"
+    onChange={[Function]}
+    placeholder="password"
+    type="password"
+    value=""
+  />
+  <label
+    htmlFor="confirmPassword"
+  >
+    Confirm password
+  </label>
+  <input
+    id="confirmPassword"
+    onChange={[Function]}
+    placeholder="confirm password"
+    type="password"
+    value=""
+  />
+  <section>
+    <p
+      class="error"
+    >
+      
+    </p>
+    <p>
+      Password must contain
+    </p>
+    <ul>
+      <li>
+        Uppercase
+      </li>
+      <li>
+        Lowercase (at least 2)
+      </li>
+      <li>
+        8 or more characters
+      </li>
+      <li>
+        Number
+      </li>
+    </ul>
+  </section>
+  <button
+    type="submit"
+  >
+    REGISTER
+  </button>
+</form>
+`;

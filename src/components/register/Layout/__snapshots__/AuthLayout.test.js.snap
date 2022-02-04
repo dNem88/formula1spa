@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test  AuthLayout component Should render Layout for login and register forms 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="container"
+  >
+    <a
+      className=""
+      href="/auth/login"
+      onClick={[Function]}
+    >
+      Sign in
+    </a>
+    <a
+      className=""
+      href="/auth/register"
+      onClick={[Function]}
+    >
+      Register
+    </a>
+  </div>
+  <div
+    className="form-container"
+  />
+</div>
+`;

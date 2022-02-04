@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing SelectForm Component snapshot match 1`] = `
+<div
+  className="container"
+>
+  <a
+    className=""
+    href="/auth/login"
+    onClick={[Function]}
+  >
+    Sign in
+  </a>
+  <a
+    className=""
+    href="/auth/register"
+    onClick={[Function]}
+  >
+    Register
+  </a>
+</div>
+`;

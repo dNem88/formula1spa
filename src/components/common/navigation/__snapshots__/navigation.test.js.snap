@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test Navigation component Should render guest user navigation 1`] = `
-<nav>
+<nav
+  className="nav"
+>
   <div
     className="logo-container"
   >
@@ -54,14 +56,14 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
   >
     <a
       className="link"
-      href="/login"
+      href="/auth/login"
       onClick={[Function]}
     >
       Sign in
     </a>
     <a
       className="link"
-      href="/register"
+      href="/auth/register"
       onClick={[Function]}
     >
       Register
@@ -71,7 +73,9 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
 `;
 
 exports[`test Navigation component Should render logged in user Navigation 1`] = `
-<nav>
+<nav
+  className="nav"
+>
   <div
     className="logo-container"
   >
@@ -124,7 +128,7 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
   >
     <a
       className="link"
-      href="/profile"
+      href="/auth/profile"
       onClick={[Function]}
     >
       Profile

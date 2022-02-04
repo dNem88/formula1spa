@@ -36,5 +36,6 @@ describe('test Navigation component', () => {
     expect(guestNavigation.children[2].type).toBe('div')
     expect(guestNavigation.children[2].children[0].type).toBe('a')
     expect(guestNavigation.children[2].children[0].children[0]).toBe('Sign in')
+    expect(guestNavigation.children[2].children[1].children[0]).toBe('Register')
   })
 })
