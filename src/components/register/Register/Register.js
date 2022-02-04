@@ -55,7 +55,7 @@ function Register() {
             <label htmlFor={'confirmPassword'}>Confirm password</label>
             <input type='password' id='confirmPassword' placeholder='confirm password' value={formdata.confirmPassword} onChange={changeHandler}></input>
             <section>
-                <p class={styles.error}>{formdata.errorMessage}</p>
+                <p className={styles.error}>{formdata.errorMessage}</p>
                 <p >Password must contain</p>
                 <ul>
                     <li>Uppercase</li>
@@ -64,7 +64,7 @@ function Register() {
                     <li>Number</li>
                 </ul>
             </section>
-            <button type='submit' ref={submitButton}>REGISTER</button>
+            <button className={styles.button} type='submit' ref={submitButton}>REGISTER</button>
         </form>
     )
 }

@@ -1,5 +1,11 @@
 main {
+    box-sizing: border-box;
     width: 100vw;
     overflow-x: hidden;
-    background-color: aqua;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

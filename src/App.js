@@ -7,6 +7,7 @@ import useAuth from './hooks/useAuth'
 import AuthLayout from './components/register/Layout/AuthLayout';
 import Register from './components/register/Register/Register';
 import Login from './components/register/Login/Login';
+import Layout from './components/home/layout/Layout';
 
 function App() {
   let context = useAuth()
@@ -20,17 +21,27 @@ function App() {
       </userContext.Provider>
       <main>
         <Routes>
-          <Route path={'/'} element={<p>Home Page</p>}/>
-          <Route path={'/latest'} element={<p>Latest News Page</p>}/>
+          <Route path={'/'} element={<Layout/>}/>
+          <Route path={'/latest'} element={<p>LatestPage</p>}/>
           <Route path={'/video'} element={<p>Video Page</p>}/>
           <Route path={'/schedule'} element={<p>Schedule Page</p>}/>
           <Route path={'/standings'} element={<p>Standings Page</p>}/>
           <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
-              <Route path={'login'} element={<Login/>}/>
-              <Route path={'register'} element={<Register/>}/>
-              <Route index element={<Login/>}/>
+            <Route path={'login'} element={
+              <userContext.Provider value={context}>
+                <Login/>
+              </userContext.Provider>
+              }/>
+            <Route path={'register'} element={
+              <userContext.Provider value={context}>
+                <Register/>
+              </userContext.Provider>
+            }/>
+            <Route index element={<userContext.Provider value={context}>
+                <Login/>
+              </userContext.Provider>}/>
           </Route>
           <Route path={'/profile'} element={<p>Profile Page</p>}/>
         </Routes>

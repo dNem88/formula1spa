@@ -35,7 +35,7 @@ section{
     color: #333;
     font-size: clamp(1rem, .8vw, 2rem);
 }
-button{
+.button{
     font-size: clamp(1rem, .8vw, 1.3rem);
     padding: .5rem;
     color: white;
@@ -46,7 +46,7 @@ button{
     cursor: pointer;
     align-self: flex-end;
 }
-button:hover{
+.button:hover{
     border-color: #e10600;
     color: #e10600;
     background-color: white;

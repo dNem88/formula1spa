@@ -6,8 +6,7 @@ import SignButton from '../authButton/SignButton'
 function Navigation() {
     let context = useContext(userContext)
     let location = useLocation()
-    // console.log(location.pathname.startsWith('/auth'))
-    // console.log('context from navigation', context)
+
     return (
         < nav className = {
             !location.pathname.startsWith('/auth') ? styles['nav'] : styles['authNav']
@@ -19,6 +18,7 @@ function Navigation() {
                     }
                     />
                 </div>
+                
                 {location.pathname.startsWith('/auth') ? null : 
                     <div className={styles['links-container']}>
                         <Link to='/latest'>Latest</Link>
