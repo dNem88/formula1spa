@@ -1,0 +1,97 @@
+.main-container{
+    box-sizing: border-box;
+    margin-top: 1vw;
+    width: 22vw;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container{
+    width: 100%;
+    height: 60%;
+    transition: height .5s ease;
+}
+
+#news-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contian;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+    border-bottom-right-radius: 1rem;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-width: clamp(.05rem,.2vw, .2rem);;
+    border-bottom-width: clamp(.05rem,.2vw, .2rem);;
+    border-bottom-color: #89898e;
+    border-right-color: #89898e;
+    margin-top: .5vw;
+    overflow-y: hidden;
+    padding: .6vw;
+    cursor: pointer;
+    transition: height .35s ease;
+}
+.dark-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+    overflow-y: hidden;
+    padding: .6vw;
+    cursor: pointer;
+    transition: height .35s ease;
+}
+
+/* .container:hover{
+    border-bottom-color: #e10600;
+    border-right-color: #e10600;
+} */
+.news-par{
+    width: 100%;
+    color: #e10600;
+    font-size: clamp(.5rem, .8vw, 1rem);
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.content-par{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    font-size: clamp(.5rem, 1.2vw, 3rem);
+}
+.main-container:hover .image-container{
+    height: 57%;
+    transition: height .35s ease;
+}
+.main-container:hover .container{
+    height: 43%;
+    transition: height .35s ease;
+    border-bottom-color: #e10600;
+    border-right-color: #e10600;
+}
+.main-container:hover .dark-container{
+    height: 43%;
+    transition: height .35s ease;
+    background-color: #1f1f27;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.main-container:hover .dark-container > .content-par{
+    color: white;
+}
+@media only screen and (max-width: 750px) {
+    .main-container{
+        width: 44vw;
+        height: 36vw;
+    }
+   
+}

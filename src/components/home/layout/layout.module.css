@@ -15,19 +15,21 @@
     border-right-style: solid;
     border-top-width: clamp(.7rem,.8vw, 3rem);;
     border-right-width: clamp(.7rem,.8vw, 3rem);;
-    border-top-color: #e10600;;
-    border-right-color: #e10600;;
+    border-top-color: #e10600;
+    border-right-color: #e10600;
 }
 .news{
     margin-top: 1vw;
     width: 47.5vw;
     height: 80vh;
+    padding: 1vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: white;
+    overflow-y: scroll;
 }
 .editor-pick{
     box-sizing: border-box;
@@ -71,16 +73,16 @@
 .more-news{
     width: 96vw;
     margin-top: 1vw;
-    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     border-top-style: solid;
     border-top-width: clamp(.7rem,.8vw, 3rem);
-    border-top-color: black;
+    border-top-color: #1f1f27 ;
     background-color: white;
+    padding-bottom: 1rem;
 }
 .schedule{
     width: 100vw;
@@ -109,7 +111,8 @@
     .trending{
         width: 96vw;
     }
-    .news{
+    .news, .more-news{
         width: 96vw;
+        height: auto;
     }
 }
