@@ -1,12 +1,14 @@
 import React, {Fragment} from 'react'
 import styles from './layout.module.css'
 import News from '../news/News'
+import Trending from '../trending/Trending'
 
 function Layout(props) {
+    /*call the news api and add the resut as props to news, more-news, trending*/
     return (
         <Fragment>
             <section className={styles['trending']}>
-
+                <Trending/>
             </section>
             <section className={styles['news']}>
                 < News  content = {
