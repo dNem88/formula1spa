@@ -3,13 +3,16 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.module.css';
 import Navigation from './components/common/navigation/Navigation'
 import userContext from './context/userContext'
+import newsContext from './context/newsContext';
 import useAuth from './hooks/useAuth'
+import useNews from './hooks/useNews';
 import AuthLayout from './components/register/Layout/AuthLayout';
 import Register from './components/register/Register/Register';
 import Login from './components/register/Login/Login';
 import Layout from './components/home/layout/Layout';
 
 function App() {
+  let contextNews = useNews();
   let context = useAuth()
   useEffect(() => {
     context.verify()
@@ -21,8 +24,11 @@ function App() {
       </userContext.Provider>
       <main>
         <Routes>
-          <Route path={'/'} element={<Layout/>}/>
-          <Route path={'/latest'} element={<p>LatestPage</p>}/>
+          <Route path={'/'} element={
+            <newsContext.Provider value={contextNews}>
+              <Layout/>
+            </newsContext.Provider>}/>
+          <Route path={'/news'} element={<p>LatestPage</p>}/>
           <Route path={'/video'} element={<p>Video Page</p>}/>
           <Route path={'/schedule'} element={<p>Schedule Page</p>}/>
           <Route path={'/standings'} element={<p>Standings Page</p>}/>

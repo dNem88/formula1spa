@@ -57,7 +57,7 @@ function useAuth() {
             return setUser({...user, user: null, isLogged: false})
         }
     }
-    console.log('render')
+    console.log('render from useAuth')
     return user;
 }
 

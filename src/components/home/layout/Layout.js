@@ -1,85 +1,30 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useContext} from 'react'
 import styles from './layout.module.css'
 import News from '../news/News'
 import Trending from '../trending/Trending'
+import newsContext from '../../../context/newsContext'
 
 function Layout(props) {
-    /*call the news api and add the resut as props to news, more-news, trending*/
+    let context = useContext(newsContext);
+    
     return (
         <Fragment>
             <section className={styles['trending']}>
-                <Trending/>
+                {(context.articles.length > 0) ? <Trending article={context.articles[1]}/> : <p>...Loading</p>}
             </section>
             <section className={styles['news']}>
-                < News  content = {
-                    'Dani Nemski is supercool'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterFebruary/HaasVF22Launch/MAZ%20Top.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News content = {
-                    'Dani Nemski is supercool'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterFebruary/HaasVF22Launch/MAZ%20Top.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News content = {
-                    'Dani Nemski is supercool'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterFebruary/HaasVF22Launch/MAZ%20Top.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News content = {
-                    'Dani Nemski is supercool'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterFebruary/HaasVF22Launch/MAZ%20Top.jpg.transform/6col/image.jpg'
-                }
-                />
+                {(context.articles.length > 3) ? context.articles.slice(1,5).map(x => {
+                        return <News key={x._id} id={x._id} imageUrl={x.urlToImage} title={x.title}/>
+                    }) : <p>...Loading</p>}
             </section>
             <fieldset className={styles['editor-pick']}>
                 <legend className={styles['editor-legend']}>EDITOR'S PICK</legend>
             </fieldset>
             <h2 className={styles['h-news']}>More news</h2>
             <section className={styles['more-news']}>
-                < News hoverChange={true} content = {
-                    'Bottas and Hamilton greatest strength after their 5 years in Mercedes'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterJanuary/GettyImages-1234043233.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News hoverChange = {
-                    true
-                }
-                content = {
-                    'Bottas and Hamilton greatest strength after their 5 years in Mercedes'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterJanuary/GettyImages-1234043233.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News hoverChange = {
-                    true
-                }
-                content = {
-                    'Bottas and Hamilton greatest strength after their 5 years in Mercedes'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterJanuary/GettyImages-1234043233.jpg.transform/6col/image.jpg'
-                }
-                />
-                < News hoverChange={true} content = {
-                    'Bottas and Hamilton greatest strength after their 5 years in Mercedes'
-                }
-                imageUrl = {
-                    'https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterJanuary/GettyImages-1234043233.jpg.transform/6col/image.jpg'
-                }
-                />
-               
+                  {(context.articles.length > 3) ? context.articles.slice(5,9).map(x => {
+                        return <News key={x._id} id={x._id} imageUrl={x.urlToImage} title={x.title} hoverChange={true}/>
+                    }) : <p>...Loading</p>}
             </section>
             <section className={styles['schedule']}>
 
@@ -90,5 +35,6 @@ function Layout(props) {
         </Fragment>
     )
 }
+
 
 export default Layout

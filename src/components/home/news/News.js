@@ -1,16 +1,20 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import styles from './news.module.css'
+import {useNavigate} from 'react-router-dom'
 
 function News(props) {
-    console.log(props.hoverChange)
+    let navigate = useNavigate();
+    function clickHandler(e) {
+        navigate(`/news/${props.id}`)
+    }
     return (
-        <div className={styles['main-container']}>
+        <div onClick={clickHandler} id={props.id} className={styles['main-container']}>
             <div className={styles['image-container']}>
-                <img id={styles['news-image']} alt={'some image'} src={props.imageUrl}/>
+                <img id={styles['news-image']} alt={'someAlt'} src={props.imageUrl}/>
             </div>
-            <div className={props.hoverChange === true ? styles['dark-container'] : styles.container}>
+            <div  className={props.hoverChange === true ? styles['dark-container'] : styles.container}>
                 <p className={styles['news-par']}>NEWS</p>
-                <p className={styles['content-par']}>{props.content}</p>
+                <p className={styles['content-par']}>{props.title}</p>
             </div>   
         </div>
     )

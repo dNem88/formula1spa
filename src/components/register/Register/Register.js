@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, Fragment } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import userContext from '../../../context/userContext'
 import {useNavigate} from 'react-router-dom'
 import styles from './register.module.css'
