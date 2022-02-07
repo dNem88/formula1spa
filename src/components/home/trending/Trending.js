@@ -3,7 +3,6 @@ import styles from './trending.module.css'
 import {useNavigate} from 'react-router-dom'
 
 function Trending(props) {
-    console.log(props.article)
     let navigate = useNavigate();
     function clickHandler(e) {
         navigate(`/news/${props.article._id}`)

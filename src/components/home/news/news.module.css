@@ -18,7 +18,7 @@
 #news-image{
     width: 100%;
     height: 100%;
-    object-fit: contian;
+    object-fit: cover;
     margin: 0;
     padding: 0;
 }
@@ -49,10 +49,6 @@
     transition: height .35s ease;
 }
 
-/* .container:hover{
-    border-bottom-color: #e10600;
-    border-right-color: #e10600;
-} */
 .news-par{
     width: 100%;
     color: #e10600;

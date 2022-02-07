@@ -4,13 +4,12 @@ import News from '../news/News'
 import Trending from '../trending/Trending'
 import newsContext from '../../../context/newsContext'
 
-function Layout(props) {
+function Layout() {
     let context = useContext(newsContext);
-    
     return (
         <Fragment>
             <section className={styles['trending']}>
-                {(context.articles.length > 0) ? <Trending article={context.articles[1]}/> : <p>...Loading</p>}
+                {(context.articles.length > 0) ? <Trending article={context.articles[0]}/> : <p>...Loading</p>}
             </section>
             <section className={styles['news']}>
                 {(context.articles.length > 3) ? context.articles.slice(1,5).map(x => {
@@ -22,7 +21,7 @@ function Layout(props) {
             </fieldset>
             <h2 className={styles['h-news']}>More news</h2>
             <section className={styles['more-news']}>
-                  {(context.articles.length > 3) ? context.articles.slice(5,9).map(x => {
+                  {(context.articles.length >= 10) ? context.articles.slice(5,9).map(x => {
                         return <News key={x._id} id={x._id} imageUrl={x.urlToImage} title={x.title} hoverChange={true}/>
                     }) : <p>...Loading</p>}
             </section>
