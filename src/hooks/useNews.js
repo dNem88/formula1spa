@@ -26,7 +26,6 @@ function useNews() {
     }, [])
     if (context.articles.length > 15) {
         hNews.updateHerokuNews({articles: context.articles})
-        console.log(context.articles.length)
     } else if (context.articles.length < 15 && context.backup.length > 15) {
         console.log('We should Not be here')
         setContext({...context, articles: context.backup})
