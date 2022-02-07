@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing news Component Testing News element 1`] = `
+<div
+  className="main-container"
+  id="test-id"
+  onClick={[Function]}
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="someAlt"
+      id="news-image"
+      src="test-url"
+    />
+  </div>
+  <div
+    className="container"
+  >
+    <p
+      className="news-par"
+    >
+      NEWS
+    </p>
+    <p
+      className="content-par"
+    >
+      test-title
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Testing news Component Testing News elements with changed className 1`] = `
+<div
+  className="main-container"
+  id="test-id"
+  onClick={[Function]}
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="someAlt"
+      id="news-image"
+      src="test-url"
+    />
+  </div>
+  <div
+    className="dark-container"
+  >
+    <p
+      className="news-par"
+    >
+      NEWS
+    </p>
+    <p
+      className="content-par"
+    >
+      test-title
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Testing news Component Testing News elements with changed className 2`] = `
+<div
+  className="main-container"
+  id="test-id"
+  onClick={[Function]}
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="someAlt"
+      id="news-image"
+      src="test-url"
+    />
+  </div>
+  <div
+    className="dark-container"
+  >
+    <p
+      className="news-par"
+    >
+      NEWS
+    </p>
+    <p
+      className="content-par"
+    >
+      test-title
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trending component Testing trendin 1`] = `
+<div
+  className="wrapper"
+  id="test-id"
+  onClick={[Function]}
+>
+  <p
+    className="trending-p"
+  >
+    TRENDING
+  </p>
+  <h1
+    className="trending-heading"
+  >
+    test-title
+  </h1>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="someAlt"
+      className="trending-image"
+      src="test-url"
+    />
+  </div>
+</div>
+`;

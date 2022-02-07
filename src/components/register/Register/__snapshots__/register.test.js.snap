@@ -59,7 +59,7 @@ exports[`test  Register component Should render Register form 1`] = `
   />
   <section>
     <p
-      class="error"
+      className="error"
     >
       
     </p>
@@ -82,6 +82,7 @@ exports[`test  Register component Should render Register form 1`] = `
     </ul>
   </section>
   <button
+    className="button"
     type="submit"
   >
     REGISTER

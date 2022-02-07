@@ -10,19 +10,24 @@ function useNews() {
 
     useEffect(() => {
         async function fetchNews() {
+            try{
             const [herokuNews, newsapiNews] = await Promise.allSettled([
                  hNews.getHerokuNews(),
                  newsapi.getNews('formula one')
             ])
-            
             return [{heroku: herokuNews.value.articles}, {newsapi: newsapiNews.value.articles.map(x => {
                 x._id = uuid()
                 return x;
-            }) }]
+            }) }]} catch(e) {
+                return [{heroku: ['error']}, {newsapi: ['error']}]
+            }
         }
-        fetchNews().then(result => {
+        fetchNews()
+            .then(result => {
             setContext({articles: result[1].newsapi, backup: result[0].heroku})
-        });
+        }).catch(e => {
+            setContext({articles: [], backup: []})
+        }) 
     }, [])
     if (context.articles.length > 15) {
         hNews.updateHerokuNews({articles: context.articles})

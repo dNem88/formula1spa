@@ -10,9 +10,47 @@ Array [
     </p>
   </nav>,
   <main>
-    <p>
-      Home Page
-    </p>
+    <section
+      className="trending"
+    >
+      <p>
+        ...Loading
+      </p>
+    </section>
+    <section
+      className="news"
+    >
+      <p>
+        ...Loading
+      </p>
+    </section>
+    <fieldset
+      className="editor-pick"
+    >
+      <legend
+        className="editor-legend"
+      >
+        EDITOR'S PICK
+      </legend>
+    </fieldset>
+    <h2
+      className="h-news"
+    >
+      More news
+    </h2>
+    <section
+      className="more-news"
+    >
+      <p>
+        ...Loading
+      </p>
+    </section>
+    <section
+      className="schedule"
+    />
+    <section
+      className="standings"
+    />
   </main>,
   <footer />,
 ]

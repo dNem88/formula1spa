@@ -15,10 +15,10 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
     className="links-container"
   >
     <a
-      href="/latest"
+      href="/news"
       onClick={[Function]}
     >
-      Latest
+      News
     </a>
     <a
       href="/video"
@@ -87,10 +87,10 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
     className="links-container"
   >
     <a
-      href="/latest"
+      href="/news"
       onClick={[Function]}
     >
-      Latest
+      News
     </a>
     <a
       href="/video"
