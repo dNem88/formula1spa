@@ -3,6 +3,8 @@ import styles from './layout.module.css'
 import News from '../news/News'
 import Trending from '../trending/Trending'
 import newsContext from '../../../context/newsContext'
+import Video from '../video/Video'   
+import VideoInfo from '../videoInfo/VideoInfo'    
 
 function Layout() {
     let context = useContext(newsContext);
@@ -18,6 +20,25 @@ function Layout() {
             </section>
             <fieldset className={styles['editor-pick']}>
                 <legend className={styles['editor-legend']}>EDITOR'S PICK</legend>
+                <div className={styles['video-half']}>
+                    <Video/>
+                </div>
+                <div className={styles['video-quarter']}>
+                    <div className={styles['video-sub']}>
+                        <Video/>
+                    </div>
+                    <div className={styles['video-info']}>
+                        <VideoInfo  title={'This is some video title to test'}/>
+                    </div>
+                </div>
+                <div className={styles['video-quarter']}>
+                    <div className={styles['video-sub']}>
+                        <Video/>
+                    </div>
+                    <div className={styles['video-info']}>
+                        <VideoInfo title={'This is some video title to test'}/>
+                    </div>
+                </div>
             </fieldset>
             <h2 className={styles['h-news']}>More news</h2>
             <section className={styles['more-news']}>
