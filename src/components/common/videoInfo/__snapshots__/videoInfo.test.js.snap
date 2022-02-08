@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test VideoInfo Snapshot test VideoInfo 1`] = `
+<div
+  className="light-info"
+  onClick={[Function]}
+>
+  <p
+    className="video-par"
+  >
+    VIDEO
+  </p>
+  <p
+    className="content-video-par"
+  >
+    test-title
+  </p>
+</div>
+`;

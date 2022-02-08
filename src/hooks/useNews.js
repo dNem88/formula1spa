@@ -13,7 +13,7 @@ function useNews() {
             try{
             const [herokuNews, newsapiNews] = await Promise.allSettled([
                  hNews.getHerokuNews(),
-                 newsapi.getNews('formula one')
+                 newsapi.getNews('formula one cars')
             ])
             return [{heroku: herokuNews.value.articles}, {newsapi: newsapiNews.value.articles.map(x => {
                 x._id = uuid()

@@ -21,10 +21,10 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
       News
     </a>
     <a
-      href="/video"
+      href="/videos"
       onClick={[Function]}
     >
-      Video
+      Videos
     </a>
     <a
       href="/schedule"
@@ -93,10 +93,10 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
       News
     </a>
     <a
-      href="/video"
+      href="/videos"
       onClick={[Function]}
     >
-      Video
+      Videos
     </a>
     <a
       href="/schedule"

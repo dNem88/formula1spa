@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test VideoWrapper Snapshot test VideoWrapper 1`] = `
+<div
+  className="video-container"
+>
+  <div
+    className="video-sub"
+  >
+    <div
+      className="player-wrapper"
+    >
+      <div
+        className="player"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="video-info"
+  >
+    <div
+      className="light-info"
+      onClick={[Function]}
+    >
+      <p
+        className="video-par"
+      >
+        VIDEO
+      </p>
+      <p
+        className="content-video-par"
+      >
+        test-title
+      </p>
+    </div>
+  </div>
+</div>
+`;

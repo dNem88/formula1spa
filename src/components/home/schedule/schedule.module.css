@@ -1,0 +1,49 @@
+.main-container{
+    box-sizing: border-box;
+    width: clamp(6.5rem, 11vw, 13rem);
+    height: 100%;
+    background-color: #1f1f27;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: clamp(4.5rem, 7vw, 9rem);
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-width: .05rem;
+    border-bottom-width: .05rem;
+    border-right-color: grey;
+    border-bottom-color: grey;
+    border-bottom-right-radius: 1rem;
+}
+.country{
+    margin-top: .5rem;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: clamp(.67rem, 1.46vw, 1.73rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: grey;
+}
+.day{
+    padding: 0;
+    margin-top: .6rem;
+    margin-bottom: 0;
+    font-size: clamp(1.32rem, 2.92vw, 3.46rem);
+    font-weight: 1000;
+    color: white;
+}
+.month{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: clamp(.6rem, 1vw, 1.4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+}

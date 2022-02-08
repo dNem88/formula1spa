@@ -22,7 +22,7 @@ function Navigation() {
                 {location.pathname.startsWith('/auth') ? null : 
                     <div className={styles['links-container']}>
                         <Link to='/news'>News</Link>
-                        <Link to='/video'>Video</Link>
+                        <Link to='/videos'>Videos</Link>
                         <Link to='/schedule'>Schedule</Link>
                         <Link to='/standings'>Standings</Link>
                         <Link to='/drivers'>Drivers</Link>

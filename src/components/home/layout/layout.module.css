@@ -80,31 +80,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
-.video-quarter:hover{
-    border-bottom-right-radius: 1rem;
-    background-color:#1f1f27;
-    color: white;
-}
-.video-quarter:hover .video-info > div{
-    background-color:#1f1f27;
-    color: white;
-    border-bottom-color: #e10600;
-    border-right-color: #e10600;
-    color: white;
-}
-.video-sub{
-    box-sizing: border-box;
-    width: 100%;
-    height: 50%;
-}
-.video-info{
-    box-sizing: border-box;
-    width: 100%;
-    height: 50%;
-    z-index: 5;
-}
+
 .h-news{
     width: 95vw;
     font-weight: bold;
@@ -137,6 +115,8 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #1f1f27;
+    padding-bottom: 1rem;
+    overflow: scroll;
 }
 .standings{
     width: 100vw;

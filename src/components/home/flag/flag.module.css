@@ -1,0 +1,17 @@
+.image-container{
+    box-sizing: border-box;
+    width: clamp(1.66rem, 3.66vw, 4.33rem);
+    height: clamp(1.32rem, 2.92vw, 3.46rem);
+    border-style: solid;
+    border-radius: .3rem;
+    border-width: .001px;
+    border-color: transparent;
+    overflow: hidden;
+}
+.image-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
