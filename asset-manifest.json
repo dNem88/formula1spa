@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/formula1spa/static/css/main.c4f74396.css",
-    "main.js": "/formula1spa/static/js/main.bae1c3f2.js",
+    "main.js": "/formula1spa/static/js/main.de39ec4b.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
     "index.html": "/formula1spa/index.html",
     "main.c4f74396.css.map": "/formula1spa/static/css/main.c4f74396.css.map",
-    "main.bae1c3f2.js.map": "/formula1spa/static/js/main.bae1c3f2.js.map",
+    "main.de39ec4b.js.map": "/formula1spa/static/js/main.de39ec4b.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4f74396.css",
-    "static/js/main.bae1c3f2.js"
+    "static/js/main.de39ec4b.js"
   ]
 }
