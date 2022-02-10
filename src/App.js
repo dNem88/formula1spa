@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.module.css';
 import Navigation from './components/common/navigation/Navigation'
 import userContext from './context/userContext'

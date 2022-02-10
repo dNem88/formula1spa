@@ -11,32 +11,46 @@ function useNews() {
     useEffect(() => {
         async function fetchNews() {
             try{
-            const [herokuNews, newsapiNews] = await Promise.allSettled([
-                 hNews.getHerokuNews(),
-                 newsapi.getNews('formula one cars')
-            ])
-            return [{heroku: herokuNews.value.articles}, {newsapi: newsapiNews.value.articles.map(x => {
-                x._id = uuid()
-                return x;
-            }) }]} catch(e) {
-                return [{heroku: ['error']}, {newsapi: ['error']}]
+                const newsapiNews = await newsapi.getNews('formula one cars')
+                    .then(result => {
+                        hNews.updateHerokuNews({articles: result.articles})
+                        return result.articles.map(x => {
+                         
+                            x._id = uuid()
+                            return x;
+                        })
+                    })
+                    return {newsapi: newsapiNews}
+            } catch(e) {
+                return {newsapi: ['error']}
             }
         }
-        fetchNews()
+        async function fetchNewsFromHeroku() {
+            try{
+                const herokuNews = await hNews.getHerokuNews()
+                return herokuNews.articles;
+            }catch(e) {
+                return {heroku: ['error']}
+            }
+        }
+        ((process.env.NODE_ENV === 'development') ? fetchNews()
             .then(result => {
-            setContext({articles: result[1].newsapi, backup: result[0].heroku})
+            setContext({articles: result.newsapi})
         }).catch(e => {
-            setContext({articles: [], backup: []})
-        }) 
+            setContext({articles: []})
+        }) : fetchNewsFromHeroku().then(result => {
+            let articlesWithId = result.map(x => {
+                x._id = uuid()
+                return x;
+            })
+            setContext({articles: articlesWithId})
+        }).catch(e => {
+            setContext({articles: []})
+        }))
+        
     }, [])
-    if (context.articles.length > 15) {
-        hNews.updateHerokuNews({articles: context.articles})
-    } else if (context.articles.length < 15 && context.backup.length > 15) {
-        console.log('We should Not be here')
-        setContext({...context, articles: context.backup})
-    }
-    console.log('render from useNews')
-    console.log(context, '=> from context')
+    
+    
     return context;
 }
 

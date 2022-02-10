@@ -106,17 +106,12 @@
     padding-bottom: 1rem;
 }
 .schedule{
+    position: relative;
     width: 100vw;
     height: 80vh;
     margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     background-color: #1f1f27;
-    padding-bottom: 1rem;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 .standings{
     width: 100vw;

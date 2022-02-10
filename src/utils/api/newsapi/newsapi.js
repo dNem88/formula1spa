@@ -2,14 +2,12 @@
 async function getNews(searchString) {
     let date = [new Date().getFullYear(), new Date().getMonth() +1, new Date().getDay()-2].join('-').trim();
     const apiKey = '42e2d1afbe1f4b948e561944ad001f29'
-    let url = `https://newsapi.org/v2/everything?q='${encodeURI(searchString)}'&from=${date}&language=en&domains=espn.com,bbc-news.com,autosport.com,reuters.com&sortBy=relevancy`
+    let url = `https://newsapi.org/v2/everything?q='${encodeURI(searchString)}'&from=${date}&language=en&domains=espn.com,bbc-news.com,autosport.com,reuters.com&sortBy=relevancy&apiKey=42e2d1afbe1f4b948e561944ad001f29`
     
     try {
         let response =  await fetch(url, {
             method: 'GET',
-            headers: {
-                'Authorization':`${apiKey}`
-            }
+           
         })
         let data = await response.json()
         return data;
@@ -21,14 +19,12 @@ async function getNews(searchString) {
 async function getMoreNews(searchString) {
     let date = [new Date().getFullYear(), new Date().getMonth() +1, new Date().getDay()-2].join('-').trim();
     const apiKey = '42e2d1afbe1f4b948e561944ad001f29'
-    let url = `https://newsapi.org/v2/everything?q='${encodeURI(searchString)}'&from=${date}&language=en&domains=espn.com,bbc-news.com,autosport.com,reuters.com&sortBy=publishedAt&page=2`
+    let url = `https://newsapi.org/v2/everything?q='${encodeURI(searchString)}'&from=${date}&language=en&domains=espn.com,bbc-news.com,autosport.com,reuters.com&sortBy=publishedAt&page=2&apiKey=42e2d1afbe1f4b948e561944ad001f29`
     
     try {
         let response =  await fetch(url, {
             method: 'GET',
-            headers: {
-                'Authorization':`${apiKey}`
-            }
+            
         })
         let data = await response.json()
         return data;
@@ -43,9 +39,7 @@ async function getTrendingTopics(searchString) {
     try {
         let response = await fetch(url, {
             method: 'GET',
-            headers: {
-                'Authorization': `${apiKey}`
-            }
+            
         })
         let data = await response.json()
         console.log(data)

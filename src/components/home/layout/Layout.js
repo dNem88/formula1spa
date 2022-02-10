@@ -7,10 +7,13 @@ import VideoWrapper from '../../common/videoWrapper/VideoWrapper'
 import Video from '../../common/video/Video'
 import hVideos from '../../../utils/api/heroku_api/hVideos'
 import Schedule from '../../home/schedule/Schedule'
+import Slider from '../../home/slider/Slider'
+import schedule from '../../../utils/api/heroku_api/schedule'
+import useSchedule from '../../../hooks/useSchedule'
+
 function Layout() {
     let context = useContext(newsContext);
     const [videos, setVideos] = useState([])
-
     useEffect(() => {
         async function FetchVideos() {
             const response = await hVideos.getVideos(3)
@@ -18,6 +21,27 @@ function Layout() {
         }
         FetchVideos()
     }, [])
+    const fullSchedule = useSchedule();
+    const [schedule, setSchedule] = useState({
+         activeClass: '',
+         nonActiveClass: '',
+         className: 'main-container'
+     })
+    
+     function setClasses(active, nonActive) {
+         setSchedule({activeClass: active, nonActiveClass: nonActive})
+     }
+     function scheduleClickHandler(e) {
+         if (e.target.className === schedule.activeClass) {
+            e.target.className = schedule.nonActiveClass
+         } else if (e.target.className === schedule.nonActiveClass) {
+             let active = document.querySelector(`.${schedule.activeClass}`);
+             if (active !== null ) {
+                 active.className = schedule.nonActiveClass
+             }
+             e.target.className = schedule.activeClass
+         }
+     }
 
     return (
         <Fragment>
@@ -51,25 +75,12 @@ function Layout() {
                     }) : <p>...Loading</p>}
             </section>
             <section className={styles['schedule']}>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-                    <Schedule/>
-            </section>
+                <Slider>
+                    {fullSchedule.schedule.length > 15 ? fullSchedule.schedule.map((x,i) => {
+                        return <Schedule clickHandler={scheduleClickHandler} setClasses={i === 0 ? setClasses : "void"} className={'main-container'} key={x._id} {...x}/>
+                    }) : <p>...Loading Schedule</p>}
+                </Slider>
+            </section>  
             <section className={styles['standings']}>
 
             </section>
