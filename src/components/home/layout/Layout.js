@@ -8,9 +8,8 @@ import Video from '../../common/video/Video'
 import hVideos from '../../../utils/api/heroku_api/hVideos'
 import Schedule from '../../home/schedule/Schedule'
 import Slider from '../../home/slider/Slider'
-import schedule from '../../../utils/api/heroku_api/schedule'
 import useSchedule from '../../../hooks/useSchedule'
-
+import compareDates from '../../../utils/common/compareDates'
 function Layout() {
     let context = useContext(newsContext);
     const [videos, setVideos] = useState([])
@@ -23,26 +22,28 @@ function Layout() {
     }, [])
     const fullSchedule = useSchedule();
     const [schedule, setSchedule] = useState({
-         activeClass: '',
-         nonActiveClass: '',
-         className: 'main-container'
-     })
+        activeId: '',
+        fetch: false
+    })
+    let upcomingRaceId
+    if (fullSchedule.schedule.length > 5 && schedule.fetch === false) {
+        upcomingRaceId = compareDates(fullSchedule.schedule)
+    }
+    useEffect(() => {
+        if (upcomingRaceId ) {
+            setSchedule({
+                activeId: upcomingRaceId,
+                fetch: true
+            })
+        }
+        console.log(upcomingRaceId, '-------------------------------------')
+    }, [upcomingRaceId])
     
-     function setClasses(active, nonActive) {
-         setSchedule({activeClass: active, nonActiveClass: nonActive})
-     }
      function scheduleClickHandler(e) {
-         if (e.target.className === schedule.activeClass) {
-            e.target.className = schedule.nonActiveClass
-         } else if (e.target.className === schedule.nonActiveClass) {
-             let active = document.querySelector(`.${schedule.activeClass}`);
-             if (active !== null ) {
-                 active.className = schedule.nonActiveClass
-             }
-             e.target.className = schedule.activeClass
-         }
+         setSchedule({...schedule, activeId: e.target.id})
+        //  upcomingRaceId = e.target.id
      }
-
+     
     return (
         <Fragment>
             <section className={styles['trending']}>
@@ -77,7 +78,7 @@ function Layout() {
             <section className={styles['schedule']}>
                 <Slider>
                     {fullSchedule.schedule.length > 15 ? fullSchedule.schedule.map((x,i) => {
-                        return <Schedule clickHandler={scheduleClickHandler} setClasses={i === 0 ? setClasses : "void"} className={'main-container'} key={x._id} {...x}/>
+                        return <Schedule clickHandler={scheduleClickHandler} key={x._id} {...x} activeId={schedule.activeId}/>
                     }) : <p>...Loading Schedule</p>}
                 </Slider>
             </section>  

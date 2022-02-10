@@ -17,6 +17,7 @@ function App() {
   useEffect(() => {
     context.verify()
   }, [])
+  
   return (
     <Router>
       <userContext.Provider value={context}>
