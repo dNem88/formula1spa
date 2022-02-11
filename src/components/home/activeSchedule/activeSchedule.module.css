@@ -1,0 +1,65 @@
+.wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1f1f27;
+}
+.content-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.country{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #949498;
+}
+.gp-name{
+    width: 100%;
+    display: flex;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+.weekend-duration{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #949498;
+}
+.clock-banner-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #193520;
+    border-radius: 1rem;
+}
+.table-container{
+    width: 100%;
+    height: 40%;
+}

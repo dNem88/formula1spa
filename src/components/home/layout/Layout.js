@@ -20,6 +20,7 @@ function Layout() {
         }
         FetchVideos()
     }, [])
+
     const fullSchedule = useSchedule();
     const [schedule, setSchedule] = useState({
         activeId: '',
@@ -41,7 +42,6 @@ function Layout() {
     
      function scheduleClickHandler(e) {
          setSchedule({...schedule, activeId: e.target.id})
-        //  upcomingRaceId = e.target.id
      }
      
     return (

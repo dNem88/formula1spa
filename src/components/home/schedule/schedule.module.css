@@ -12,8 +12,8 @@
     border-bottom-style: solid;
     border-right-width: .05rem;
     border-bottom-width: .05rem;
-    border-right-color: grey;
-    border-bottom-color: grey;
+    border-right-color: 38383f;
+    border-bottom-color: 38383f;
     border-bottom-right-radius: 1rem;
     cursor: pointer;
     transition: width 1s ease;
@@ -27,13 +27,13 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    padding-top: clamp(4.5rem, 7vw, 9rem);
+    padding-top: clamp(1.15rem, 1.75vw, 2.25rem);
     border-right-style: solid;
     border-bottom-style: solid;
     border-right-width: .05rem;
     border-bottom-width: .05rem;
-    border-right-color: grey;
-    border-bottom-color: grey;
+    border-right-color: 38383f;
+    border-bottom-color: 38383f;
     border-bottom-right-radius: 1rem;
     cursor: pointer;
     transition: width 1s ease;
@@ -50,7 +50,7 @@
     justify-content: center;
     font-size: 1.2vw;
     font-weight: bold;
-    color: grey;
+    color: #949498;
 }
 .day{
     padding: 0;
@@ -68,5 +68,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: grey;
+    color: #949498;
+}
+
+@media screen and (max-width: 500px) {
+    .active-main-container{
+        width: 90vw;
+    }
 }

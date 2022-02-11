@@ -5,7 +5,7 @@ import flags from '../../../assets/images/flags/flag-images'
 function Flag(props) {
     
     return (
-        <div className={styles['image-container']}>
+        <div className={styles[props.classname]}>
             <img src={flags[props.imageBase]} alt={'flag'}/>
         </div>
     )
