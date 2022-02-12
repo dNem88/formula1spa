@@ -10,46 +10,63 @@ function useNews() {
 
     useEffect(() => {
         async function fetchNews() {
-            try{
-                const newsapiNews = await newsapi.getNews('formula one cars')
-                    .then(result => {
-                        hNews.updateHerokuNews({articles: result.articles})
-                        return result.articles.map(x => {
-                         
-                            x._id = uuid()
-                            return x;
-                        })
-                    })
-                    return {newsapi: newsapiNews}
-            } catch(e) {
-                return {newsapi: ['error']}
+            try {
+                const response = await newsapi.getNews('formula one cars')
+                if (!response.ok) {
+                    throw new Error('Server error! Response ok is false')
+                }
+                const newsapiNews = await response.json()
+                hNews.updateHerokuNews({
+                    articles: newsapiNews.articles
+                }) /*Update database with the current response*/
+                return newsapiNews.articles.map(x => {
+                    x._id = uuid()
+                    return x;
+                })     /*Add id to each article, newsapi doesnt provide id in the response*/
+            } catch(err) {
+                return new Error(err.message, {cause: err})
+
             }
         }
         async function fetchNewsFromHeroku() {
             try{
-                const herokuNews = await hNews.getHerokuNews()
-                return herokuNews.articles;
-            }catch(e) {
-                return {heroku: ['error']}
+                const response = await hNews.getHerokuNews()
+                if (!response.ok) {
+                    throw new Error('Fetch Failed! Response ok is false')
+                }
+                const herokuNews = await response.json()
+                return herokuNews[0]
+            } catch(err) {
+                return err
             }
         }
+
         ((process.env.NODE_ENV === 'development') ? fetchNews()
-            .then(result => {
-            setContext({articles: result.newsapi})
-        }).catch(e => {
-            setContext({articles: []})
-        }) : fetchNewsFromHeroku().then(result => {
-            let articlesWithId = result.map(x => {
-                x._id = uuid()
-                return x;
-            })
-            setContext({articles: articlesWithId})
-        }).catch(e => {
-            setContext({articles: []})
-        }))
+                .then(json => {
+                    if (json.message) {
+                        throw new Error(json.message)
+                    }
+                    setContext({articles: json, error: null, hasError: false})
+                }).catch(err => {
+                    setContext({...context, hasError: true, error: err.message})
+        }) : fetchNewsFromHeroku()
+                .then(response => {
+                    if (response.message) {
+                        throw new Error(response.message)
+                    }
+                    if (!response.articles)  {
+                        throw new Error('Not enough articles to show!')
+                    }
+                    let articlesWithId = response.articles.map(x => {
+                            x._id = uuid()
+                            return x;
+                    })
+                    setContext({hasError: false, error: null, articles: articlesWithId})
+                }).catch(err => {
+                    setContext({...context, hasError: true, error: err.message})
+                }))
         
     }, [])
-    
     
     return context;
 }

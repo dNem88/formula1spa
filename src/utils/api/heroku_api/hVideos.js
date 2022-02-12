@@ -1,17 +1,16 @@
 const heroku_api_url = 'https://boiling-brushlands-51072.herokuapp.com'
 
 async function getVideos(count=10) {
-    try{
+    try {
         let response = await fetch(`${heroku_api_url}/videos?count=${count}`, {
             headers: {
                 'content-type': 'application/json'
             },
             credentials: 'include'
         })
-        let videos = response.json()
-        return videos
-    } catch(e) {
-        return {error: {message: 'Failed to fetch videos!'}}
+        return response
+    } catch(err) {
+        return err
     }
 }
 

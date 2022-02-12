@@ -1,0 +1,31 @@
+.main{
+    box-sizing: border-box;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1f1f27;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: #e10600;
+    border-width: .25rem;
+}
+
+.error-p{
+    width: 100%;
+    color: #e10600;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.error-message{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}

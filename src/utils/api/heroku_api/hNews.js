@@ -8,11 +8,9 @@ async function getHerokuNews() {
             },
             credentials: 'include'
         })
-        let news = await response.json();
-        
-        return news[0]
-    } catch(e) {
-        return {error: {message: 'Sever error. Please try again later!'}}
+        return response
+    } catch(err) {
+        return err
     }
 }
 async function updateHerokuNews(articles) {

@@ -8,11 +8,10 @@ async function getFullSchedule() {
             },
             credentials: 'include'
         })
-        let schedule = await response.json();
         
-        return schedule
-    } catch(e) {
-        return {error: {message: 'Sever error. Please try again later!'}}
+        return response
+    } catch(err) {
+        return err
     }
 }
 async function getScheduleById(id) {

@@ -1,0 +1,8 @@
+.schedule{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 1vw;
+    background-color: #1f1f27;
+    overflow-x: scroll;
+}
