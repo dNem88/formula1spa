@@ -6,6 +6,7 @@ import styles from './login.module.css'
 function Login() {
     let context = useContext(userContext);
     const navigate = useNavigate()
+
     const [formdata, setFormdata] = useState({
         username: '',
         password: '',
@@ -22,21 +23,21 @@ function Login() {
         submitButton.current.disabled = true;
         try {
             let response = await context.login(formdata)
-            console.log(response)
-        if (response.error) {
-            setFormdata({...formdata, errorMessage: response.error.message})
+            if (response.message) {
+                throw new Error(response.message)
+            } 
+            if (response._id && response.authToken) {
+                navigate('/')
+            }
+        } catch(err) {
             submitButton.current.disabled = false;
-        } 
-        if (response._id && response.authToken) {
-            navigate('/')
-        }
-        } catch(e) {
             setFormdata({
                 ...formdata,
-                errorMessage: 'Unexpected ServerError'
+                errorMessage: err.message
             })
         }
     }
+    
     return (
         <form onSubmit = {
             submitHandler

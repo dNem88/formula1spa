@@ -75,6 +75,6 @@
     }
     .news, .more-news{
         width: 96vw;
-        height: auto;
+        height: 80vh;
     }
 }

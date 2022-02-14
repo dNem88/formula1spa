@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom'
 import styles from './register.module.css'
 
 function Register() {
+
     let context = useContext(userContext);
     const navigate = useNavigate()
     const [formdata, setFormdata] = useState({
@@ -24,19 +25,24 @@ function Register() {
         submitButton.current.disabled = true;
         try {
             let response = await context.register(formdata)
-            console.log(response)
-        if (response.error) {
-            setFormdata({...formdata, errorMessage: response.error.message})
+            if (response.acknowledged && response.insertedId) {
+                navigate('/auth/login')
+            }
+            if (response.error) {
+                submitButton.current.disabled = false;
+                throw new Error(response.error.message)
+            }
+            if (response.message) {
+                submitButton.current.disabled = false;
+                throw new Error(response.message)
+            }
+        } catch(err) {
             submitButton.current.disabled = false;
-        } 
-        if (response.acknowledged && response.insertedId) {
-            navigate('/auth/login')
-        }
-        } catch(e) {
             setFormdata({
                 ...formdata,
-                errorMessage: 'Unexpected ServerError'
+                errorMessage: err.message
             })
+            
         }
     }
     return (
