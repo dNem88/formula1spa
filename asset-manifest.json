@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/formula1spa/static/css/main.74682150.css",
-    "main.js": "/formula1spa/static/js/main.34674b78.js",
+    "main.css": "/formula1spa/static/css/main.86aee08c.css",
+    "main.js": "/formula1spa/static/js/main.16d478a0.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
+    "static/media/authLogo.svg": "/formula1spa/static/media/authLogo.8d79743b12d6904d259d43ce08915b48.svg",
+    "static/media/logo.svg": "/formula1spa/static/media/logo.8d79743b12d6904d259d43ce08915b48.svg",
     "index.html": "/formula1spa/index.html",
-    "main.74682150.css.map": "/formula1spa/static/css/main.74682150.css.map",
-    "main.34674b78.js.map": "/formula1spa/static/js/main.34674b78.js.map",
+    "main.86aee08c.css.map": "/formula1spa/static/css/main.86aee08c.css.map",
+    "main.16d478a0.js.map": "/formula1spa/static/js/main.16d478a0.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74682150.css",
-    "static/js/main.34674b78.js"
+    "static/css/main.86aee08c.css",
+    "static/js/main.16d478a0.js"
   ]
 }
