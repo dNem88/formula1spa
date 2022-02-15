@@ -154,9 +154,14 @@ Array [
     >
       EDITOR'S PICK
     </legend>
-    <p>
-      ...Loading
-    </p>
+    <div
+      className="lds-ring"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
   </fieldset>,
   <h2
     className="h-news"
@@ -279,9 +284,14 @@ Array [
       </div>
     </div>
   </section>,
-  <section
-    className="schedule"
-  />,
+  <div
+    className="lds-ring"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>,
   <section
     className="standings"
   />,

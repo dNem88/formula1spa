@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ActiveSchedule Should render properly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="test-class"
+    >
+      <img
+        alt="flag"
+      />
+    </div>
+    <h5
+      className="country"
+    >
+      test-country
+    </h5>
+    <h2
+      className="gp-name"
+    >
+      FORMULA 1 TEST-RACE 2022
+    </h2>
+    <h6
+      className="weekend-duration"
+    >
+      test-weekend
+    </h6>
+  </div>
+  <div
+    className="clock-banner-container"
+  />
+  <div
+    className="table-container"
+  />
+</div>
+`;

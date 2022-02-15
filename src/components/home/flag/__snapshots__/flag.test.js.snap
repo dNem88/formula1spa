@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Flag Should Render Properly Flag 1`] = `
+<div
+  className="test-class"
+>
+  <img
+    alt="flag"
+  />
+</div>
+`;

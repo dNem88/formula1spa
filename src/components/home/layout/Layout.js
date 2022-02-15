@@ -4,7 +4,7 @@ import News from '../../common/news/News'
 import Trending from '../trending/Trending'
 import newsContext from '../../../context/newsContext'
 import Spinner from '../../common/spinner/Spinner'
-import ErrorComp from '../../common/error/ErrorComp'
+import ErrorComp from '../../common/errorComp/ErrorComp'
 import VideosWrapper from '../videosWrapper/VideosWrapper'
 import ScheduleWrapper from '../ScheduleWrapper/ScheduleWrapper'
 

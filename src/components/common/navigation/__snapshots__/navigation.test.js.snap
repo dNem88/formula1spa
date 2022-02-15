@@ -8,12 +8,18 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
     className="logo-container"
   >
     <img
-      src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg"
+      src="authLogo.svg"
     />
   </div>
   <div
     className="links-container"
   >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
     <a
       href="/news"
       onClick={[Function]}
@@ -80,12 +86,18 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
     className="logo-container"
   >
     <img
-      src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg"
+      src="authLogo.svg"
     />
   </div>
   <div
     className="links-container"
   >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
     <a
       href="/news"
       onClick={[Function]}

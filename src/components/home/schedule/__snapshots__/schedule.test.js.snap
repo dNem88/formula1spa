@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Schedule Schedule active 1`] = `
+<div
+  className="active-main-container"
+  id="test-id"
+>
+  <ActiveScheduleMock />
+</div>
+`;
+
+exports[`Test Schedule Schedule non-active 1`] = `
+<div
+  className="main-container"
+  id="test-id"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="flag"
+    />
+  </div>
+  <h3
+    className="country"
+  >
+    BULGARIA
+  </h3>
+  <h1
+    className="day"
+  >
+    2022
+  </h1>
+  <h3
+    className="month"
+  >
+    MAY
+  </h3>
+</div>
+`;

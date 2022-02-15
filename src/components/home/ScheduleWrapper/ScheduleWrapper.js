@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment} from 'react'
 import Schedule from '../schedule/Schedule';
 import Slider from '../slider/Slider';
 import Spinner from '../../common/spinner/Spinner';
-import ErrorComp from '../../common/error/ErrorComp';
+import ErrorComp from '../../common/errorComp/ErrorComp';
 import useSchedule from '../../../hooks/useSchedule';
 import compareDates from '../../../utils/common/compareDates';
 import styles from './scheduleWrapper.module.css'

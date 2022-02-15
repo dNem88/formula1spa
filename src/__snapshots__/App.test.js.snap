@@ -5,24 +5,87 @@ Array [
   <nav
     className="nav"
   >
-    <p>
-      Loading....
-    </p>
+    <div
+      className="logo-container"
+    >
+      <img
+        src="authLogo.svg"
+      />
+    </div>
+    <div
+      className="links-container"
+    >
+      <a
+        href="#/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="#/news"
+        onClick={[Function]}
+      >
+        News
+      </a>
+      <a
+        href="#/videos"
+        onClick={[Function]}
+      >
+        Videos
+      </a>
+      <a
+        href="#/schedule"
+        onClick={[Function]}
+      >
+        Schedule
+      </a>
+      <a
+        href="#/standings"
+        onClick={[Function]}
+      >
+        Standings
+      </a>
+      <a
+        href="#/drivers"
+        onClick={[Function]}
+      >
+        Drivers
+      </a>
+      <a
+        href="#/teams"
+        onClick={[Function]}
+      >
+        Teams
+      </a>
+    </div>
+    <div
+      className="auth-container"
+    />
   </nav>,
   <main>
     <section
       className="trending"
     >
-      <p>
-        ...Loading
-      </p>
+      <div
+        className="lds-ring"
+      >
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
     </section>
     <section
       className="news"
     >
-      <p>
-        ...Loading
-      </p>
+      <div
+        className="lds-ring"
+      >
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
     </section>
     <fieldset
       className="editor-pick"
@@ -32,9 +95,14 @@ Array [
       >
         EDITOR'S PICK
       </legend>
-      <p>
-        ...Loading
-      </p>
+      <div
+        className="lds-ring"
+      >
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
     </fieldset>
     <h2
       className="h-news"
@@ -44,13 +112,23 @@ Array [
     <section
       className="more-news"
     >
-      <p>
-        ...Loading
-      </p>
+      <div
+        className="lds-ring"
+      >
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
     </section>
-    <section
-      className="schedule"
-    />
+    <div
+      className="lds-ring"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
     <section
       className="standings"
     />

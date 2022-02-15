@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment} from 'react'
 import styles from './videosWrapper.module.css'
 import Video from '../../common/video/Video'
 import hVideos from '../../../utils/api/heroku_api/hVideos'
-import ErrorComp from '../../common/error/ErrorComp'
+import ErrorComp from '../../common/errorComp/ErrorComp'
 import Spinner from '../../common/spinner/Spinner'
 import VideoWrapper from '../../common/videoWrapper/VideoWrapper'
 
