@@ -1,0 +1,36 @@
+.links-container{
+    width: 100vw;
+    background-color: #e10600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+.links-container > a{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 7vh;
+    text-decoration: none;
+    background-color: #e10600;
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+    border-bottom-right-radius: 1rem;
+    animation-name: active;
+    animation-duration: 0.4s;
+    
+}
+
+@keyframes active {
+    from {height: 0; opacity: 0;}
+    to {height: 7vh; opacity: 1;}
+}

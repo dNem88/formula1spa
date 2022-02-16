@@ -1,0 +1,36 @@
+.nav{
+    box-sizing: border-box;
+    position: fixed;
+    padding: 1vh;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e10600;
+}
+
+.hamburger-icon-container{
+    height: 100%;
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo-container{
+    height: 100%;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-icon-container{
+    height: 100%;
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

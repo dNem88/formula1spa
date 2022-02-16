@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.module.css';
 import Navigation from './components/common/navigation/Navigation'
@@ -10,18 +10,30 @@ import AuthLayout from './components/register/Layout/AuthLayout';
 import Register from './components/register/Register/Register';
 import Login from './components/register/Login/Login';
 import Layout from './components/home/layout/Layout';
+import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
 
 function App() {
+  const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
   let context = useAuth()
+ 
   useEffect(() => {
-    context.verify()
+    if (context.isLogged === 'initial') {
+       context.verify()
+    }
   }, [])
-  
+  useEffect(() => {
+     window.addEventListener('resize', (e) => {
+       setViewport({width: window.innerWidth})
+       console.log('event Resize Triggered')
+     })
+
+  }, [])
+  console.log('RENDER FROM APP>JS')
   return (
     <Router>
       <userContext.Provider value={context}>
-        <Navigation/>
+        {viewport.width > 850 ? <Navigation/> : <MobileNavigation/>}
       </userContext.Provider>
       <main>
         <Routes>
