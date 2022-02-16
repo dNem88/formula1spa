@@ -69,12 +69,23 @@
     background-color: white;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) and (orientation: portrait) {
     .trending{
         width: 96vw;
     }
     .news, .more-news{
         width: 96vw;
         height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    .trending{
+        width: 96vw;
+        height: 150vh;
+    }
+    .news, .more-news{
+        width: 96vw;
+        height: 150vh;
     }
 }

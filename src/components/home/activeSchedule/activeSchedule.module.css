@@ -59,20 +59,11 @@
     animation-name: fade;
     animation-duration: 1.2s;
 }
-.clock-banner-container{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    box-sizing: border-box;
-    background-color: #193520;
-    border-radius: 1rem;
-}
-.table-container{
-    width: 100%;
-    height: 40%;
-}
+
+
 @keyframes fade {
     0% {opacity: 0;}
     60% {opacity: 0;}
     100% {opacity: 1;}
 }
+

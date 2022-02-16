@@ -9,7 +9,6 @@
     overflow: hidden;
 }
 .left-flag{
-    box-sizing: border-box;
     width: clamp(1.66rem, 3.66vw, 4.33rem);
     height: clamp(1.06rem, 2.336vw, 2.76rem);
     border-style: solid;
