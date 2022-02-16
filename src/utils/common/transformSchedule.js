@@ -7,12 +7,6 @@ function transformSchedule(props) {
         let raceStart = [raceDate[0], Number(raceDate[1])-1, Number(raceDate[2]), ...props.time.split(':').slice(0,2)]
         let UTCinMs = Date.UTC(...raceStart) /*in UTC Time*/
         transformed.raceStartUTC = UTCinMs
-        // console.log('===============================')
-        // console.log(raceStart)
-        // console.log(new Date(UTCinMs).toUTCString(), 'utc')
-        // console.log(new Date(UTCinMs).toString(), 'local')
-        // console.log('----------------------------')
-        
         let date1 = new Date(props.date);
         date1.setDate(date1.getDate() - 2)
         let weekendStart = `${date1.getDate()} ${months[date1.getMonth()].substring(0,3).toUpperCase()} ${date1.getFullYear()}`

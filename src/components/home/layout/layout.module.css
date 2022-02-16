@@ -1,7 +1,7 @@
 
 .trending{
     box-sizing: border-box;
-    margin-top: 1vw;
+    margin-top: 2.5vw;
     width: 46.5vw;
     height: 80vh;
     padding: 1vw;
@@ -20,7 +20,7 @@
     border-right-color: #e10600;
 }
 .news{
-    margin-top: 1vw;
+    margin-top: 2.5vw;
     width: 47.5vw;
     height: 80vh;
     padding: 1vw;
@@ -44,7 +44,7 @@
 }
 .more-news{
     width: 96vw;
-    margin-top: 1vw;
+    margin-top: 2.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,7 +61,7 @@
     width: 100vw;
     height: 80vh;
     display: flex;
-    margin-top: 1vw;
+    margin-top: 2.5vw;
     flex-direction: row;
     align-items: center;
     justify-content: center;
