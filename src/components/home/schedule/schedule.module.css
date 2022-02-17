@@ -73,11 +73,21 @@
 @media screen and (max-width: 500px) {
     .active-main-container{
         width: 90vw;
-        border-right-width: .15rem;
-        border-bottom-width: .15rem;
+         border-right-style: solid;
+        border-bottom-style: solid;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        border-right-color: 38383f;
+        border-bottom-color: 38383f;
+        border-bottom-right-radius: 1rem;   
     }
     .main-container{
-        border-right-width: .15rem;
-        border-bottom-width: .15rem;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        border-right-color: 38383f;
+        border-bottom-color: 38383f;
+        border-bottom-right-radius: 1rem;   
     }
 }

@@ -27,8 +27,9 @@ function MobileNavigation(props) {
                     <div className={styles['profile-icon-container']}>
                         {context.isLogged && context.user ? <Link to={'/profile'}><img src={profile}/></Link> : ''} 
                     </div>
+                    {(navigation.active) ? <ActiveMobileNavigation click={clickHandler} isLogged={context.isLogged}/> : null}
                 </nav>
-                {(navigation.active) ? <ActiveMobileNavigation click={clickHandler} isLogged={context.isLogged}/> : null}
+                
             </Fragment>
         )
     

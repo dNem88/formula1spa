@@ -1,12 +1,16 @@
 .links-container{
-    width: 100vw;
+    position: absolute;
+    width: 100%;
+    height: min(110vh);
     background-color: #e10600;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 10vh;
+    top: 7vh;
+    left: 0;
     padding-bottom: 5vh;
+    z-index: 5;
 }
 .links-container > a{
     margin: 0;
@@ -26,11 +30,27 @@
     border-right-width: 1px;
     border-bottom-right-radius: 1rem;
     animation-name: active;
-    animation-duration: 0.4s;
+    animation-duration: 0.5s;
     
 }
 
 @keyframes active {
     from {height: 0; opacity: 0;}
     to {height: 7vh; opacity: 1;}
+}
+
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+    .links-container{
+        margin-top: 8vh;
+        position: absolute;
+    }
+    .links-container > a{
+        height: 11vh;
+        
+    }
+    @keyframes active {
+    from {height: 0; opacity: 0;}
+    to {height: 11vh; opacity: 1;}
+}
+
 }

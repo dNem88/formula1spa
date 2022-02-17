@@ -59,14 +59,11 @@
 
 .standings{
     width: 100vw;
-    height: 80vh;
     display: flex;
     margin-top: 2.5vw;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    background-color: white;
+    background-color: #d0d0d2;
 }
 
 @media only screen and (max-width: 800px) and (orientation: portrait) {

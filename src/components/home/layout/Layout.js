@@ -7,6 +7,7 @@ import Spinner from '../../common/spinner/Spinner'
 import ErrorComp from '../../common/errorComp/ErrorComp'
 import VideosWrapper from '../videosWrapper/VideosWrapper'
 import ScheduleWrapper from '../ScheduleWrapper/ScheduleWrapper'
+import DriversStandings from '../standings/DriversStandings'
 
 function Layout() {
     let context = useContext(newsContext);
@@ -33,7 +34,7 @@ function Layout() {
             </section>
             <ScheduleWrapper/>
             <section className={styles['standings']}>
-
+                <DriversStandings/>
             </section>
         </Fragment>
     )

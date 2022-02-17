@@ -11,23 +11,26 @@ import Register from './components/register/Register/Register';
 import Login from './components/register/Login/Login';
 import Layout from './components/home/layout/Layout';
 import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
+import Footer from './components/common/footer/Footer'
 
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
   let context = useAuth()
- 
+  function onResize(e) {
+    setViewport({width: window.innerWidth})
+       console.log('event Resize Triggered')
+  }
   useEffect(() => {
     if (context.isLogged === 'initial') {
        context.verify()
     }
   }, [])
   useEffect(() => {
-     window.addEventListener('resize', (e) => {
-       setViewport({width: window.innerWidth})
-       console.log('event Resize Triggered')
-     })
-
+     window.addEventListener('resize', onResize)
+     return () => {
+        window.removeEventListener('resize', onResize)
+     }
   }, [])
   console.log('RENDER FROM APP>JS')
   return (
@@ -65,7 +68,7 @@ function App() {
           <Route path={'/profile'} element={<p>Profile Page</p>}/>
         </Routes>
       </main>
-      <footer></footer>
+      <Footer/>
     </Router>
   );
 }

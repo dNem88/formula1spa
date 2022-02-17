@@ -1,19 +1,20 @@
 .nav{
     box-sizing: border-box;
-    position: fixed;
+    position: relative;
     padding: 1vh;
     width: 100vw;
-    height: 10vh;
+    height: 7vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #e10600;
+    z-index: 5;
 }
 
 .hamburger-icon-container{
     height: 100%;
-    width: 10vh;
+    width: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,8 +30,17 @@
 }
 .profile-icon-container{
     height: 100%;
-    width: 10vh;
+    width: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+    .nav{
+        height: 15vh;
+    }
+    .hamburger-icon-container, .profile-icon-container{
+        width: 15vh;
+    }
 }

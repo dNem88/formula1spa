@@ -1,0 +1,49 @@
+.driver-row {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: .5vw;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-style: solid;
+    border-color: transparent;
+    background-color: white;
+    border-radius: .5rem;
+}
+.driver-row > :nth-child(1) {
+    font-weight: bold;
+    color: black;
+}
+.driver-row > :nth-child(2) {
+    color: #38383f;
+    padding: 0;
+    margin-left: 2vw;
+}
+.driver-row > :nth-child(3) {
+    font-weight: bold;
+    color: black;
+    margin-left: .5vw;
+}
+.driver-row > :nth-child(4) {
+    color: #949498;
+    font-size: small;
+    padding: 0;
+    margin-left: 2vw;
+}
+.driver-row > :nth-child(5) {
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    right: 3vw;
+    width: clamp( 4rem ,8vw, 10rem);
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d2;
+    border-radius: 1rem;
+}
