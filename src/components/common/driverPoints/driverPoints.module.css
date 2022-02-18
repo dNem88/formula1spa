@@ -14,25 +14,47 @@
     background-color: white;
     border-radius: .5rem;
 }
+.driver-row:hover{
+    background-color:#38383f;
+}
 .driver-row > :nth-child(1) {
     font-weight: bold;
     color: black;
 }
+.driver-row:hover > :nth-child(1) {
+    font-weight: bold;
+    color: white;
+}
+
 .driver-row > :nth-child(2) {
     color: #38383f;
     padding: 0;
     margin-left: 2vw;
 }
+.driver-row:hover > :nth-child(2) {
+    font-weight: bold;
+    color: white;
+}
+
 .driver-row > :nth-child(3) {
     font-weight: bold;
     color: black;
     margin-left: .5vw;
 }
+.driver-row:hover > :nth-child(3) {
+    font-weight: bold;
+    color: white;
+}
+
 .driver-row > :nth-child(4) {
     color: #949498;
     font-size: small;
     padding: 0;
     margin-left: 2vw;
+}
+.driver-row:hover > :nth-child(4) {
+    font-weight: bold;
+    color:#949498;
 }
 .driver-row > :nth-child(5) {
     font-weight: bold;

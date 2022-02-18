@@ -6,7 +6,7 @@ function Flag(props) {
     
     return (
         <div className={styles[props.classname]}>
-            <img src={flags[props.imageBase]} alt={'flag'}/>
+            <img src={flags[props.imageBase]} alt={`${props.imageBase}-flag`} loading='lazy'/>
         </div>
     )
 }

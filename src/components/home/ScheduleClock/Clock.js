@@ -39,7 +39,7 @@ function Clock() {
     return (
         <div className={styles['clock-banner-container']}>
             <div className={styles['clock']}>
-                <img src={clock} alt={'clock'}/>
+                <img src={clock} alt='clock'/>
             </div>
             <div className={styles['time-container']}>
                 <p >Your Time</p>

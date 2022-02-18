@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing DriverPoints Render data properly 1`] = `
+<div
+  className="driver-row"
+>
+  <span>
+    2
+  </span>
+  <p>
+    Lewis
+  </p>
+  <span>
+    Hamilton
+  </span>
+  <p>
+    Mercedes
+  </p>
+  <span>
+    100
+  </span>
+</div>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing RaceTime Render Correct Time 1`] = `
+<table
+  className="race-time-container"
+>
+  <tbody>
+    <tr>
+      <td
+        className="left-td"
+      >
+        Race
+      </td>
+      <td
+        className="right-td"
+      />
+    </tr>
+    <tr>
+      <td
+        className="left-td"
+      >
+        Your Local Time
+      </td>
+      <td
+        className="right-td"
+      >
+        04:50
+      </td>
+    </tr>
+    <tr>
+      <td
+        className="left-td"
+      >
+        GMT Time
+      </td>
+      <td
+        className="right-td"
+      >
+        02:50
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

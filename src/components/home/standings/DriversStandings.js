@@ -26,7 +26,6 @@ function DriversStandings() {
                 console.log(json)
                 return json
             }catch(err) {
-                console.log(err)
                 setStandings({standings: null, hasError: true, errorMessage: err.message})
                 return err
             }
@@ -47,7 +46,7 @@ function DriversStandings() {
                     <div className={styles['standings-container']}>
                         {!standings.standings ? <Spinner/> : 
                             standings.standings.slice(0,10).map(x => {
-                                return <DriversPoints {...x}/>
+                                return <DriversPoints key={x._id} {...x}/>
                             })
                         }
                     </div>

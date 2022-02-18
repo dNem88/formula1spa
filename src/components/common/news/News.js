@@ -10,7 +10,7 @@ function News(props) {
     return (
         <div onClick={clickHandler} id={props.id} className={styles['main-container']}>
             <div className={styles['image-container']}>
-                <img id={styles['news-image']} alt={'someAlt'} src={props.imageUrl}/>
+                <img id={styles['news-image']} alt={'image-from-newsapi'} src={props.imageUrl} loading='lazy'/>
             </div>
             <div  className={props.hoverChange === true ? styles['dark-container'] : styles.container}>
                 <p className={styles['news-par']}>NEWS</p>

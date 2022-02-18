@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing MobileNavigation in Active State Render Link User is Logged In 1`] = `
+<div
+  className="links-container"
+  onClick={[Function]}
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    href="/news"
+    onClick={[Function]}
+  >
+    News
+  </a>
+  <a
+    href="/videos"
+    onClick={[Function]}
+  >
+    Videos
+  </a>
+  <a
+    href="/schedule"
+    onClick={[Function]}
+  >
+    Schedule
+  </a>
+  <a
+    href="/standings"
+    onClick={[Function]}
+  >
+    Standings
+  </a>
+  <a
+    href="/drivers"
+    onClick={[Function]}
+  >
+    Drivers
+  </a>
+  <a
+    href="/teams"
+    onClick={[Function]}
+  >
+    Teams
+  </a>
+  <a
+    href="/profile"
+    onClick={[Function]}
+  >
+    Profile
+  </a>
+</div>
+`;
+
+exports[`Testing MobileNavigation in Active State Render Link User is NOT Logged 1`] = `
+<div
+  className="links-container"
+  onClick={[Function]}
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    href="/news"
+    onClick={[Function]}
+  >
+    News
+  </a>
+  <a
+    href="/videos"
+    onClick={[Function]}
+  >
+    Videos
+  </a>
+  <a
+    href="/schedule"
+    onClick={[Function]}
+  >
+    Schedule
+  </a>
+  <a
+    href="/standings"
+    onClick={[Function]}
+  >
+    Standings
+  </a>
+  <a
+    href="/drivers"
+    onClick={[Function]}
+  >
+    Drivers
+  </a>
+  <a
+    href="/teams"
+    onClick={[Function]}
+  >
+    Teams
+  </a>
+  <a
+    href="/auth/login"
+    onClick={[Function]}
+  >
+    Sign in
+  </a>
+  <a
+    href="/auth/register"
+    onClick={[Function]}
+  >
+    Register
+  </a>
+</div>
+`;

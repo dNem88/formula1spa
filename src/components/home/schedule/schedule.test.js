@@ -21,7 +21,8 @@ let mockProps = {
         }
     },
     raceName: "Imola",
-    season: "2022"
+    season: "2022",
+    time: '20:00'
 }
 jest.fn(transformSchedule(mockProps))
 jest.mock('../activeSchedule/ActiveSchedule', () => () => {

@@ -1,4 +1,4 @@
-import React, {useContext, useState, Fragment} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
 import styles from './mobileNavigation.module.css'
 import userContext from '../../../context/userContext'
@@ -8,7 +8,7 @@ import profile from '../../../assets/images/navigation/profile.svg'
 import xicon from '../../../assets/images/navigation/xicon.svg'
 import ActiveMobileNavigation from '../activeMobileNavigation/ActiveMobileNavigation';
 
-function MobileNavigation(props) {
+function MobileNavigation() {
     let context = useContext(userContext)
     const [navigation, setNavigation] = useState({active: false})
     function clickHandler(e) {
@@ -16,21 +16,18 @@ function MobileNavigation(props) {
     }
 
         return (
-            <Fragment>
                 <nav className={styles['nav']}>
                     <div onClick={clickHandler} className={styles['hamburger-icon-container']}>
-                        <img src={navigation.active ? xicon : menu}/>
+                        <img src={navigation.active ? xicon : menu} alt='menu-icon'/>
                     </div>
                     <div className={styles['logo-container']}>
-                        <img src={logo}/>
+                        <img src={logo} alt='formula1-logo'/>
                     </div>
                     <div className={styles['profile-icon-container']}>
-                        {context.isLogged && context.user ? <Link to={'/profile'}><img src={profile}/></Link> : ''} 
+                        {context.isLogged && context.user ? <Link to={'/profile'}><img src={profile} alt='profile-icon'/></Link> : ''} 
                     </div>
                     {(navigation.active) ? <ActiveMobileNavigation click={clickHandler} isLogged={context.isLogged}/> : null}
                 </nav>
-                
-            </Fragment>
         )
     
     

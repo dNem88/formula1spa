@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing DriverStandings Render Component 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="heading-container"
+  >
+    <h2>
+      DRIVERS STANDINGS
+    </h2>
+  </div>
+  <div
+    className="standings-container"
+  >
+    <div
+      className="lds-ring"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+  </div>
+  <a
+    href="/standings"
+    onClick={[Function]}
+  >
+    VIEW FULL STANDINGS
+  </a>
+</div>
+`;

@@ -20,7 +20,6 @@ describe('Test ActiveSchedule' , () => {
                 <ActiveSchedule {...mockProps}/>
             </MemoryRouter>
         ).toJSON()
-        expect(activeSchedule).toMatchSnapshot()
         expect(activeSchedule.type).toBe('div')
         expect(activeSchedule.props.className).toBe('wrapper')
         expect(activeSchedule.children.length).toBe(3)
@@ -28,8 +27,8 @@ describe('Test ActiveSchedule' , () => {
         expect(activeSchedule.children[0].props.className).toBe('content-container')
         expect(activeSchedule.children[1].type).toBe('div')
         expect(activeSchedule.children[1].props.className).toBe('clock-banner-container')
-        expect(activeSchedule.children[2].type).toBe('div')
-        expect(activeSchedule.children[2].props.className).toBe('table-container')
+        expect(activeSchedule.children[2].type).toBe('table')
+        expect(activeSchedule.children[2].props.className).toBe('race-time-container')
         let contentContainer = activeSchedule.children[0]
         expect(contentContainer.children.length).toBe(4)
         expect(contentContainer.children[0].type).toBe('div')
