@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/formula1spa/static/css/main.6ff75150.css",
-    "main.js": "/formula1spa/static/js/main.c8a3f562.js",
+    "main.css": "/formula1spa/static/css/main.2a40b800.css",
+    "main.js": "/formula1spa/static/js/main.c352d6d2.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
     "static/media/clock.png": "/formula1spa/static/media/clock.4103ddb25d602609f226.png",
     "static/media/profile.svg": "/formula1spa/static/media/profile.a3a562178197937510e12ad63eb4115a.svg",
@@ -10,12 +10,12 @@
     "index.html": "/formula1spa/index.html",
     "static/media/menu.svg": "/formula1spa/static/media/menu.eec57384032ed89c762e0ac0822edfab.svg",
     "static/media/xicon.svg": "/formula1spa/static/media/xicon.62df51ddb295eb7f59d08af576534dfd.svg",
-    "main.6ff75150.css.map": "/formula1spa/static/css/main.6ff75150.css.map",
-    "main.c8a3f562.js.map": "/formula1spa/static/js/main.c8a3f562.js.map",
+    "main.2a40b800.css.map": "/formula1spa/static/css/main.2a40b800.css.map",
+    "main.c352d6d2.js.map": "/formula1spa/static/js/main.c352d6d2.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ff75150.css",
-    "static/js/main.c8a3f562.js"
+    "static/css/main.2a40b800.css",
+    "static/js/main.c352d6d2.js"
   ]
 }
