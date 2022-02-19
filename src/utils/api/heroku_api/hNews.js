@@ -34,6 +34,7 @@ async function updateHerokuNews(articles) {
     }
 }
 
+
 export default {
     updateHerokuNews,
     getHerokuNews

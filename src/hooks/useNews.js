@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import newsContext from '../context/newsContext';
 import newsapi from '../utils/api/newsapi/newsapi';
 import {v4 as uuid} from 'uuid'
@@ -46,7 +46,7 @@ function useNews() {
                     if (json.message) {
                         throw new Error(json.message)
                     }
-                    setContext({articles: json, error: null, hasError: false})
+                    setContext({articles: json.reverse(), error: null, hasError: false})
                 }).catch(err => {
                     setContext({...context, hasError: true, error: err.message})
         }) : fetchNewsFromHeroku()
@@ -57,10 +57,12 @@ function useNews() {
                     if (!response.articles)  {
                         throw new Error('Not enough articles to show!')
                     }
-                    let articlesWithId = response.articles.map(x => {
+                    let articlesWithId = response.articles
+                        .map(x => {
                             x._id = uuid()
                             return x;
-                    })
+                        })
+                        .reverse()
                     setContext({hasError: false, error: null, articles: articlesWithId})
                 }).catch(err => {
                     setContext({...context, hasError: true, error: err.message})

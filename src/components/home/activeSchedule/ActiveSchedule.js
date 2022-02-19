@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import styles from './activeSchedule.module.css'
-import Flag from '../flag/Flag'
+import Flag from '../../common/flag/Flag'
 import Clock from '../ScheduleClock/Clock';
 import RaceTime from '../ScheduleRaceStart/RaceTime';
 

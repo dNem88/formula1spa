@@ -28,7 +28,8 @@ function VideosWrapper() {
             }
         }
         FetchVideos()
-    }, [])
+    },[])
+    
     return (
          <fieldset className={styles['editor-pick']}>
                 <legend className={styles['editor-legend']}>EDITOR'S PICK</legend>

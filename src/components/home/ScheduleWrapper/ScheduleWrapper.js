@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Fragment} from 'react'
+import React, {useState, useEffect} from 'react'
 import Schedule from '../schedule/Schedule';
 import Slider from '../slider/Slider';
 import Spinner from '../../common/spinner/Spinner';

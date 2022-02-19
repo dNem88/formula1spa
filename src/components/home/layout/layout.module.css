@@ -4,26 +4,31 @@
     margin-top: 2.5vw;
     width: 46.5vw;
     height: 80vh;
-    padding: 1vw;
+    padding-top: 1vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     background-color: white;
     border-top-right-radius: 1rem;
     border-top-style: solid;
     border-right-style: solid;
-    border-top-width: clamp(.7rem,.8vw, 3rem);;
-    border-right-width: clamp(.7rem,.8vw, 3rem);;
+    border-top-width: clamp(.45rem,.6vw, 3rem);
+    border-right-width: clamp(.45rem,.6vw, 3rem);
     border-top-color: #e10600;
     border-right-color: #e10600;
+    cursor: pointer;
 }
 .news{
+    box-sizing: border-box;
     margin-top: 2.5vw;
     width: 47.5vw;
     height: 80vh;
-    padding: 1vw;
+    /* padding: 1vw; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,18 +45,20 @@
     font-size: clamp(2rem, 2vw, 4rem);
     color: black;
     justify-self: flex-start;
-    margin-top: 1vw;
+    padding: 0;
 }
 .more-news{
+    box-sizing: border-box;
     width: 96vw;
-    margin-top: 2.5vw;
+    margin-top: 1.5vw;
+    padding-top: 1.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     border-top-style: solid;
-    border-top-width: clamp(.7rem,.8vw, 3rem);
+    border-top-width: clamp(.45rem,.6vw, 3rem);
     border-top-color: #1f1f27 ;
     background-color: white;
     padding-bottom: 1rem;
@@ -79,10 +86,10 @@
 @media only screen and (max-width: 800px) and (orientation: landscape) {
     .trending{
         width: 96vw;
-        height: 150vh;
+        height: 100vh;
     }
     .news, .more-news{
         width: 96vw;
-        height: 150vh;
+        height: 180vh;
     }
 }

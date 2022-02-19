@@ -12,7 +12,6 @@ function convertRaceTime(timeInMilliseconds) {
           localMinutes = (localMinutes < 10 ? `0${localMinutes}` : localMinutes)
            let utcStart = `${utcHours}:${utcMinutes}`
            let localStart = `${localHours}:${localMinutes}`
-           console.log([utcStart, localStart])
           return [utcStart, localStart]
       } else {
           return ['','']

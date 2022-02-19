@@ -23,7 +23,6 @@ function DriversStandings() {
                     throw new Error(json.error.message)
                 }
                 setStandings({standings: json, hasError: null, errorMessage: null})
-                console.log(json)
                 return json
             }catch(err) {
                 setStandings({standings: null, hasError: true, errorMessage: err.message})
@@ -33,7 +32,7 @@ function DriversStandings() {
         FetchStandings()
         
     }, [])
-    console.log(standings)
+
     return (
         <Fragment>
              {(standings.hasError) ? <ErrorComp errorMessage={standings.errorMessage}/> : 
@@ -46,7 +45,7 @@ function DriversStandings() {
                     <div className={styles['standings-container']}>
                         {!standings.standings ? <Spinner/> : 
                             standings.standings.slice(0,10).map(x => {
-                                return <DriversPoints key={x._id} {...x}/>
+                                return <DriversPoints key={x.driver} {...x}/>
                             })
                         }
                     </div>

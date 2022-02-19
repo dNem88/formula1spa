@@ -10,8 +10,10 @@ import AuthLayout from './components/register/Layout/AuthLayout';
 import Register from './components/register/Register/Register';
 import Login from './components/register/Login/Login';
 import Layout from './components/home/layout/Layout';
+import NewsLayout from './components/news/layout/NewsLayout';
 import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
 import Footer from './components/common/footer/Footer'
+import ActiveNews from './components/news/activeNews/ActiveNews';
 
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
@@ -19,7 +21,6 @@ function App() {
   let context = useAuth()
   function onResize(e) {
     setViewport({width: window.innerWidth})
-       console.log('event Resize Triggered')
   }
   useEffect(() => {
     if (context.isLogged === 'initial') {
@@ -44,7 +45,14 @@ function App() {
             <newsContext.Provider value={contextNews}>
               <Layout/>
             </newsContext.Provider>}/>
-          <Route path={'/news'} element={<p>LatestPage</p>}/>
+          <Route path={'/news/*'} element={
+            <newsContext.Provider value={contextNews}>
+              <NewsLayout/>
+            </newsContext.Provider>}>
+              <Route path={':id'} element={<ActiveNews index={false}/>}/>
+              <Route index element={
+                <ActiveNews index={true}/>}/>
+          </Route>
           <Route path={'/video'} element={<p>Video Page</p>}/>
           <Route path={'/schedule'} element={<p>Schedule Page</p>}/>
           <Route path={'/standings'} element={<p>Standings Page</p>}/>

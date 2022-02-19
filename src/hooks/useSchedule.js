@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import schedule from '../utils/api/heroku_api/schedule'
 
 

@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: .5rem;
     background-color: #1f1f27;
 }
 .heading-container > h2{
@@ -26,8 +27,8 @@
 }
 .main-container > a{
     box-sizing: border-box;
-    width: clamp(7rem, 20vw, 12rem);
-    height: clamp(1.5rem, 3vw, 4rem);
+    width: clamp(9rem, 20vw, 12rem);
+    height: clamp(2.2rem, 3.3vw, 4rem);
     padding: 1vw;
     background-color: #e10600;
     font-weight: bold;

@@ -14,7 +14,7 @@ function Navigation() {
         <nav className={!location.pathname.startsWith('/auth') ? styles['nav'] : styles['authNav']
         }>
              <div className={styles['logo-container']}>
-                <img src={location.pathname.startsWith('/auth') ? logo : authLogo}/>
+                <img src={location.pathname.startsWith('/auth') ? logo : authLogo} alt='logo'/>
             </div>
             {location.pathname.startsWith('/auth') ? null : 
                 <div className={styles['links-container']}>

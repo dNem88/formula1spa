@@ -14,12 +14,12 @@
     border-bottom-right-radius: 1rem;
     border-top-style: solid;
     border-right-style: solid;
-    border-top-width: clamp(.7rem,.8vw, 3rem);
-    border-right-width: clamp(.7rem,.8vw, 3rem);
+    border-top-width: clamp(.45rem,.6vw, 3rem);
+    border-right-width: clamp(.45rem,.6vw, 3rem);
     border-top-color: #e10600;
     border-right-color: #e10600;
     border-bottom-style: solid;
-    border-bottom-width: clamp(.7rem,.8vw, 3rem);
+    border-bottom-width: clamp(.45rem,.6vw, 3rem);
     border-bottom-color: #e10600;
     border-left: none;
     background-color: white;
@@ -66,7 +66,7 @@
 
 @media only screen and (max-width: 800px) and (orientation: landscape){
     .editor-pick{
-        height: 150vh;
+        height: 90vh;
     }
     
 }

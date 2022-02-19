@@ -1,6 +1,6 @@
-import React, {useState, Fragment, useRef, useEffect} from 'react'
+import React, {Fragment} from 'react'
 import styles from './schedule.module.css'
-import Flag from '../flag/Flag'
+import Flag from '../../common/flag/Flag'
 import transformSchedule from '../../../utils/common/transformSchedule'
 import ActiveSchedule from '../activeSchedule/ActiveSchedule'
 
