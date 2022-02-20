@@ -22,10 +22,10 @@ async function getVideoById(id) {
             },
             credentials: 'include'
         })
-        let video = response.json()
-        return video
-    } catch(e) {
-        return {error: {message: 'Failed to fetch video!'}}
+        
+        return response
+    } catch(err) {
+        return err
     }
 }
 

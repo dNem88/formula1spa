@@ -5,8 +5,9 @@ import {useNavigate} from 'react-router-dom'
 function VideoInfo(props) {
     let navigate = useNavigate()
     function clickHandler() {
-        navigate(`/videos/${props.id}`)
+        navigate(`/videos/${props.id || props._id}`)
     }
+    
     return (
         <div onClick={clickHandler} className={styles['light-info']}>
             <p className={styles['video-par']}>VIDEO</p>

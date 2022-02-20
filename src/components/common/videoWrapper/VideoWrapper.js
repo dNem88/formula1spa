@@ -5,13 +5,14 @@ import styles from './videoWrapper.module.css'
 
 
 function VideoWrapper(props) {
+
     return (
         <div className={styles['video-container']}>
             <div className={styles['video-sub']}>
                 <Video url={props.url}/>
             </div>
             <div className={styles['video-info']}>
-                <VideoInfo title={props.title} id={props.id}/>
+                <VideoInfo title={props.title} id={props.id || props._id}/>
             </div>
         </div>
     )
