@@ -16,6 +16,8 @@ import Footer from './components/common/footer/Footer'
 import ActiveNews from './components/news/activeNews/ActiveNews';
 import VideoLayout from './components/video/videoLayout/VideoLayout'
 import MainVideo from './components/video/mainVideo/MainVideo'
+import EventSchedule from './components/schedule/EventSchedule/EventSchedule'
+
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
@@ -58,7 +60,7 @@ function App() {
                 <Route path=":id" element={<MainVideo/>}/>
                 <Route index element={<MainVideo/>}/>
           </Route>
-          <Route path={'/schedule'} element={<p>Schedule Page</p>}/>
+          <Route path={'/schedule'} element={<EventSchedule/>}/>
           <Route path={'/standings'} element={<p>Standings Page</p>}/>
           <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
