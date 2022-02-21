@@ -9,3 +9,11 @@
     background-color: #1F1F27;
 }
 
+
+@media only screen and (max-width: 850px) {
+    .main-container{
+        height: 140vh;
+        flex-direction: column;
+        padding: 1vw;
+    }
+}

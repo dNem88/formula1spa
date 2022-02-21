@@ -3,13 +3,13 @@ import styles from './videoLayout.module.css'
 import hVideos from '../../../utils/api/heroku_api/hVideos'
 import ErrorComp from '../../common/errorComp/ErrorComp'
 import VideosContainer from '../videosContainer/VideosContainer'
-import {useLocation} from 'react-router-dom'
+import {useLocation, useParams} from 'react-router-dom'
 
 function VideoLayout() {
     const [state, setState] = useState({error: null, errorMessage: null, videos: null, mainID: null, mainVideo: null})
     const location = useLocation()
-    let id = location.pathname.match(/\/[a-z0-9-]{10,}/g);
-    
+    let {id} = useParams()
+  
     useEffect(() => {
         async function FetchVideos() {
             try {
@@ -29,8 +29,10 @@ function VideoLayout() {
 
     useEffect(() => {
         if (id && state.videos) {
-            let videoToRender = state.videos.filter(x => x._id === id[0].substring(1))
-            setState({...state, mainID: id[0].substring(1), mainVideo: videoToRender[0]})
+            let videoToRender = state.videos.filter(x => x._id === id)
+            if (videoToRender) {
+                setState({...state, mainID: id, mainVideo: videoToRender[0]})
+            } 
         }
         if (!id) {
             if (state.videos) {
@@ -42,7 +44,7 @@ function VideoLayout() {
                  })
             }
         }
-    }, [state.videos, location])
+    }, [state.videos, location.pathname])
 
     return (
         <div className={styles.layout}>
