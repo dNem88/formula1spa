@@ -5,7 +5,8 @@ exports[`Test Flag Should Render Properly Flag 1`] = `
   className="test-class"
 >
   <img
-    alt="flag"
+    alt="test-base-flag"
+    loading="lazy"
   />
 </div>
 `;

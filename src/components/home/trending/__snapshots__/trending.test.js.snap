@@ -20,8 +20,9 @@ exports[`Trending component Testing trendin 1`] = `
     className="image-container"
   >
     <img
-      alt="someAlt"
+      alt="trending-image"
       className="trending-image"
+      loading="eager"
       src="test-url"
     />
   </div>

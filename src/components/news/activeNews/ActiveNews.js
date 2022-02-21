@@ -3,7 +3,7 @@ import ErrorComp from '../../common/errorComp/ErrorComp'
 import newsContext from '../../../context/newsContext'
 import {useLocation, useParams} from 'react-router-dom'
 import styles from './activeNews.module.css'
-
+import NewsDummyContent from '../../common/content/NewsDummyContent'
 
 function ActiveNews(props) {
     const news = useContext(newsContext)
@@ -39,7 +39,7 @@ function ActiveNews(props) {
                     <div className={styles['image-container']}>
                     <img alt='news-newsapi-image' src={state.article.urlToImage}/>
                     </div>
-                    <p className={styles['content']}>{state.article.content}</p>
+                    <NewsDummyContent/>
                 </Fragment> : null}
             </section>
             }

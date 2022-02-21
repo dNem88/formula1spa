@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing VideosLayout Render Properly 1`] = `
+<div
+  className="layout"
+>
+  <h1
+    className="header"
+  >
+    Video
+  </h1>
+  VideosContainer
+  <h1
+    className="latest-header"
+  >
+    Latest videos
+  </h1>
+  LatestVideosContainer
+</div>
+`;

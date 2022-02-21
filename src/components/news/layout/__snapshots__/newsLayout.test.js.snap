@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing NewsLayout Render Properly 1`] = `
+<section
+  className="wrapper"
+>
+  <div
+    className="news-container"
+  >
+    <section
+      className="news-slider"
+      onClick={[Function]}
+    >
+      <div
+        className="main-container"
+        id="test-id"
+        onClick={[Function]}
+      >
+        <div
+          className="image-container"
+        >
+          <img
+            alt="image-from-newsapi"
+            id="news-image"
+            loading="lazy"
+          />
+        </div>
+        <div
+          className="dark-container"
+        >
+          <p
+            className="news-par"
+          >
+            NEWS
+          </p>
+          <p
+            className="content-par"
+          >
+            test-title
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+`;

@@ -8,6 +8,7 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
     className="logo-container"
   >
     <img
+      alt="logo"
       src="authLogo.svg"
     />
   </div>
@@ -86,6 +87,7 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
     className="logo-container"
   >
     <img
+      alt="logo"
       src="authLogo.svg"
     />
   </div>

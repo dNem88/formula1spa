@@ -9,6 +9,7 @@ Array [
       className="logo-container"
     >
       <img
+        alt="logo"
         src="authLogo.svg"
       />
     </div>

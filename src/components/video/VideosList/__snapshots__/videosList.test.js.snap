@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing VideosList Render Properly 1`] = `
+<div
+  className="video-wrapper"
+>
+  VideoMock
+  VideoInfoMock
+</div>
+`;

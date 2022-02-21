@@ -10,8 +10,9 @@ exports[`Testing news Component Testing News element 1`] = `
     className="image-container"
   >
     <img
-      alt="someAlt"
+      alt="image-from-newsapi"
       id="news-image"
+      loading="lazy"
       src="test-url"
     />
   </div>
@@ -42,8 +43,9 @@ exports[`Testing news Component Testing News elements with changed className 1`]
     className="image-container"
   >
     <img
-      alt="someAlt"
+      alt="image-from-newsapi"
       id="news-image"
+      loading="lazy"
       src="test-url"
     />
   </div>
@@ -74,8 +76,9 @@ exports[`Testing news Component Testing News elements with changed className 2`]
     className="image-container"
   >
     <img
-      alt="someAlt"
+      alt="image-from-newsapi"
       id="news-image"
+      loading="lazy"
       src="test-url"
     />
   </div>

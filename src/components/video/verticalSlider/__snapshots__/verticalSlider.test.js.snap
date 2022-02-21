@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing VericalSlider Render Properly 1`] = `
+<div
+  className="slider"
+>
+  <h3
+    className="more-videos-title"
+  >
+    More videos
+  </h3>
+  <div
+    className="relative-wrapper"
+  >
+    <div
+      className="slider-container-absolute"
+    >
+      <div
+        className="video-wrapper"
+      >
+        Video
+        VideoInfo
+      </div>
+    </div>
+  </div>
+</div>
+`;

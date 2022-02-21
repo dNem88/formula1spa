@@ -18,7 +18,8 @@ exports[`Test Schedule Schedule non-active 1`] = `
     className="image-container"
   >
     <img
-      alt="flag"
+      alt="bulgaria-flag"
+      loading="lazy"
     />
   </div>
   <h3

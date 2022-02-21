@@ -1,0 +1,4 @@
+p{
+    font-size: clamp(1.2rem, 1.2vw, 2rem);
+    margin-bottom: 3vw;
+}
