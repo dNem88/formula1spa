@@ -56,7 +56,7 @@
     color: white;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 850px) and (orientation: portrait){
     .main-container{
         width: 100%;
         height: 60vh;
@@ -69,5 +69,21 @@
     }
      .video-wrapper > :nth-child(2) {
         height: 40%;
+    }
+}
+
+@media only screen and (max-width: 950px) and (orientation: landscape){
+   .main-container{
+        width: 95%;
+        height: 120vh;
+    }
+    .video-wrapper{
+        height: 90vh;
+    }
+    .video-wrapper > :nth-child(1) {
+        height: 65vh;
+    }
+     .video-wrapper > :nth-child(2) {
+        height: 30vh;
     }
 }

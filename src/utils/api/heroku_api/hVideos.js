@@ -1,6 +1,6 @@
 const heroku_api_url = 'https://boiling-brushlands-51072.herokuapp.com'
 
-async function getVideos(count=10) {
+async function getVideos(count=20) {
     try {
         let response = await fetch(`${heroku_api_url}/videos?count=${count}`, {
             headers: {

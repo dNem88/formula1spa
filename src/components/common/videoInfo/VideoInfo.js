@@ -1,12 +1,19 @@
 import React from 'react'
 import styles from './videoInfo.module.css'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 
 function VideoInfo(props) {
     let navigate = useNavigate()
+    let location = useLocation()
     function clickHandler() {
         navigate(`/videos/${props.id || props._id}`)
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     }
+    
+        
     
     return (
         <div onClick={clickHandler} className={styles['light-info']}>

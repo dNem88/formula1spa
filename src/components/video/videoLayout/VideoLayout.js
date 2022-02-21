@@ -3,6 +3,7 @@ import styles from './videoLayout.module.css'
 import hVideos from '../../../utils/api/heroku_api/hVideos'
 import ErrorComp from '../../common/errorComp/ErrorComp'
 import VideosContainer from '../videosContainer/VideosContainer'
+import LatestVideosContainer from '../latestVideosContainer/LatestVideosContainer'
 import {useLocation, useParams} from 'react-router-dom'
 
 function VideoLayout() {
@@ -45,12 +46,14 @@ function VideoLayout() {
             }
         }
     }, [state.videos, location.pathname])
-
+    console.log(state)
     return (
         <div className={styles.layout}>
             {state.error && state.errorMessage ? <ErrorComp errorMessage={state.errorMessage}/> : null}
             <h1 className={styles['header']}>Video</h1>
             <VideosContainer {...state}/>
+            <h1 className={styles['latest-header']}>Latest videos</h1>
+            <LatestVideosContainer {...state}/>
         </div>
         
     )

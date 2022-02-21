@@ -11,7 +11,7 @@ function VerticalSlider(props) {
             <h3 className={styles['more-videos-title']}>More videos</h3>
             <div className={styles['relative-wrapper']}>
                 <div className={styles['slider-container-absolute']}>
-                    {props.videos.map(x => {
+                    {props.videos.slice(0,4).map(x => {
                         return <div key={x._id} className={styles['video-wrapper']}>
                                     <Video url={x.url}/>
                                     <VideoInfo  _id={x._id} title={x.title}/>
