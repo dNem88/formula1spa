@@ -34,7 +34,7 @@ function Layout() {
             </section>
             <ScheduleWrapper/>
             <section className={styles['standings']}>
-                <DriversStandings/>
+                <DriversStandings count={10}/>
             </section>
         </Fragment>
     )

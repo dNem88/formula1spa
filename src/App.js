@@ -16,12 +16,16 @@ import Footer from './components/common/footer/Footer'
 import ActiveNews from './components/news/activeNews/ActiveNews';
 import VideoLayout from './components/video/videoLayout/VideoLayout'
 import MainVideo from './components/video/mainVideo/MainVideo'
-import ScheduleLayout from './components/schedule/ScheduleLayout/ScheduleLayout'
-
+import StandingsLayout from './components/standings/standingsLayout/StandingsLayout';
+import ScheduleLayout from './components/schedule/ScheduleLayout/ScheduleLayout';
+import DriversStandings from './components/home/standings/DriversStandings';
+import ConstructorsStandings
+ from './components/common/constructorsStandings/ConstructorsStandings';
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
   let context = useAuth()
+  
   function onResize(e) {
     setViewport({width: window.innerWidth})
   }
@@ -53,14 +57,19 @@ function App() {
               <NewsLayout/>
             </newsContext.Provider>}>
               <Route path={':id'} element={<ActiveNews index={false}/>}/>
-              <Route index element={<ActiveNews index={true}/>}/>
+              <Route index element={
+                <ActiveNews index={true}/>}/>
           </Route>
           <Route path={'/videos/*'} element={<VideoLayout/>}>
                 <Route path=":id" element={<MainVideo/>}/>
                 <Route index element={<MainVideo/>}/>
           </Route>
           <Route path={'/schedule'} element={<ScheduleLayout/>}/>
-          <Route path={'/standings'} element={<p>Standings Page</p>}/>
+          <Route path={'/standings/*'} element={<StandingsLayout/>}>
+                <Route path={'drivers'} element={<DriversStandings count={25}/>}/>
+                <Route path={'constructors'} element={<ConstructorsStandings/>}/>
+                 <Route index element={<DriversStandings count={25}/>}/>
+          </Route>
           <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
@@ -74,8 +83,7 @@ function App() {
                 <Register/>
               </userContext.Provider>
             }/>
-            <Route index element={
-              <userContext.Provider value={context}>
+            <Route index element={<userContext.Provider value={context}>
                 <Login/>
               </userContext.Provider>}/>
           </Route>

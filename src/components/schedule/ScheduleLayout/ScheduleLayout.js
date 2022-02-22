@@ -10,7 +10,7 @@ const headerProps = {
     header: 'F1 Schedule 2022',
     description: 'A record 23-race Formula 1 calendar for 2022, including the inaugural Miami Grand Prix*. Click on any Grand Prix for full F1 schedule details, dates, times & full weekend program. *Subject to circuit homologation.'
 }
-function ScheduleLayout(props) {
+function ScheduleLayout() {
 
     const [state, setState] = useState({fullSchedule: null, error: null, errorMessage: null})
 
@@ -34,15 +34,13 @@ function ScheduleLayout(props) {
         }
         FetchSchedule()
     }, [])
- /*Schedule List expects props.fullSchedule array*/
+ 
     return (
         <div className={styles['main-container']}>
+             <CommonHeader {...headerProps} />
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}
             {state.fullSchedule ? 
-                <Fragment>
-                    <CommonHeader {...headerProps} />
-                    <ScheduleList fullSchedule={state.fullSchedule}/> 
-                </Fragment> : <Spinner/>}
+               <ScheduleList fullSchedule={state.fullSchedule}/> : <Spinner/>}
         </div>
     )
 }

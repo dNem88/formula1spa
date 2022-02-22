@@ -6,11 +6,11 @@ function DriverPoints(props) {
     const lastName = driver[1]
     return (
         <div className={styles['driver-row']}>
-            <span>{props.position}</span>
+            <p>{props.position}</p>
             <p>{firstName}</p>
-            <span>{lastName}</span>
+            <p>{lastName}</p>
             <p>{props.team}</p>
-            <span>{props.points}</span>
+            <p>{props.points}</p>
         </div>
     )
 }

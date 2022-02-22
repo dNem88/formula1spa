@@ -9,8 +9,8 @@ function CommonHeader(props){
             <div className={styles.header}>
                 <h1>{props.header}</h1>
             </div>
-            <div>
-                <p className={styles.description}>{props.description}</p>
+            <div className={styles.description}>
+                <p >{props.description}</p>
             </div>
         </div>
     )
