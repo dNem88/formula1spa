@@ -1,21 +1,31 @@
 {
   "files": {
-    "main.css": "/formula1spa/static/css/main.273947e7.css",
-    "main.js": "/formula1spa/static/js/main.4ca846dc.js",
+    "main.css": "/formula1spa/static/css/main.210091f3.css",
+    "main.js": "/formula1spa/static/js/main.ca568af8.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
     "static/media/clock.png": "/formula1spa/static/media/clock.4103ddb25d602609f226.png",
+    "static/media/bahrain.jpg": "/formula1spa/static/media/bahrain.5d9efe58e2fbfd1081d7.jpg",
+    "static/media/uk.jpg": "/formula1spa/static/media/uk.a49762c8bf913ba89c48.jpg",
+    "static/media/netherlands.jpg": "/formula1spa/static/media/netherlands.7e01f538628eb5203356.jpg",
+    "static/media/belgium.jpg": "/formula1spa/static/media/belgium.8815dd6116d69a0c7ab3.jpg",
+    "static/media/brazil.jpg": "/formula1spa/static/media/brazil.20bb497365f7654af68c.jpg",
+    "static/media/austria.jpg": "/formula1spa/static/media/austria.f97b3d35ae5f1aebceaf.jpg",
+    "static/media/usa.jpg": "/formula1spa/static/media/usa.e04e48f10e19e723e732.jpg",
+    "static/media/mexico.jpg": "/formula1spa/static/media/mexico.3048ec5a87c7fe6e755a.jpg",
+    "static/media/singapore.jpg": "/formula1spa/static/media/singapore.080f6f92bbd90bc786a0.jpg",
+    "static/media/united_states.jpg": "/formula1spa/static/media/united_states.f4db0ab686e86fca7521.jpg",
     "static/media/profile.svg": "/formula1spa/static/media/profile.a3a562178197937510e12ad63eb4115a.svg",
     "static/media/authLogo.svg": "/formula1spa/static/media/authLogo.30713623e50f2063f89b3600e8b78df9.svg",
     "static/media/logo.svg": "/formula1spa/static/media/logo.30713623e50f2063f89b3600e8b78df9.svg",
     "index.html": "/formula1spa/index.html",
     "static/media/menu.svg": "/formula1spa/static/media/menu.eec57384032ed89c762e0ac0822edfab.svg",
     "static/media/xicon.svg": "/formula1spa/static/media/xicon.62df51ddb295eb7f59d08af576534dfd.svg",
-    "main.273947e7.css.map": "/formula1spa/static/css/main.273947e7.css.map",
-    "main.4ca846dc.js.map": "/formula1spa/static/js/main.4ca846dc.js.map",
+    "main.210091f3.css.map": "/formula1spa/static/css/main.210091f3.css.map",
+    "main.ca568af8.js.map": "/formula1spa/static/js/main.ca568af8.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.273947e7.css",
-    "static/js/main.4ca846dc.js"
+    "static/css/main.210091f3.css",
+    "static/js/main.ca568af8.js"
   ]
 }
