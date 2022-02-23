@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ScheduleLayout Match Snapshot 1`] = `
+<section
+  className="main-container"
+>
+  <p
+    className="legend"
+  >
+    ROUND 
+    5
+  </p>
+  <div
+    className="date-container"
+  >
+    <div
+      className="date-sub-container"
+    >
+      <span>
+        
+      </span>
+      <span>
+        JAN
+      </span>
+    </div>
+    <div
+      className="flag-container"
+    >
+      <img
+        alt="national-flag"
+        loading="lazy"
+        src="italy.jpg"
+      />
+    </div>
+  </div>
+  <div
+    className="race-name-container"
+  >
+    <div
+      className="race-sub-container"
+    >
+      <span>
+        Italy
+      </span>
+      <span>
+        FORMULA 1 
+        TEST GRAND PRIX
+         2022
+      </span>
+    </div>
+  </div>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="race-track-image"
+      loading="lazy"
+      src="italy.jpg"
+    />
+  </div>
+</section>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ScheduleLayout Match Snapshot 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="header"
+    >
+      <h1>
+        F1 Schedule 2022
+      </h1>
+    </div>
+    <div
+      className="description"
+    >
+      <p>
+        A record 23-race Formula 1 calendar for 2022, including the inaugural Miami Grand Prix*. Click on any Grand Prix for full F1 schedule details, dates, times & full weekend program. *Subject to circuit homologation.
+      </p>
+    </div>
+  </div>
+  <div
+    className="lds-ring"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;

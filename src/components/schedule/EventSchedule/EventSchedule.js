@@ -4,7 +4,7 @@ import flags from '../../../assets/images/flags/flag-images'
 import circuits from '../../../assets/images/circuits/circuit-images'
 
 function EventSchedule(props) {
-    let dates;
+    let dates = [];
     if (props.weekend) {
         dates = props.weekend.split('-').map(x => x.trim().split(" ")[0])
     }

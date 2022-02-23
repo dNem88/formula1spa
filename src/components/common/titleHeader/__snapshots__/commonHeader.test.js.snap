@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Common Header Based on Props Match Snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      test-header
+    </h1>
+  </div>
+  <div
+    className="description"
+  >
+    <p>
+      test-description
+    </p>
+  </div>
+</div>
+`;

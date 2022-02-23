@@ -5,7 +5,7 @@ import styles from './authLayout.module.css'
 function AuthLayout() {
     return (
         <div className={styles.container}>
-            <SelectForm/>
+            <SelectForm location={'auth'}/>
             <div className={styles['form-container']}>
                 <Outlet/>
             </div>

@@ -13,7 +13,7 @@ function StandingsLayout() {
     return (
         <section className={styles['wrapper']}>
             <CommonHeader {...headerProps}/>
-            <SelectForm/>
+            <SelectForm location={'standings'}/>
             <div className={styles['outlet-container']}>
                 <Outlet/>
             </div>

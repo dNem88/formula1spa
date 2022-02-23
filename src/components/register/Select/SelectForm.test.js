@@ -7,7 +7,7 @@ describe('Testing SelectForm Component', () => {
     test('snapshot match', () => {
         let Select = renderer.create(
             <MemoryRouter>
-                <SelectForm/>
+                <SelectForm location={'auth'}/>
             </MemoryRouter>
         ).toJSON()
         expect(Select).toMatchSnapshot()

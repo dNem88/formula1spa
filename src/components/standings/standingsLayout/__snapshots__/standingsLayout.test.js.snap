@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ScheduleLayout Match Snapshot 1`] = `
+<section
+  className="wrapper"
+>
+  <CommonHeader
+    description="Live standings for the current F1 Season"
+    header="F1 Standings 2022"
+  />
+  <SelectForm
+    location="standings"
+  />
+  <div
+    className="outlet-container"
+  />
+</section>
+`;

@@ -1,20 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing DriverPoints Render data properly 1`] = `
+exports[`Testing Constructor Points Component render properly based on props 1`] = `
 <div
   className="driver-row"
 >
   <p>
-    2
-  </p>
-  <p>
-    Lewis
-  </p>
-  <p>
-    Hamilton
+    7
   </p>
   <p>
     Mercedes
+  </p>
+  <p />
+  <p>
+    German
   </p>
   <p>
     100

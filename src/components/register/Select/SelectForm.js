@@ -2,10 +2,10 @@ import React from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import styles from './selectForm.module.css'
 
-function SelectForm() {
+function SelectForm(props) {
     const location = useLocation()
 
-    if (location.pathname.includes('auth')) {
+    if (props.location === 'auth') {
         return (
         <div className={styles.container}>
             <Link className={location.pathname.includes('/auth/login') ? styles['active-link'] : ''} to={'/auth/login'}>Sign in</Link>
@@ -13,7 +13,7 @@ function SelectForm() {
         </div>
     )
     }
-    if (location.pathname.includes('standings')) {
+    if (props.location === 'standings') {
         return (
         <div className={styles.container}>
             <Link className={location.pathname.includes('/standings/drivers') ? styles['active-link'] : ''} to={'/standings/drivers'}>Drivers</Link>
