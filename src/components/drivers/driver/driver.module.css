@@ -1,8 +1,8 @@
 .main-container{
     box-sizing: border-box;
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -11,7 +11,6 @@
     padding: 1vw;
     padding-bottom: 0;
     margin-top: 3vw;
-    margin-bottom: 4vw;
     border-top: .2rem solid black;
     border-right: .2rem solid black;
     border-top-right-radius: 1rem;

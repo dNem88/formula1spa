@@ -1,16 +1,14 @@
 .main-container{
     box-sizing: border-box;
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1vw;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-top: 3vw;
     border-top: .2rem solid black;
     border-right: .2rem solid black;
     border-top-right-radius: 1rem;

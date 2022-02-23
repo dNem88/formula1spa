@@ -25,6 +25,8 @@
     color: black;
     width: max-content;
     font-size: clamp(4rem, 4.5vw, 7rem);
+    font-family: 'Passion One', cursive;
+   
 }
 .description{
     box-sizing: border-box;

@@ -29,7 +29,7 @@ function DriversLayout() {
         }
         FetchDrivers()
     }, [])
-    console.log(state)
+
     return (
         <Fragment>
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}

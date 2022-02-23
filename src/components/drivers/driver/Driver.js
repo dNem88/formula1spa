@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom'
 
 function Driver(props) {
     const navigate = useNavigate()
-    console.log(props._id)
+    
     function clickHandler(e) {
         console.log(e.target)
         navigate(`/drivers/${props._id}`)
