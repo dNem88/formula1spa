@@ -21,6 +21,7 @@ import ScheduleLayout from './components/schedule/ScheduleLayout/ScheduleLayout'
 import DriversStandings from './components/home/standings/DriversStandings';
 import ConstructorsStandings
  from './components/common/constructorsStandings/ConstructorsStandings';
+import DriversLayout from './components/drivers/driversLayout/DriversLayout';
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
@@ -70,7 +71,8 @@ function App() {
                 <Route path={'constructors'} element={<ConstructorsStandings/>}/>
                  <Route index element={<DriversStandings count={25}/>}/>
           </Route>
-          <Route path={'/drivers'} element={<p>Drivers Page</p>}/>
+          <Route path={'/drivers'} element={<DriversLayout/>}/>
+          <Route path={'/drivers/:id'} element={<p>Drivers Page By ID</p>}/>
           <Route path={'/teams'} element={<p>Teams Page</p>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
             <Route path={'login'} element={

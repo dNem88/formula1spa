@@ -20,9 +20,13 @@ import spain from './spain.jpg'
 import uk from './uk.jpg'
 import usa from './usa.jpg'
 import united_states from './united_states.jpg'
+import finland from './finland.jpg'
+import thailand from './thailand.jpg'
+import china from './china.jpg'
+import germany from './germany.jpg'
 
 
 
-const flags = {uae, australia, austria, azerbaijan, bahrain, belgium, brazil, canada, france, hungary, italy, japan, mexico, monaco, netherlands, russia, saudi_arabia, singapore, spain, uk, usa, united_states}
+const flags = {uae, australia, austria, azerbaijan, bahrain, belgium, brazil, canada, france, hungary, italy, japan, mexico, monaco, netherlands, russia, saudi_arabia, singapore, spain, uk, usa, united_states, finland, thailand, germany, china}
 
 export default flags
