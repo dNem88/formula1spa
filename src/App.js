@@ -22,6 +22,8 @@ import DriversStandings from './components/home/standings/DriversStandings';
 import ConstructorsStandings
  from './components/common/constructorsStandings/ConstructorsStandings';
 import DriversLayout from './components/drivers/driversLayout/DriversLayout';
+import TeamsLayout from './components/teams/teamsLayout/TeamsLayout';
+
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
@@ -73,7 +75,8 @@ function App() {
           </Route>
           <Route path={'/drivers'} element={<DriversLayout/>}/>
           <Route path={'/drivers/:id'} element={<p>Drivers Page By ID</p>}/>
-          <Route path={'/teams'} element={<p>Teams Page</p>}/>
+          <Route path={'/teams'} element={<TeamsLayout/>}/>
+          <Route path={'/teams/:id'} element={<p>Teams Page By ID</p>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
             <Route path={'login'} element={
               <userContext.Provider value={context}>
