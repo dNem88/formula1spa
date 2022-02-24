@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/formula1spa/static/css/main.5500d47f.css",
-    "main.js": "/formula1spa/static/js/main.52d653c2.js",
+    "main.css": "/formula1spa/static/css/main.34061f74.css",
+    "main.js": "/formula1spa/static/js/main.2f656806.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
     "static/media/clock.png": "/formula1spa/static/media/clock.4103ddb25d602609f226.png",
+    "static/media/alfa_romeo.jpg": "/formula1spa/static/media/alfa_romeo.f3ba7bdb9eb3a085bf54.jpg",
     "static/media/sainz.jpg": "/formula1spa/static/media/sainz.5106dda27abe05f1f81b.jpg",
+    "static/media/mclaren.jpg": "/formula1spa/static/media/mclaren.5a1cdc30da7e8951be1a.jpg",
+    "static/media/williams.jpg": "/formula1spa/static/media/williams.4a668e8eeef441ebd80e.jpg",
+    "static/media/redbull.jpg": "/formula1spa/static/media/redbull.55b0fab60139e064d0a5.jpg",
+    "static/media/aston_martin.jpg": "/formula1spa/static/media/aston_martin.21950c5fbeb925e2df97.jpg",
+    "static/media/ferrari.jpg": "/formula1spa/static/media/ferrari.e5ec76c0cf78ee1e85e6.jpg",
+    "static/media/alpine.jpg": "/formula1spa/static/media/alpine.fb36aa73b4cfedbba53e.jpg",
     "static/media/vettel.jpg": "/formula1spa/static/media/vettel.7efc02b96e59eb729adc.jpg",
     "static/media/stroll.jpg": "/formula1spa/static/media/stroll.f30f6d8c3480077e1627.jpg",
     "static/media/alonso.jpg": "/formula1spa/static/media/alonso.29d2fc683887bfb1bb3b.jpg",
+    "static/media/mercedes.jpg": "/formula1spa/static/media/mercedes.63299808021925e33337.jpg",
+    "static/media/haas.jpg": "/formula1spa/static/media/haas.ed02044b12e9472dcca2.jpg",
     "static/media/verstappen.jpg": "/formula1spa/static/media/verstappen.0ed765989c47bf6863df.jpg",
     "static/media/leclerc.jpg": "/formula1spa/static/media/leclerc.c16e3fc65fea138023ff.jpg",
     "static/media/hamilton.jpg": "/formula1spa/static/media/hamilton.ba2f42ef2f9a4f5edc2c.jpg",
@@ -20,6 +29,7 @@
     "static/media/ricciardo.jpg": "/formula1spa/static/media/ricciardo.b3e66c06eace9753e556.jpg",
     "static/media/latifi.jpg": "/formula1spa/static/media/latifi.4c1bb08909f59325c8ff.jpg",
     "static/media/ocon.jpg": "/formula1spa/static/media/ocon.ef6a8390428efdd17284.jpg",
+    "static/media/alpha_tauri.jpg": "/formula1spa/static/media/alpha_tauri.23f669a1530727e9ba2b.jpg",
     "static/media/russel.jpg": "/formula1spa/static/media/russel.95ddaac6540dd48414b8.jpg",
     "static/media/bottas.jpg": "/formula1spa/static/media/bottas.4712c0ae5b7f6b64cd82.jpg",
     "static/media/albon.jpg": "/formula1spa/static/media/albon.e8331cd439f9524705ce.jpg",
@@ -40,12 +50,12 @@
     "index.html": "/formula1spa/index.html",
     "static/media/menu.svg": "/formula1spa/static/media/menu.eec57384032ed89c762e0ac0822edfab.svg",
     "static/media/xicon.svg": "/formula1spa/static/media/xicon.62df51ddb295eb7f59d08af576534dfd.svg",
-    "main.5500d47f.css.map": "/formula1spa/static/css/main.5500d47f.css.map",
-    "main.52d653c2.js.map": "/formula1spa/static/js/main.52d653c2.js.map",
+    "main.34061f74.css.map": "/formula1spa/static/css/main.34061f74.css.map",
+    "main.2f656806.js.map": "/formula1spa/static/js/main.2f656806.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5500d47f.css",
-    "static/js/main.52d653c2.js"
+    "static/css/main.34061f74.css",
+    "static/js/main.2f656806.js"
   ]
 }
