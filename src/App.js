@@ -23,6 +23,7 @@ import ConstructorsStandings
  from './components/common/constructorsStandings/ConstructorsStandings';
 import DriversLayout from './components/drivers/driversLayout/DriversLayout';
 import TeamsLayout from './components/teams/teamsLayout/TeamsLayout';
+import TeamPageLayout from './components/teamPage/teamPageLayout/TeamPageLayout';
 
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
@@ -76,7 +77,7 @@ function App() {
           <Route path={'/drivers'} element={<DriversLayout/>}/>
           <Route path={'/drivers/:id'} element={<p>Drivers Page By ID</p>}/>
           <Route path={'/teams'} element={<TeamsLayout/>}/>
-          <Route path={'/teams/:id'} element={<p>Teams Page By ID</p>}/>
+          <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
             <Route path={'login'} element={
               <userContext.Provider value={context}>

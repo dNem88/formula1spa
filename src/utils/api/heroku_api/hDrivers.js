@@ -25,9 +25,22 @@ async function getDriverById(id) {
         return err
     }
 }
+async function getDriverByName(name) {
+    try {
+        const response = await fetch(`https://boiling-brushlands-51072.herokuapp.com/drivers?name=${encodeURI(name)}`, {
+            headers: {
+                'Content-type': 'application/json'
+            },
+            credentials: 'include'
+        })
+        return response
+    } catch (err) {
+        return err
+    }
+}
 
 const api = {
-    getDriverById, getDrivers
+    getDriverById, getDrivers, getDriverByName
 }
 
 export default api

@@ -1,0 +1,27 @@
+.main-container{
+    width: 100vw;
+    height: 90vh;
+    padding: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 235, 235, 0.9);
+}
+.content-container{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.drivers-container{
+    width: 50%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

@@ -1,0 +1,51 @@
+.main-container{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image-container{
+    width: 23vw;
+    height: 23vw;
+    background-color: white;
+}
+.image-container > img {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 235, 235, 0.9);
+}
+.content{
+    box-sizing: border-box;
+    width: 23vw;
+    height: 30%;
+    color: white;
+}
+.content > h1{
+    width: 100%;
+    height:50%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    padding-left: 2vw;
+    font-family: 'Passion One', cursive;
+    font-size: clamp(3rem, 4vw, 6rem);
+    color: black
+}
+.driver{
+    padding: 0;
+    margin: 0;
+    padding-left: 2vw;
+    font-size: clamp(1.4rem, 1.3vw, 2.5rem);
+    color: black;
+}
+.team{
+    padding: 0;
+    margin: 0;
+    padding-left: 2vw;
+    font-size: clamp(1rem, 1vw, 2rem);
+    color: black;
+}

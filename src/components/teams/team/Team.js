@@ -5,7 +5,7 @@ import teams from '../../../assets/images/teams/teams'
 import {useNavigate} from 'react-router-dom'
 import TeamDriver from '../teamDriver/TeamDriver'
 
-function Driver(props) {
+function Team(props) {
     const navigate = useNavigate()
     
     function clickHandler(e) {
@@ -23,7 +23,7 @@ function Driver(props) {
                 </div>
             </div>
             {props.drivers.map( x => {
-                return <TeamDriver name={x} image={x.split(' ')[1].toLowerCase()}/>
+                return <TeamDriver key={x} name={x} image={x.split(' ')[1].toLowerCase()}/>
             })}
             <div className={styles['flex-wrapper']}>
                 <img src={teams[props.image]} alt='f1-team-image' loading='lazy'/>
@@ -32,4 +32,4 @@ function Driver(props) {
     )
 }
 
-export default Driver
+export default Team
