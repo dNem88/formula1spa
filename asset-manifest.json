@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/formula1spa/static/css/main.34061f74.css",
-    "main.js": "/formula1spa/static/js/main.2f656806.js",
+    "main.css": "/formula1spa/static/css/main.bce3db9f.css",
+    "main.js": "/formula1spa/static/js/main.23846012.js",
     "static/js/787.9e555f54.chunk.js": "/formula1spa/static/js/787.9e555f54.chunk.js",
     "static/media/clock.png": "/formula1spa/static/media/clock.4103ddb25d602609f226.png",
     "static/media/alfa_romeo.jpg": "/formula1spa/static/media/alfa_romeo.f3ba7bdb9eb3a085bf54.jpg",
@@ -50,12 +50,12 @@
     "index.html": "/formula1spa/index.html",
     "static/media/menu.svg": "/formula1spa/static/media/menu.eec57384032ed89c762e0ac0822edfab.svg",
     "static/media/xicon.svg": "/formula1spa/static/media/xicon.62df51ddb295eb7f59d08af576534dfd.svg",
-    "main.34061f74.css.map": "/formula1spa/static/css/main.34061f74.css.map",
-    "main.2f656806.js.map": "/formula1spa/static/js/main.2f656806.js.map",
+    "main.bce3db9f.css.map": "/formula1spa/static/css/main.bce3db9f.css.map",
+    "main.23846012.js.map": "/formula1spa/static/js/main.23846012.js.map",
     "787.9e555f54.chunk.js.map": "/formula1spa/static/js/787.9e555f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34061f74.css",
-    "static/js/main.2f656806.js"
+    "static/css/main.bce3db9f.css",
+    "static/js/main.23846012.js"
   ]
 }
