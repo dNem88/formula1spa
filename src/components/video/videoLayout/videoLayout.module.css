@@ -1,12 +1,12 @@
 .layout{
      width: 100%;
-     background-color: #1F1F27;
+     background-color: var(--color-dark-blue);
      display: flex;
      flex-direction: column;
 }
 
 .header{
-    background-color: #1F1F27;
+    background-color: var(--color-dark-blue);
     height: 12vh;
     font-size: 4rem;
     color: white;

@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgba(238, 235, 235, 0.9);
+    background-color: white;
 }
 .content-container{
     width: 50%;
@@ -18,7 +18,6 @@
     height: 100%;
 }
 .drivers-container{
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +29,7 @@
     }
     .content-container{
         width: 100%;
-        height: 100vh;
+        height: 70vh;
     }
     .drivers-container{
         width: 100%;
@@ -39,12 +38,14 @@
 }
 @media only screen and (max-width: 1000px) and (orientation: landscape){
     .main-container{
-        height: 150vh;
+        height: 120vh;
     }
     .content-container{
-        height: 150vh;
+        width: 50%;
+        height: 120vh;
     }
     .drivers-container{
-        height: 150vh;
+        width:30%;
+        height: 120vh;
     }
 }

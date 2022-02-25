@@ -23,6 +23,9 @@
     height: 30%;
     color: white;
 }
+.content:hover  h1{
+    color: white;
+}
 .content > h1{
     width: 100%;
     height:50%;
@@ -33,7 +36,9 @@
     padding-left: 2vw;
     font-family: 'Passion One', cursive;
     font-size: clamp(3rem, 4vw, 6rem);
-    color: black
+    color: black;
+    animation-name: fade;
+    animation-duration: .5s;
 }
 .driver{
     padding: 0;
@@ -41,6 +46,11 @@
     padding-left: 2vw;
     font-size: clamp(1.4rem, 1.3vw, 2.5rem);
     color: black;
+    animation-name: fade;
+    animation-duration: .5s;
+}
+.content:hover  .driver{
+    color: white;
 }
 .team{
     padding: 0;
@@ -48,4 +58,42 @@
     padding-left: 2vw;
     font-size: clamp(1rem, 1vw, 2rem);
     color: black;
+    animation-name: fade;
+    animation-duration: .5s;
+}
+.content:hover  .team{
+    color: white;
+}
+.content:hover{
+    background-color: var(--color-dark-blue);
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media only screen and (max-width: 800px) and (orientation: portrait){
+    .main-container{
+        width: 50vw;
+        height: 100%;
+    }
+    .image-container{
+        width: 48vw;
+        height: 48vw;
+    }
+    .content{
+        width: 48vw;
+        height: 60vw;
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape){
+     .main-container{
+        width: 50vw;
+        height: 100%;
+    }
+    .content{
+        height: 45vh;
+    }
 }

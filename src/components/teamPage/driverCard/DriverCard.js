@@ -3,7 +3,7 @@ import styles from './driverCard.module.css'
 import drivers from '../../../assets/images/drivers/driver-images'
 import hDrivers from '../../../utils/api/heroku_api/hDrivers'
 import ErrorComp from '../../common/errorComp/ErrorComp'
-import Spinner from '../../common/spinner/Spinner'
+
 
 function DriverCard(props) {
     let familyName = props.image.split(' ')[1]
@@ -24,14 +24,20 @@ function DriverCard(props) {
         }
         FetchDriver()
     }, [])
+
    
     return (
+        
         <div className={styles['main-container']}>
             <div className={styles['image-container']}>
                 <img src={drivers[familyName.toLowerCase()]} alt='driver-image' loading='lazy'/>
             </div>
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}
-            {!state.error ? (!state.driver ? <Spinner/> : 
+            {!state.error ? (!state.driver ? 
+            <div className={styles.content}>
+                 
+            </div>
+                    : 
                     <div className={styles.content}>
                         <h1>{state.driver.permanentNumber}</h1>
                         <p className={styles['driver']}>{`${state.driver.givenName} ${state.driver.familyName}`}</p>

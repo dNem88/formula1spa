@@ -19,3 +19,13 @@
     height: 100%;
     object-fit: fill;
 }
+.flag-container{
+    width: 15vh;
+    height: 8vh;
+    padding: 0;
+}
+.flag-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

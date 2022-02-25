@@ -24,6 +24,7 @@ import ConstructorsStandings
 import DriversLayout from './components/drivers/driversLayout/DriversLayout';
 import TeamsLayout from './components/teams/teamsLayout/TeamsLayout';
 import TeamPageLayout from './components/teamPage/teamPageLayout/TeamPageLayout';
+import DriverPageLayout from './components/driverPage/driverPageLayout/DriverPageLayout';
 
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
@@ -75,7 +76,7 @@ function App() {
                  <Route index element={<DriversStandings count={25}/>}/>
           </Route>
           <Route path={'/drivers'} element={<DriversLayout/>}/>
-          <Route path={'/drivers/:id'} element={<p>Drivers Page By ID</p>}/>
+          <Route path={'/drivers/:id'} element={<DriverPageLayout/>}/>
           <Route path={'/teams'} element={<TeamsLayout/>}/>
           <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
           <Route path={'/auth'} element={<AuthLayout/>}>
