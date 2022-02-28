@@ -4,7 +4,7 @@ import hStandings from '../../../utils/api/heroku_api/hStandings'
 import ErrorComp from '../../common/errorComp/ErrorComp'
 import {Link} from 'react-router-dom'
 import DriversPoints from '../../common/driverPoints/DriverPoints'
-import Spinner from '../../common/spinner/Spinner'
+
 
 
 function DriversStandings(props) {
@@ -46,7 +46,7 @@ function DriversStandings(props) {
                         <h2>DRIVERS STANDINGS</h2>
                     </div>
                     <div className={styles['standings-container']}>
-                        {!standings.standings ? <Spinner/> : 
+                        {!standings.standings ? null : 
                             standings.standings.slice(0,props.count).map(x => {
                                 return <DriversPoints key={x.driver} {...x}/>
                             })

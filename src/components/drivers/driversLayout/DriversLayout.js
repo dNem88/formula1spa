@@ -2,7 +2,6 @@ import React, {useState, useEffect, Fragment} from 'react'
 import styles from './driversLayout.module.css'
 import api from '../../../utils/api/heroku_api/hDrivers'
 import ErrorComp from '../../common/errorComp/ErrorComp'
-import Spinner from '../../common/spinner/Spinner'
 import CommonHeader from '../../common/titleHeader/CommonHeader'
 import DriversList from '../DriversList/DriversList'
 
@@ -35,7 +34,7 @@ function DriversLayout() {
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}
             <section className={styles['main-container']}>
                 <CommonHeader {...headerProps}/>
-                {!state.error && !state.drivers ? <Spinner/> :
+                {!state.error && !state.drivers ? null :
                     <DriversList {...state}/>
                 }
             </section>

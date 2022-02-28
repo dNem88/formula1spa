@@ -2,7 +2,6 @@ import React, {useState, useEffect, Fragment} from 'react'
 import styles from './teamsLayout.module.css'
 import api from '../../../utils/api/heroku_api/hTeams'
 import ErrorComp from '../../common/errorComp/ErrorComp'
-import Spinner from '../../common/spinner/Spinner'
 import CommonHeader from '../../common/titleHeader/CommonHeader'
 import TeamsList from '../teamsList/TeamsList'
 
@@ -35,7 +34,7 @@ function TeamsLayout() {
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}
             <section className={styles['main-container']}>
                 <CommonHeader {...headerProps}/>
-                {!state.error && !state.teams ? <Spinner/> :
+                {!state.error && !state.teams ? null :
                     <TeamsList {...state}/>
                 }
             </section>

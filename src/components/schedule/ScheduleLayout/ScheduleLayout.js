@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react'
 import ScheduleList from '../ScheduleList/ScheduleList'
 import styles from './scheduleLayout.module.css'
 import ErrorComp from '../../common/errorComp/ErrorComp'
-import Spinner from '../../common/spinner/Spinner'
+
 import transformSchedule from '../../../utils/common/transformSchedule'
 import schedule from '../../../utils/api/heroku_api/schedule'
 import CommonHeader from '../../common/titleHeader/CommonHeader'
@@ -40,7 +40,7 @@ function ScheduleLayout() {
              <CommonHeader {...headerProps} />
             {state.error ? <ErrorComp errorMessage={state.errorMessage}/> : null}
             {state.fullSchedule ? 
-               <ScheduleList fullSchedule={state.fullSchedule}/> : <Spinner/>}
+               <ScheduleList fullSchedule={state.fullSchedule}/> : null}
         </div>
     )
 }
