@@ -5,6 +5,7 @@ import hVideos from '../../../utils/api/heroku_api/hVideos'
 import ErrorComp from '../../common/errorComp/ErrorComp'
 import Spinner from '../../common/spinner/Spinner'
 import VideoWrapper from '../../common/videoWrapper/VideoWrapper'
+import Fieldset from '../../common/containers/fieldset/Fieldset'
 
 function VideosWrapper() {
     const [videos, setVideos] = useState({error: null, hasError: false, videos: null})
@@ -31,8 +32,7 @@ function VideosWrapper() {
     },[])
     
     return (
-         <fieldset className={styles['editor-pick']}>
-                <legend className={styles['editor-legend']}>EDITOR'S PICK</legend>
+            <Fieldset content={"EDITOR'S PICK"} size={'full'} color={'black'}>
                 {videos.hasError && videos.error ? <ErrorComp errorMessage={videos.error}/> : null}
                 {(!videos.error && !videos.hasError) ? videos.videos ? <Fragment>
                     <div className={styles['video-half']}>
@@ -45,7 +45,7 @@ function VideosWrapper() {
                         <VideoWrapper url={videos.videos[2].url} title={videos.videos[2].title} id={videos.videos[2]._id}/>
                     </div> 
                 </Fragment> : <Spinner/> : null}
-            </fieldset>
+            </Fieldset>
     )
 }
 

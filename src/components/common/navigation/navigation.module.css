@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 .links-container > a:hover{
-    background-color: #1F1F27;
+    background-color: var(--color-dark-blue);
 }
 .auth-container {
     margin-right: 1.5rem;
@@ -67,5 +67,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #1f1f27;
+    background-color: var(--color-dark-blue);
 }

@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     border-radius: .5rem;
-    background-color: #1f1f27;
+    background-color: var(--color-dark-blue);
 }
 .heading-container > h2{
     color: white;
@@ -30,7 +30,7 @@
     width: clamp(9rem, 20vw, 12rem);
     height: clamp(2.2rem, 3.3vw, 4rem);
     padding: 1vw;
-    background-color: #e10600;
+    background-color: var(--color-red);
     font-weight: bold;
     font-size: clamp(.5rem, .8vw, 1.5rem);
     color: white;
@@ -46,8 +46,8 @@
     background-color: white;
     border-style: solid;
     border-width: 2px;
-    border-color: #e10600;
-    color:#1f1f27;
+    border-color: var(--color-red);
+    color: var(--color-dark-blue);
 }
 
 @media only screen and (max-width: 850px) {

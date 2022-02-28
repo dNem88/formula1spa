@@ -7,16 +7,16 @@
     padding: 3vw;
     align-items: center;
     justify-content: flex-start;
-    background-color: #1f1f27;
+    background-color: var(--color-dark-blue);
     border-style: solid;
     border-radius: 1rem;
-    border-color: #e10600;
+    border-color: var(--color-red);
     border-width: .25rem;
 }
 
 .error-p{
     width: 100%;
-    color: #e10600;
+    color: var(--color-red);
     font-size: clamp(1rem, 1.5vw, 3rem);
     font-weight: bold;
     padding: 0;

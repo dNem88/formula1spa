@@ -1,17 +1,6 @@
-.main-container{
-    box-sizing: border-box;
-    width: 22vw;
-    height: 38vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
 .image-container{
     width: 100%;
-    height: 60%;
+    height: 50%;
     transition: height .5s ease;
 }
 
@@ -25,16 +14,10 @@
 .container {
     box-sizing: border-box;
     width: 100%;
-    height: 40%;
+    height: 50%;
     border-bottom-right-radius: 1rem;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-right-width: clamp(.05rem,.2vw, .2rem);;
-    border-bottom-width: clamp(.05rem,.2vw, .2rem);;
-    border-bottom-color: #89898e;
-    border-right-color: #89898e;
-    margin-top: .5vw;
-    overflow-y: hidden;
+    border-right: clamp(.05rem,.2vw, .2rem) solid #89898e;
+    border-bottom: clamp(.05rem,.2vw, .2rem) solid #89898e;
     padding: .6vw;
     cursor: pointer;
     transition: height .35s ease;
@@ -42,7 +25,7 @@
 .dark-container{
     box-sizing: border-box;
     width: 100%;
-    height: 40%;
+    height: 50%;
     overflow-y: hidden;
     padding: .5vw;
     cursor: pointer;
@@ -51,56 +34,21 @@
 
 .news-par{
     width: 100%;
-    color: #e10600;
-    font-size: clamp(.5rem, .8vw, 1rem);
+    color: var(--color-red);
+    font-size: var(--font-size-small);
     font-weight: bold;
     padding: 0;
     margin: 0;
+
 }
 .content-par{
     width: 100%;
     padding: 0;
     margin: 0;
-    word-wrap: break-word;
-    font-size: clamp(rem, 1.2vw, 3rem);
-}
-.main-container:hover .image-container{
-    height: 57%;
-    transition: height .35s ease;
-}
-.main-container:hover .container{
-    height: 43%;
-    transition: height .35s ease;
-    border-bottom-color: #e10600;
-    border-right-color: #e10600;
-}
-.main-container:hover .dark-container{
-    height: 43%;
-    transition: height .35s ease;
-    background-color: #1f1f27;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-.main-container:hover .dark-container > .content-par{
-    color: white;
-}
-@media only screen and (max-width: 750px) {
-    .main-container{
-        width: 44vw;
-        height: 45%;
-    }
-    .image-container {
-        height: 50%;
-    }
-    .container, .dark-container{
-        height: 50%;
-        padding: .5rem;
-    }
-}
-@media only screen and (max-width: 800px) and (orientation: landscape){
-    .main-container{
-        width: 45vw;
-        height: 80vh;
-    }
+    font-size: var(--font-size-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+

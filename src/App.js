@@ -1,31 +1,86 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, lazy, Suspense} from 'react'
 import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.module.css';
+
+import Spinner from './components/common/spinner/Spinner';
 import Navigation from './components/common/navigation/Navigation'
+import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
+
 import userContext from './context/userContext'
 import newsContext from './context/newsContext';
 import useAuth from './hooks/useAuth'
 import useNews from './hooks/useNews';
-import AuthLayout from './components/register/Layout/AuthLayout';
-import Register from './components/register/Register/Register';
-import Login from './components/register/Login/Login';
-import Layout from './components/home/layout/Layout';
-import NewsLayout from './components/news/layout/NewsLayout';
-import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
 import Footer from './components/common/footer/Footer'
-import ActiveNews from './components/news/activeNews/ActiveNews';
-import VideoLayout from './components/video/videoLayout/VideoLayout'
-import MainVideo from './components/video/mainVideo/MainVideo'
-import StandingsLayout from './components/standings/standingsLayout/StandingsLayout';
-import ScheduleLayout from './components/schedule/ScheduleLayout/ScheduleLayout';
-import DriversStandings from './components/home/standings/DriversStandings';
-import ConstructorsStandings
- from './components/common/constructorsStandings/ConstructorsStandings';
-import DriversLayout from './components/drivers/driversLayout/DriversLayout';
-import TeamsLayout from './components/teams/teamsLayout/TeamsLayout';
-import TeamPageLayout from './components/teamPage/teamPageLayout/TeamPageLayout';
-import DriverPageLayout from './components/driverPage/driverPageLayout/DriverPageLayout';
 
+import Layout from './components/home/layout/Layout';
+
+
+// import NewsLayout from 
+const ActiveNews = lazy(() => 
+  import('./components/news/activeNews/ActiveNews')
+)
+// import ActiveNews from './components/news/activeNews/ActiveNews';
+
+const VideoLayout = lazy(() => 
+  import('./components/video/videoLayout/VideoLayout')
+)
+// import VideoLayout from './components/video/videoLayout/VideoLayout'
+const MainVideo = lazy(() => 
+  import('./components/video/mainVideo/MainVideo')
+)
+// import MainVideo from './components/video/mainVideo/MainVideo'
+const StandingsLayout = lazy(() => 
+  import('./components/standings/standingsLayout/StandingsLayout')
+)
+// import StandingsLayout from './components/standings/standingsLayout/StandingsLayout';
+const ScheduleLayout = lazy(() => 
+  import('./components/schedule/ScheduleLayout/ScheduleLayout')
+)
+// import ScheduleLayout from './components/schedule/ScheduleLayout/ScheduleLayout';
+const DriversStandings = lazy(() => 
+  import('./components/home/standings/DriversStandings')
+)
+// import DriversStandings from './components/home/standings/DriversStandings';
+const ConstructorsStandings = lazy(() => 
+  import('./components/common/constructorsStandings/ConstructorsStandings')
+)
+// import ConstructorsStandings
+// from './components/common/constructorsStandings/ConstructorsStandings';
+
+const DriversLayout = lazy(() =>
+import('./components/drivers/driversLayout/DriversLayout')
+)
+// import DriversLayout from './components/drivers/driversLayout/DriversLayout';
+const DriverPageLayout = lazy(() => 
+import('./components/driverPage/driverPageLayout/DriverPageLayout')
+)
+// import DriverPageLayout from './components/driverPage/driverPageLayout/DriverPageLayout';
+
+const TeamsLayout = lazy(() => 
+import('./components/teams/teamsLayout/TeamsLayout'))
+// import TeamsLayout from './components/teams/teamsLayout/TeamsLayout';
+const TeamPageLayout = lazy(() => 
+import('./components/teamPage/teamPageLayout/TeamPageLayout')
+)
+// import TeamPageLayout from './components/teamPage/teamPageLayout/TeamPageLayout';
+const AuthLayout = lazy(() => 
+  import('./components/register/Layout/AuthLayout')
+)
+// import AuthLayout from './components/register/Layout/AuthLayout';
+const Register = lazy(() => 
+  import('./components/register/Register/Register')
+)
+// import Register from './components/register/Register/Register';
+const Login = lazy(() => 
+  import('./components/register/Login/Login')
+)
+// import Login from './components/register/Login/Login';
+
+
+
+const NewsLayout = lazy(() =>
+  import('./components/news/layout/NewsLayout')
+)
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
@@ -52,6 +107,7 @@ function App() {
         {viewport.width > 850 ? <Navigation/> : <MobileNavigation/>}
       </userContext.Provider>
       <main>
+        <Suspense fallback={<p></p>}>
         <Routes>
           <Route path={'/'} element={
             <newsContext.Provider value={contextNews}>
@@ -96,6 +152,7 @@ function App() {
           </Route>
           <Route path={'/profile'} element={<p>Profile Page</p>}/>
         </Routes>
+        </Suspense>
       </main>
       <Footer/>
     </Router>

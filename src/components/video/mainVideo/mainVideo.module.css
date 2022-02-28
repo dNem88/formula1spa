@@ -1,45 +1,11 @@
-.main-container{
-    box-sizing: border-box;
-    width: 50%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-top-color: #e10600;
-    border-right-color: #e10600;
-    border-bottom-color: #e10600;
-    border-top-width: clamp(.45rem,.6vw, 3rem);
-    border-right-width: clamp(.45rem,.6vw, 3rem);
-    border-bottom-width: clamp(.45rem,.6vw, 3rem);
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-left: none;
-    padding: 1.5vw;
-}
 
-.legend{
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
-    padding-bottom: .5rem;
-    padding-left: 0;
-    padding-right: .5vw;
-    padding-left: .5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 .video-wrapper{
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-   
+    padding-left: 2vw;
 }
 
 .video-wrapper :nth-child(2){
@@ -57,12 +23,9 @@
 }
 
 @media only screen and (max-width: 850px) and (orientation: portrait){
-    .main-container{
-        width: 100%;
-        height: 60vh;
-    }
+
     .video-wrapper{
-        height: 100%;
+        height: 85vh;
     }
     .video-wrapper > :nth-child(1) {
         height: 60%;
@@ -73,10 +36,7 @@
 }
 
 @media only screen and (max-width: 950px) and (orientation: landscape){
-   .main-container{
-        width: 95%;
-        height: 120vh;
-    }
+   
     .video-wrapper{
         height: 90vh;
     }

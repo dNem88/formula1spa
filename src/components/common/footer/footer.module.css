@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #1f1f27;
+    background-color: var(--color-dark-blue);
     color: white;
 }
 .footer-container{
@@ -35,7 +35,7 @@
 }
 .footer-container > a:hover{
     text-decoration: underline;
-    text-decoration-color: #e10600;
+    text-decoration-color: var(--color-red);
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;
 }
@@ -59,17 +59,13 @@
         justify-content: flex-start;
         width: 95%;
         height: 6vh;
-        border-bottom-style: solid;
-        border-bottom-color: white;
-        border-bottom-width: 1px;
-        border-right-style: solid;
-        border-right-color: white;
-        border-right-width: 1px;
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
         border-bottom-right-radius: 1rem;
     }
     .footer-container > a:hover{
-         border-bottom-color: #e10600;
-         border-right-color: #e10600;
+         border-bottom-color: var(--color-red);
+         border-right-color: var(--color-red);
          text-decoration: none;
     }
     .strong-container{

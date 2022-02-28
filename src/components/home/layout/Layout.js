@@ -1,13 +1,23 @@
-import React, {Fragment, useContext} from 'react'
+import React, {Fragment, useContext, lazy, Suspense} from 'react'
 import styles from './layout.module.css'
 import News from '../../common/news/News'
 import Trending from '../trending/Trending'
 import newsContext from '../../../context/newsContext'
 import Spinner from '../../common/spinner/Spinner'
 import ErrorComp from '../../common/errorComp/ErrorComp'
-import VideosWrapper from '../videosWrapper/VideosWrapper'
-import ScheduleWrapper from '../ScheduleWrapper/ScheduleWrapper'
-import DriversStandings from '../standings/DriversStandings'
+
+const VideosWrapper = lazy(() => 
+    import('../videosWrapper/VideosWrapper')
+)
+// import VideosWrapper from '../videosWrapper/VideosWrapper'
+const ScheduleWrapper = lazy(() => 
+    import('../ScheduleWrapper/ScheduleWrapper')
+)
+// import ScheduleWrapper from '../ScheduleWrapper/ScheduleWrapper'
+const DriversStandings = lazy(() => 
+    import('../standings/DriversStandings')
+)
+// import DriversStandings from '../standings/DriversStandings'
 
 function Layout() {
     let context = useContext(newsContext);

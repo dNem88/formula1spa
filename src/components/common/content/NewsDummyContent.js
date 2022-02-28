@@ -4,7 +4,7 @@ import styles from './content.module.css'
 function NewsDummyContent() {
     
     return (
-        <p>Important to note that NewsApi, which I use for this project, doesn't allow news content for development purposes. So the paragraph below is with some dummy data instead of the original content.<br/>
+        <p className={styles['content']}>Important to note that NewsApi, which I use for this project, doesn't allow news content for development purposes. So the paragraph below is with some dummy data instead of the original content.<br/>
         <br/>
             
             Why do some teams have 'gills' on their sidepods, why have some teams chosen pullrod over pushrod suspension, and why do the 2022 F1 cars look so different? Mark Hughes investigates after AlphaTauri, Williams, Ferrari and Mercedes unveiled their cars over the second week of 2022 Formula 1 car launches - with technical imagery from Giorgio Piola.<br/>

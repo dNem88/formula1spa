@@ -3,6 +3,7 @@ import styles from './mainVideo.module.css'
 import Video from '../../common/video/Video'
 import VideoInfo from '../../common/videoInfo/VideoInfo'
 import {useOutletContext} from 'react-router-dom'
+import Fieldset from '../../common/containers/fieldset/Fieldset'
 
 function MainVideo() {
     const context = useOutletContext()
@@ -13,18 +14,16 @@ function MainVideo() {
     }
    
     return (
-        <fieldset className={styles['main-container']}>
+        <Fieldset content={'MUST SEE'} size={'half'} color={'white'}>
             {video ?
              <Fragment>
-                <legend className={styles.legend}>Must see</legend>
                 <div className={styles['video-wrapper']}>
                     <Video url={video.url}/>
                     <VideoInfo _id={video._id} title={video.title}/>
                 </div>
              </Fragment> : null
-            }
-            
-        </fieldset>
+            } 
+        </Fieldset>
     )
 }
 

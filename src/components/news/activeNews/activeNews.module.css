@@ -9,7 +9,7 @@
 
 .feature{
     font-weight: bold;
-    color: #e10600;
+    color: var(--color-red);
 }
 .news-heading{
     font-size: clamp(2rem, 2vw, 4rem);
@@ -23,8 +23,8 @@
     border-right-style: solid;
     border-top-width: 1vw;
     border-right-width: 1vw;
-    border-top-color: #e10600;
-    border-right-color: #e10600;
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-red);
     border-top-right-radius: 2rem;
     overflow: hidden;
     margin-bottom: 3vw;

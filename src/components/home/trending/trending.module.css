@@ -11,8 +11,8 @@
 }
 .trending-p{
     width: 100%;
-    color: #e10600;
-    font-size: clamp(.5rem, .8vw, 1rem);
+    color: var(--color-red);
+    font-size: var(--font-size-small);
     font-weight: bold;
     padding: 0;
     margin: 0; 

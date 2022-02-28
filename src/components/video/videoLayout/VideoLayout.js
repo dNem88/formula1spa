@@ -46,7 +46,7 @@ function VideoLayout() {
             }
         }
     }, [state.videos, location.pathname])
-    console.log(state)
+    
     return (
         <div className={styles.layout}>
             {state.error && state.errorMessage ? <ErrorComp errorMessage={state.errorMessage}/> : null}
