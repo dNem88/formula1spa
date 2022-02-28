@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/formula1spa/static/css/main.9cc1d9f2.css",
-    "main.js": "/formula1spa/static/js/main.50f11a21.js",
+    "main.js": "/formula1spa/static/js/main.8fadb107.js",
     "static/css/304.52b2859b.chunk.css": "/formula1spa/static/css/304.52b2859b.chunk.css",
     "static/js/304.a7cfd201.chunk.js": "/formula1spa/static/js/304.a7cfd201.chunk.js",
     "static/css/676.9031fd96.chunk.css": "/formula1spa/static/css/676.9031fd96.chunk.css",
@@ -11,15 +11,15 @@
     "static/css/310.8eb79862.chunk.css": "/formula1spa/static/css/310.8eb79862.chunk.css",
     "static/js/310.cf9c6237.chunk.js": "/formula1spa/static/js/310.cf9c6237.chunk.js",
     "static/css/891.a1b029ec.chunk.css": "/formula1spa/static/css/891.a1b029ec.chunk.css",
-    "static/js/891.a6cf93bc.chunk.js": "/formula1spa/static/js/891.a6cf93bc.chunk.js",
+    "static/js/891.01f765ea.chunk.js": "/formula1spa/static/js/891.01f765ea.chunk.js",
     "static/css/799.ccca0ed0.chunk.css": "/formula1spa/static/css/799.ccca0ed0.chunk.css",
     "static/js/799.e41f4c31.chunk.js": "/formula1spa/static/js/799.e41f4c31.chunk.js",
     "static/css/850.51ad8057.chunk.css": "/formula1spa/static/css/850.51ad8057.chunk.css",
-    "static/js/850.d6211c41.chunk.js": "/formula1spa/static/js/850.d6211c41.chunk.js",
+    "static/js/850.d42f69d5.chunk.js": "/formula1spa/static/js/850.d42f69d5.chunk.js",
     "static/css/113.096c96fb.chunk.css": "/formula1spa/static/css/113.096c96fb.chunk.css",
     "static/js/113.043b2c33.chunk.js": "/formula1spa/static/js/113.043b2c33.chunk.js",
     "static/css/753.0d8e3e54.chunk.css": "/formula1spa/static/css/753.0d8e3e54.chunk.css",
-    "static/js/753.06050455.chunk.js": "/formula1spa/static/js/753.06050455.chunk.js",
+    "static/js/753.3d0d8bde.chunk.js": "/formula1spa/static/js/753.3d0d8bde.chunk.js",
     "static/css/718.7866e741.chunk.css": "/formula1spa/static/css/718.7866e741.chunk.css",
     "static/js/718.8922a694.chunk.js": "/formula1spa/static/js/718.8922a694.chunk.js",
     "static/css/785.5dd6b1c7.chunk.css": "/formula1spa/static/css/785.5dd6b1c7.chunk.css",
@@ -80,7 +80,7 @@
     "static/media/menu.svg": "/formula1spa/static/media/menu.eec57384032ed89c762e0ac0822edfab.svg",
     "static/media/xicon.svg": "/formula1spa/static/media/xicon.62df51ddb295eb7f59d08af576534dfd.svg",
     "main.9cc1d9f2.css.map": "/formula1spa/static/css/main.9cc1d9f2.css.map",
-    "main.50f11a21.js.map": "/formula1spa/static/js/main.50f11a21.js.map",
+    "main.8fadb107.js.map": "/formula1spa/static/js/main.8fadb107.js.map",
     "304.52b2859b.chunk.css.map": "/formula1spa/static/css/304.52b2859b.chunk.css.map",
     "304.a7cfd201.chunk.js.map": "/formula1spa/static/js/304.a7cfd201.chunk.js.map",
     "676.9031fd96.chunk.css.map": "/formula1spa/static/css/676.9031fd96.chunk.css.map",
@@ -90,15 +90,15 @@
     "310.8eb79862.chunk.css.map": "/formula1spa/static/css/310.8eb79862.chunk.css.map",
     "310.cf9c6237.chunk.js.map": "/formula1spa/static/js/310.cf9c6237.chunk.js.map",
     "891.a1b029ec.chunk.css.map": "/formula1spa/static/css/891.a1b029ec.chunk.css.map",
-    "891.a6cf93bc.chunk.js.map": "/formula1spa/static/js/891.a6cf93bc.chunk.js.map",
+    "891.01f765ea.chunk.js.map": "/formula1spa/static/js/891.01f765ea.chunk.js.map",
     "799.ccca0ed0.chunk.css.map": "/formula1spa/static/css/799.ccca0ed0.chunk.css.map",
     "799.e41f4c31.chunk.js.map": "/formula1spa/static/js/799.e41f4c31.chunk.js.map",
     "850.51ad8057.chunk.css.map": "/formula1spa/static/css/850.51ad8057.chunk.css.map",
-    "850.d6211c41.chunk.js.map": "/formula1spa/static/js/850.d6211c41.chunk.js.map",
+    "850.d42f69d5.chunk.js.map": "/formula1spa/static/js/850.d42f69d5.chunk.js.map",
     "113.096c96fb.chunk.css.map": "/formula1spa/static/css/113.096c96fb.chunk.css.map",
     "113.043b2c33.chunk.js.map": "/formula1spa/static/js/113.043b2c33.chunk.js.map",
     "753.0d8e3e54.chunk.css.map": "/formula1spa/static/css/753.0d8e3e54.chunk.css.map",
-    "753.06050455.chunk.js.map": "/formula1spa/static/js/753.06050455.chunk.js.map",
+    "753.3d0d8bde.chunk.js.map": "/formula1spa/static/js/753.3d0d8bde.chunk.js.map",
     "718.7866e741.chunk.css.map": "/formula1spa/static/css/718.7866e741.chunk.css.map",
     "718.8922a694.chunk.js.map": "/formula1spa/static/js/718.8922a694.chunk.js.map",
     "785.5dd6b1c7.chunk.css.map": "/formula1spa/static/css/785.5dd6b1c7.chunk.css.map",
@@ -114,6 +114,6 @@
   },
   "entrypoints": [
     "static/css/main.9cc1d9f2.css",
-    "static/js/main.50f11a21.js"
+    "static/js/main.8fadb107.js"
   ]
 }
