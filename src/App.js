@@ -2,17 +2,17 @@ import React, {useEffect, useState, lazy, Suspense} from 'react'
 import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.module.css';
 
-import Spinner from './components/common/spinner/Spinner';
 import Navigation from './components/common/navigation/Navigation'
 import MobileNavigation from './components/common/mobileNavigation/MobileNavigation';
+import Layout from './components/home/layout/Layout';
+import Footer from './components/common/footer/Footer'
+import MainSpinner from './components/common/mainSpinner/MainSpinner'
 
 import userContext from './context/userContext'
 import newsContext from './context/newsContext';
 import useAuth from './hooks/useAuth'
 import useNews from './hooks/useNews';
-import Footer from './components/common/footer/Footer'
 
-import Layout from './components/home/layout/Layout';
 
 
 // import NewsLayout from 
@@ -107,51 +107,51 @@ function App() {
         {viewport.width > 850 ? <Navigation/> : <MobileNavigation/>}
       </userContext.Provider>
       <main>
-        <Suspense fallback={<p></p>}>
-        <Routes>
-          <Route path={'/'} element={
-            <newsContext.Provider value={contextNews}>
-              <Layout/>
-            </newsContext.Provider>}/>
-          <Route path={'/news/*'} element={
-            <newsContext.Provider value={contextNews}>
-              <NewsLayout/>
-            </newsContext.Provider>}>
-              <Route path={':id'} element={<ActiveNews index={false}/>}/>
-              <Route index element={
-                <ActiveNews index={true}/>}/>
-          </Route>
-          <Route path={'/videos/*'} element={<VideoLayout/>}>
-                <Route path=":id" element={<MainVideo/>}/>
-                <Route index element={<MainVideo/>}/>
-          </Route>
-          <Route path={'/schedule'} element={<ScheduleLayout/>}/>
-          <Route path={'/standings/*'} element={<StandingsLayout/>}>
-                <Route path={'drivers'} element={<DriversStandings count={25}/>}/>
-                <Route path={'constructors'} element={<ConstructorsStandings/>}/>
-                 <Route index element={<DriversStandings count={25}/>}/>
-          </Route>
-          <Route path={'/drivers'} element={<DriversLayout/>}/>
-          <Route path={'/drivers/:id'} element={<DriverPageLayout/>}/>
-          <Route path={'/teams'} element={<TeamsLayout/>}/>
-          <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
-          <Route path={'/auth'} element={<AuthLayout/>}>
-            <Route path={'login'} element={
-              <userContext.Provider value={context}>
-                <Login/>
-              </userContext.Provider>
+        <Suspense fallback={<MainSpinner/>}>
+          <Routes>
+            <Route path={'/'} element={
+              <newsContext.Provider value={contextNews}>
+                <Layout/>
+              </newsContext.Provider>}/>
+            <Route path={'/news/*'} element={
+              <newsContext.Provider value={contextNews}>
+                <NewsLayout/>
+              </newsContext.Provider>}>
+                <Route path={':id'} element={<ActiveNews index={false}/>}/>
+                <Route index element={
+                  <ActiveNews index={true}/>}/>
+            </Route>
+            <Route path={'/videos/*'} element={<VideoLayout/>}>
+                  <Route path=":id" element={<MainVideo/>}/>
+                  <Route index element={<MainVideo/>}/>
+            </Route>
+            <Route path={'/schedule'} element={<ScheduleLayout/>}/>
+            <Route path={'/standings/*'} element={<StandingsLayout/>}>
+                  <Route path={'drivers'} element={<DriversStandings count={25}/>}/>
+                  <Route path={'constructors'} element={<ConstructorsStandings/>}/>
+                  <Route index element={<DriversStandings count={25}/>}/>
+            </Route>
+            <Route path={'/drivers'} element={<DriversLayout/>}/>
+            <Route path={'/drivers/:id'} element={<DriverPageLayout/>}/>
+            <Route path={'/teams'} element={<TeamsLayout/>}/>
+            <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
+            <Route path={'/auth'} element={<AuthLayout/>}>
+              <Route path={'login'} element={
+                <userContext.Provider value={context}>
+                  <Login/>
+                </userContext.Provider>
+                }/>
+              <Route path={'register'} element={
+                <userContext.Provider value={context}>
+                  <Register/>
+                </userContext.Provider>
               }/>
-            <Route path={'register'} element={
-              <userContext.Provider value={context}>
-                <Register/>
-              </userContext.Provider>
-            }/>
-            <Route index element={<userContext.Provider value={context}>
-                <Login/>
-              </userContext.Provider>}/>
-          </Route>
-          <Route path={'/profile'} element={<p>Profile Page</p>}/>
-        </Routes>
+              <Route index element={<userContext.Provider value={context}>
+                  <Login/>
+                </userContext.Provider>}/>
+            </Route>
+            <Route path={'/profile'} element={<p>Profile Page</p>}/>
+          </Routes>
         </Suspense>
       </main>
       <Footer/>
