@@ -3,22 +3,24 @@
     position: relative;
     width: 46vw;
     height: 23vw;
+    padding: 1vw;
+    padding-bottom: 0;
+    margin-top: 3vw;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1vw;
-    padding-bottom: 0;
-    margin-top: 3vw;
+    
     border-top: .2rem solid black;
     border-right: .2rem solid black;
     border-top-right-radius: 1rem;
     cursor: pointer;
 }
 .main-container:hover{
-    border-top-color: red;
-    border-right-color: red;
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-red);
     
 }
 

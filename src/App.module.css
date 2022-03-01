@@ -4,8 +4,9 @@
     --padding-containers: 1.5vw;
     --padding-basic: 2vw;
     --font-style-headers: 'Passion One', cursive;
-    --font-size-medium: clamp(1rem, 1vw, 2em);
     --font-size-small: clamp(.7rem, .8vw, 1rem);
+    --font-size-medium: clamp(1rem, 1vw, 2rem);
+    --font-size-large: clamp(1.3rem, 1.5vw, 2.5rem);
   
 }
 

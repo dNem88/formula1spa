@@ -2,19 +2,15 @@
     box-sizing: border-box;
     width: clamp(1.66rem, 3.66vw, 4.33rem);
     height: clamp(1.32rem, 2.92vw, 3.46rem);
-    border-style: solid;
+    border: .001px solid transparent;
     border-radius: .3rem;
-    border-width: .001px;
-    border-color: transparent;
     overflow: hidden;
 }
 .left-flag{
     width: clamp(1.66rem, 3.66vw, 4.33rem);
     height: clamp(1.06rem, 2.336vw, 2.76rem);
-    border-style: solid;
+    border: .001px solid transparent;
     border-radius: .3rem;
-    border-width: .001px;
-    border-color: transparent;
     overflow: hidden;
 }
 

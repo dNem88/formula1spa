@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react'
 import EventSchedule from '../EventSchedule/EventSchedule'
 
-function ScheduleList(props) {
+function ScheduleList({fullSchedule}) {
     
     return (
         <Fragment>
-            {props.fullSchedule ? 
-                props.fullSchedule.map((x,i) => {
+            {fullSchedule ? 
+                fullSchedule.map((x,i) => {
                     x.round = i+1;
                     if (x.imageBase === 'italy' && x.month === 'SEP') {
                         x.imageBase = 'italy_sep'

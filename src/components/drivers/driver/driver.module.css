@@ -17,8 +17,8 @@
     cursor: pointer;
 }
 .main-container:hover{
-    border-top-color: red;
-    border-right-color: red;
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-red);
     
 }
 

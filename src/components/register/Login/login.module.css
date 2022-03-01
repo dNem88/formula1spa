@@ -1,9 +1,7 @@
 form{
     background-color: #e4e1dd;
-    border-style: solid;
+    border: .7px solid #333;
     border-radius: .8rem;
-    border-color: #333;
-    border-width: .7px;
     display: flex;
     flex-direction: column;
     width: clamp(22rem, 40vw, 40rem);
@@ -20,8 +18,7 @@ h2{
 input{
     height: 7vh;
     border-radius: .8rem;
-    border-color: #333;
-    border-width: .7px;
+    border: .7px solid #333;
     padding-left: 1rem;
     font-size: clamp(1rem, .8vw, 2rem);
 }
@@ -67,8 +64,6 @@ button:hover{
     color: #333;
     font-weight: bold;
     text-decoration: none;
-    border-bottom-style: solid;
-    border-bottom-color: var(--color-red);
-    border-bottom-width: 2.2px;
+    border-bottom: 2.2px solid var(--color-red);
     margin-left: 1rem;
 }

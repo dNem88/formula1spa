@@ -2,11 +2,12 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    margin-top: .5vw;
+    padding: 1vw;
+
     border-right: clamp(.05rem,.2vw, .2rem) solid #89898e;
     border-bottom: clamp(.05rem,.2vw, .2rem) solid #89898e;
     border-bottom-right-radius: 1rem;
-    margin-top: .5vw;
-    padding: 1vw;
     cursor: pointer;
     overflow: hidden;
 }

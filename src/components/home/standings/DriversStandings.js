@@ -7,7 +7,7 @@ import DriversPoints from '../../common/driverPoints/DriverPoints'
 
 
 
-function DriversStandings(props) {
+function DriversStandings({count}) {
     const [standings, setStandings] = useState({
         standings: null,
         hasError: null,
@@ -47,12 +47,14 @@ function DriversStandings(props) {
                     </div>
                     <div className={styles['standings-container']}>
                         {!standings.standings ? null : 
-                            standings.standings.slice(0,props.count).map(x => {
+                            standings.standings.slice(0,count).map(x => {
                                 return <DriversPoints key={x.driver} {...x}/>
                             })
                         }
                     </div>
-                    {props.count > 20 ? null : <Link to={'/standings'}>VIEW FULL STANDINGS</Link>}
+                    {count > 20 ? null : <Link to={'/standings'} onClick={() => {
+                        window.scrollTo({top: 0, behavior: 'smooth'})
+                    }}>VIEW FULL STANDINGS</Link>}
                 </div>
              }
         </Fragment>

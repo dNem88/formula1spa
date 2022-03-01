@@ -1,23 +1,19 @@
-import React, {Fragment}  from 'react';
-import {Link} from 'react-router-dom'
+import React  from 'react';
 import styles from './activeMobileNavigation.module.css'
+import NavLink from '../NavLink/NavLink'
+import navigation from '../../../utils/navigation/navigation'
 
-function ActiveMobileNavigation(props) {
-
+function ActiveMobileNavigation({click, isLogged}) {
+    const {guest, user} = navigation;
     return (
-           <div onClick={props.click} className={styles['links-container']}>
-                <Link to='/'>Home</Link>
-                <Link to='/news'>News</Link>
-                <Link to='/videos'>Videos</Link>
-                <Link to='/schedule'>Schedule</Link>
-                <Link to='/standings'>Standings</Link>
-                <Link to='/drivers'>Drivers</Link>
-                <Link to='/teams'>Teams</Link>
-                {props.isLogged ? <Link to='/profile'>Profile</Link> : 
-                <Fragment>
-                    <Link to='/auth/login'>Sign in</Link>
-                    <Link to='/auth/register'>Register</Link>
-                </Fragment>}
+           <div onClick={click} className={styles['links-container']}>
+               {isLogged ? user.map(x => {
+                   return <NavLink key={x.href} {...x} classname={'mobile-link'}/>
+               }) :
+                    guest.map(x => {
+                        return <NavLink key={x.href} {...x} classname={'mobile-link'}/>
+                    })
+               }
            </div>
     )
 }

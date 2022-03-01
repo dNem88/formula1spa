@@ -1,9 +1,10 @@
 .nav{
     box-sizing: border-box;
     position: relative;
-    padding: 1vh;
     width: 100vw;
     height: 7vh;
+    padding: 1vh;
+    
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -2,10 +2,10 @@ import React from 'react'
 
 import styles from './slider.module.css'
 
-function Slider(props) {
+function Slider({children}) {
 
     return (
-        <div className={styles.slider}>{props.children}</div>
+        <div className={styles.slider}>{children}</div>
     )
 }
 

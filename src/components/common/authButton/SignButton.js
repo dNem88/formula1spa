@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import styles from './signButton.module.css'
-function SignButton(props) {
+function SignButton({textContent, href}) {
 
     return (
-        <Link className={styles.link} to={props.href}>{props.textContent}</Link>
+        <Link className={styles.link} to={href}>{textContent}</Link>
     )
 }
 

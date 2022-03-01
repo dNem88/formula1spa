@@ -3,19 +3,21 @@
     position: relative;
     width: 23vw;
     height: 23vw;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     margin-top: 3vw;
     border-top: .2rem solid black;
     border-right: .2rem solid black;
     border-top-right-radius: 1rem;
 }
 .main-container:hover{
-    border-top-color: red;
-    border-right-color: red;
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-red);
 }
 .legend{
     position: absolute;
@@ -27,7 +29,7 @@
     left: 0;
     top: -.7rem;
     height: clamp(.9rem, 1.2vw, 1.8rem);
-    color: red;
+    color: var(--color-red);
     font-size: clamp(.7rem, 1vw, 1.5rem);
     font-weight: bold;
 
@@ -87,9 +89,7 @@
 .race-name-container{
      width: 100%;
     height: 25%;
-     border-top-style: solid;
-    border-top-color: black;
-    border-top-width: .1rem;
+    border-top: .1rem solid black;
 }
 .race-sub-container{
     width: 100%;
@@ -106,22 +106,20 @@
 }
 .race-sub-container > :nth-child(1)::after{
     content:'>';
-    color: red;
+    color: var(--color-red);
     margin-left: 1vw;
 }
 .race-sub-container > :nth-child(2){
-     background-color: white;
+    background-color: white;
     color: black;
     font-size: clamp(.8rem, .75vw, 2rem);
 }
 
 
 .image-container{
-     width: 100%;
+    width: 100%;
     height: 50%;
-    border-top-style: solid;
-    border-top-color: black;
-    border-top-width: .1rem;
+    border-top: .1rem solid black;
 }
 .image-container > img{
     width: 100%;

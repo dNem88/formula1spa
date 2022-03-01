@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './flag.module.css'
 import flags from '../../../assets/images/flags/flag-images'
 
-function Flag(props) {
+function Flag({imageBase, classname}) {
     
     return (
-        <div className={styles[props.classname]}>
-            <img src={flags[props.imageBase]} alt={`${props.imageBase}-flag`} loading='lazy'/>
+        <div className={styles[classname]}>
+            <img src={flags[imageBase]} alt={`${imageBase}-flag`} loading='lazy'/>
         </div>
     )
 }

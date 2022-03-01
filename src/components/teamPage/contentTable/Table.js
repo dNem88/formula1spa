@@ -1,6 +1,7 @@
 import React from 'react'
 import TableRow from '../tableRow/TableRow'
 import styles from './table.module.css'
+import stringSplit from '../../../utils/common/stringSplit'
 
 function Table(props) {
     const blackList = ['_id', 'image', 'drivers', 'stats']
@@ -13,13 +14,14 @@ function Table(props) {
     return (
         <table className={styles.table}>
             <tbody>
-                {data.map((x,i )=> {
-                    console.log(x,i)
-                return <TableRow key={`${i}${x[0]}`} title={x[0]} content={x[1]}/>
+                {data.map(([k,v],i )=> {
+                    let transformed = stringSplit(k)
+                    return <TableRow key={`${i}${k}`} title={transformed} content={v}/>
             })}
                 {!stats ? null : 
-                    stats.map((x,i )=> {
-                return <TableRow key={`${i}${x[0]}`} title={x[0]} content={x[1]}/>
+                    stats.map(([k,v],i ) => {
+                    let transformed = stringSplit(k)
+                    return <TableRow key={`${i}${k}`} title={transformed} content={v}/>
             })
                 }
             </tbody>

@@ -12,41 +12,11 @@
     padding-bottom: 5vh;
     z-index: 5;
 }
-.links-container > a{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    width: 90%;
-    height: 7vh;
-    text-decoration: none;
-    background-color: var(--color-red);
-    color: white;
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom-right-radius: 1rem;
-    animation-name: active;
-    animation-duration: 0.5s;
-    
-}
 
-@keyframes active {
-    from {height: 0; opacity: 0;}
-    to {height: 7vh; opacity: 1;}
-}
 
 @media only screen and (max-width: 850px) and (orientation: landscape) {
     .links-container{
         margin-top: 8vh;
         position: absolute;
     }
-    .links-container > a{
-        height: 11vh;
-        
-    }
-    @keyframes active {
-    from {height: 0; opacity: 0;}
-    to {height: 11vh; opacity: 1;}
-}
-
 }

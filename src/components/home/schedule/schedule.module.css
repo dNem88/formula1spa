@@ -2,18 +2,16 @@
     box-sizing: border-box;
     width: clamp(6.5rem, 11vw, 13rem);
     height: 100%;
-    background-color: #1f1f27;
+    background-color: var(--color-dark-blue);
+    padding-top: clamp(4.5rem, 7vw, 9rem);
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    padding-top: clamp(4.5rem, 7vw, 9rem);
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-right-width: .05rem;
-    border-bottom-width: .05rem;
-    border-right-color: 38383f;
-    border-bottom-color: 38383f;
+    
+    border-right: .05rem solid #38383f;
+    border-bottom: .05rem solid #38383f;
     border-bottom-right-radius: 1rem;
     cursor: pointer;
     transition: width 1s ease;
@@ -22,31 +20,31 @@
     box-sizing: border-box;
     width: clamp(26rem, 44vw, 52rem);
     height: 100%;
-    background-color: #1f1f27;
+    padding-top: clamp(1.15rem, 1.75vw, 2.25rem);
+    background-color: var(--color-dark-blue);
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    padding-top: clamp(1.15rem, 1.75vw, 2.25rem);
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-right-width: .05rem;
-    border-bottom-width: .05rem;
-    border-right-color: 38383f;
-    border-bottom-color: 38383f;
+    
+    border-right: .05rem solid #38383f;
+    border-bottom: .05rem solid #38383f;
     border-bottom-right-radius: 1rem;
     cursor: pointer;
     transition: width 1s ease;
 }
 .country{
+    width: 100%;
+    height: clamp(.67rem, 1.46vw, 1.73rem);
     margin-top: .5rem;
     margin-bottom: 0;
     padding: 0;
-    width: 100%;
-    height: clamp(.67rem, 1.46vw, 1.73rem);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: clamp(.75rem, 1.2vw, 2rem);
     font-weight: bold;
     color: #949498;
@@ -73,21 +71,13 @@
 @media screen and (max-width: 500px) {
     .active-main-container{
         width: 90vw;
-         border-right-style: solid;
-        border-bottom-style: solid;
-        border-right-width: 5px;
-        border-bottom-width: 5px;
-        border-right-color: 38383f;
-        border-bottom-color: 38383f;
+        border-right: 5px solid #38383f;
+        border-bottom: 5px solid #38383f;
         border-bottom-right-radius: 1rem;   
     }
     .main-container{
-        border-right-style: solid;
-        border-bottom-style: solid;
-        border-right-width: 5px;
-        border-bottom-width: 5px;
-        border-right-color: 38383f;
-        border-bottom-color: 38383f;
-        border-bottom-right-radius: 1rem;   
+        border-right: 5px solid #38383f;
+        border-bottom: 5px solid #38383f;
+        border-bottom-right-radius: 1rem;  
     }
 }

@@ -2,8 +2,9 @@
     box-sizing: border-box;
     width: 100vw;
     height: 10vh;
-    display: flex;
     padding: 0;
+
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -21,21 +22,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.links-container > a{
-    box-sizing: border-box;
-    width: min(16.6%);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-size: clamp(1.2rem, 1.5vw, 2.5rem);
-    cursor: pointer;
-}
-.links-container > a:hover{
-    background-color: var(--color-dark-blue);
-}
+
 .auth-container {
     margin-right: 1.5rem;
     width: clamp(12rem, 14vw, 20rem);

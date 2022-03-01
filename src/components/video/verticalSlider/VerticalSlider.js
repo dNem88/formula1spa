@@ -3,7 +3,7 @@ import styles from './verticalSlider.module.css'
 import VideoInfo from '../../common/videoInfo/VideoInfo'
 import Video from '../../common/video/Video'
 
-function VerticalSlider(props) {
+function VerticalSlider({videos}) {
 
 
     return (
@@ -11,7 +11,7 @@ function VerticalSlider(props) {
             <h3 className={styles['more-videos-title']}>More videos</h3>
             <div className={styles['relative-wrapper']}>
                 <div className={styles['slider-container-absolute']}>
-                    {props.videos.slice(0,4).map(x => {
+                    {videos.slice(0,4).map(x => {
                         return <div key={x._id} className={styles['video-wrapper']}>
                                     <Video url={x.url}/>
                                     <VideoInfo  _id={x._id} title={x.title}/>

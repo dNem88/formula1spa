@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react'
 import Driver from '../driver/Driver'
 
-function DriversList(props) {
+function DriversList({drivers}) {
 
     return (
         <Fragment>
-            {!props.drivers ? null :
-                props.drivers.map(x => {
+            {!drivers ? null :
+                drivers.map(x => {
                     return <Driver key={x._id} {...x}/>
                 })
             }

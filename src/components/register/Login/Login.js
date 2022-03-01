@@ -39,9 +39,7 @@ function Login() {
     }
     
     return (
-        <form onSubmit = {
-            submitHandler
-        } >
+        <form onSubmit = {submitHandler}>
             <div>
                 <h2>SIGN IN</h2>
             </div>

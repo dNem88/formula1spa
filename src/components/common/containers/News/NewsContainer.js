@@ -8,6 +8,7 @@ function NewsContainer({id, path, type, children}) {
 
     function clickHandler(e) {
         navigate(`/${path}/${id}`)
+        window.scrollTo({top: 0, behavior: 'smooth'})
     }
 
     return (

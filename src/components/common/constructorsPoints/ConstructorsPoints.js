@@ -2,15 +2,15 @@ import React from 'react'
 import styles from './constructorsPoints.module.css'
 
 
-function ConstructorsPoints(props) {
+function ConstructorsPoints({position, constructor, nationality, points}) {
     
     return (
         <div className={styles['driver-row']}>
-            <p>{props.position}</p>
-            <p>{props.constructor}</p>
+            <p>{position}</p>
+            <p>{constructor}</p>
             <p></p>
-            <p>{props.nationality}</p>
-            <p>{props.points}</p>
+            <p>{nationality}</p>
+            <p>{points}</p>
         </div>
     )
 }

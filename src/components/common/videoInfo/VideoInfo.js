@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './videoInfo.module.css'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-function VideoInfo(props) {
+function VideoInfo({_id, id, title}) {
     let navigate = useNavigate()
     let location = useLocation()
     function clickHandler() {
-        navigate(`/videos/${props.id || props._id}`)
+        navigate(`/videos/${id || _id}`)
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -18,7 +18,7 @@ function VideoInfo(props) {
     return (
         <div onClick={clickHandler} className={styles['light-info']}>
             <p className={styles['video-par']}>VIDEO</p>
-            <p className={styles['content-video-par']}>{props.title}</p>
+            <p className={styles['content-video-par']}>{title}</p>
         </div>  
     )
 }
