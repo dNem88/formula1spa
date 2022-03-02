@@ -25,29 +25,3 @@ exports[`Testing Constructor Standings Component render properly  1`] = `
   </div>
 </div>
 `;
-
-exports[`Testing Constructor Standings Component render properly based on props 1`] = `
-<div
-  className="main-container"
->
-  <div
-    className="heading-container"
-  >
-    <h2>
-      CONSTRUCTORS STANDINGS
-    </h2>
-  </div>
-  <div
-    className="standings-container"
-  >
-    <div
-      className="lds-ring"
-    >
-      <div />
-      <div />
-      <div />
-      <div />
-    </div>
-  </div>
-</div>
-`;

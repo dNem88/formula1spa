@@ -11,7 +11,7 @@ describe('Testing news Component', () => {
         ).toJSON();
         expect(news).toMatchSnapshot()
         expect(news.type).toBe('div')
-        expect(news.props.className).toBe('main-container')
+        expect(news.props.className).toBe('main-container-vertical')
         expect(news.props.id).toBe('test-id')
         expect(news.children[0].type).toBe('div')
         expect(news.children[0].props.className).toBe('image-container')
@@ -34,9 +34,8 @@ describe('Testing news Component', () => {
             </MemoryRouter>
         ).toJSON();
         expect(newsTwo).toMatchSnapshot()
-        expect(newsTwo).toMatchSnapshot()
         expect(newsTwo.type).toBe('div')
-        expect(newsTwo.props.className).toBe('main-container')
+        expect(newsTwo.props.className).toBe('main-container-vertical')
         expect(newsTwo.props.id).toBe('test-id')
         expect(newsTwo.children[0].type).toBe('div')
         expect(newsTwo.children[0].props.className).toBe('image-container')

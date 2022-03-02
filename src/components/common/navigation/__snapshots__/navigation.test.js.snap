@@ -16,42 +16,49 @@ exports[`test Navigation component Should render guest user navigation 1`] = `
     className="links-container"
   >
     <a
+      className="desktop-link"
       href="/"
       onClick={[Function]}
     >
       Home
     </a>
     <a
+      className="desktop-link"
       href="/news"
       onClick={[Function]}
     >
       News
     </a>
     <a
+      className="desktop-link"
       href="/videos"
       onClick={[Function]}
     >
       Videos
     </a>
     <a
+      className="desktop-link"
       href="/schedule"
       onClick={[Function]}
     >
       Schedule
     </a>
     <a
+      className="desktop-link"
       href="/standings"
       onClick={[Function]}
     >
       Standings
     </a>
     <a
+      className="desktop-link"
       href="/drivers"
       onClick={[Function]}
     >
       Drivers
     </a>
     <a
+      className="desktop-link"
       href="/teams"
       onClick={[Function]}
     >
@@ -95,42 +102,49 @@ exports[`test Navigation component Should render logged in user Navigation 1`] =
     className="links-container"
   >
     <a
+      className="desktop-link"
       href="/"
       onClick={[Function]}
     >
       Home
     </a>
     <a
+      className="desktop-link"
       href="/news"
       onClick={[Function]}
     >
       News
     </a>
     <a
+      className="desktop-link"
       href="/videos"
       onClick={[Function]}
     >
       Videos
     </a>
     <a
+      className="desktop-link"
       href="/schedule"
       onClick={[Function]}
     >
       Schedule
     </a>
     <a
+      className="desktop-link"
       href="/standings"
       onClick={[Function]}
     >
       Standings
     </a>
     <a
+      className="desktop-link"
       href="/drivers"
       onClick={[Function]}
     >
       Drivers
     </a>
     <a
+      className="desktop-link"
       href="/teams"
       onClick={[Function]}
     >

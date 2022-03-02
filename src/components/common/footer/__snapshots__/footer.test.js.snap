@@ -8,42 +8,49 @@ exports[`Testing Footer Render Links Properly 1`] = `
     className="footer-container"
   >
     <a
+      className="footer-link"
       href="/"
       onClick={[Function]}
     >
       Home
     </a>
     <a
+      className="footer-link"
       href="/news"
       onClick={[Function]}
     >
       News
     </a>
     <a
+      className="footer-link"
       href="/videos"
       onClick={[Function]}
     >
       Videos
     </a>
     <a
+      className="footer-link"
       href="/schedule"
       onClick={[Function]}
     >
       Schedule
     </a>
     <a
+      className="footer-link"
       href="/standings"
       onClick={[Function]}
     >
       Standings
     </a>
     <a
+      className="footer-link"
       href="/drivers"
       onClick={[Function]}
     >
       Drivers
     </a>
     <a
+      className="footer-link"
       href="/teams"
       onClick={[Function]}
     >

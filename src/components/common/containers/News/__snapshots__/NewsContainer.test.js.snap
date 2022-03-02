@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing NewsContainer Component render properly based on props 1`] = `
+<div
+  className="main-container-news"
+  id="test-id"
+  onClick={[Function]}
+>
+  CHILDREN
+</div>
+`;

@@ -69,7 +69,7 @@ const navigation = {
             content: 'Teams'
         },
         {
-            href: '/profile',
+            href: '/auth/profile',
             content: 'Profile'
         }
     ]

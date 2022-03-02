@@ -35,7 +35,7 @@ Array [
     className="news"
   >
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={2}
       onClick={[Function]}
     >
@@ -64,7 +64,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={3}
       onClick={[Function]}
     >
@@ -93,7 +93,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={4}
       onClick={[Function]}
     >
@@ -122,7 +122,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={5}
       onClick={[Function]}
     >
@@ -152,10 +152,10 @@ Array [
     </div>
   </section>,
   <fieldset
-    className="editor-pick"
+    className="fieldset-full"
   >
     <legend
-      className="editor-legend"
+      className="legend-black"
     >
       EDITOR'S PICK
     </legend>
@@ -177,7 +177,7 @@ Array [
     className="more-news"
   >
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={6}
       onClick={[Function]}
     >
@@ -206,7 +206,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={7}
       onClick={[Function]}
     >
@@ -235,7 +235,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={8}
       onClick={[Function]}
     >
@@ -264,7 +264,7 @@ Array [
       </div>
     </div>
     <div
-      className="main-container"
+      className="main-container-vertical"
       id={9}
       onClick={[Function]}
     >
@@ -316,16 +316,7 @@ Array [
       </div>
       <div
         className="standings-container"
-      >
-        <div
-          className="lds-ring"
-        >
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
-      </div>
+      />
       <a
         href="/standings"
         onClick={[Function]}

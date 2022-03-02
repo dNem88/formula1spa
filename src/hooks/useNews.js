@@ -16,9 +16,12 @@ function useNews() {
                     throw new Error('Server error! Response ok is false')
                 }
                 const newsapiNews = await response.json()
-                hNews.updateHerokuNews({
-                    articles: newsapiNews.articles
-                }) /*Update database with the current response*/
+                console.log(newsapiNews)
+                if (newsapiNews.articles.length > 15) {
+                    hNews.updateHerokuNews({
+                        articles: newsapiNews.articles
+                    }) /*Update database with the current response*/
+                }
                 return newsapiNews.articles.map(x => {
                     x._id = uuid()
                     return x;

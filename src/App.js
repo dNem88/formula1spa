@@ -66,18 +66,19 @@ const Register = lazy(() =>
 const Login = lazy(() => 
   import('./components/register/Login/Login')
 )
-
-
-
-
 const NewsLayout = lazy(() =>
   import('./components/news/layout/NewsLayout')
 )
+const ProfileLayout = lazy(() => 
+  import('./components/profile/layout/ProfileLayout')
+)
+
+
 function App() {
   const [viewport, setViewport] = useState({width: window.innerWidth})
   let contextNews = useNews();
   let context = useAuth()
-  
+
   function onResize(e) {
     setViewport({width: window.innerWidth})
   }
@@ -127,7 +128,11 @@ function App() {
             <Route path={'/drivers/:id'} element={<DriverPageLayout/>}/>
             <Route path={'/teams'} element={<TeamsLayout/>}/>
             <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
-            <Route path={'/auth'} element={<AuthLayout/>}>
+            <Route path={'/auth'} element={
+                <userContext.Provider value={context}>
+                  <AuthLayout/>
+                </userContext.Provider>
+            }>
               <Route path={'login'} element={
                 <userContext.Provider value={context}>
                   <Login/>
@@ -141,8 +146,13 @@ function App() {
               <Route index element={<userContext.Provider value={context}>
                   <Login/>
                 </userContext.Provider>}/>
+              <Route path={'profile'} element={
+                <userContext.Provider value={context}>
+                  <ProfileLayout/>
+                </userContext.Provider>
+            }/>
             </Route>
-            <Route path={'/profile'} element={<p>Profile Page</p>}/>
+            
           </Routes>
         </Suspense>
       </main>

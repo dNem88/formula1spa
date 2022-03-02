@@ -38,7 +38,7 @@ describe('Testing Layout Component', () => {
         expect(layout[1].props.className).toBe('news')
         expect(layout[1].children.length).toBe(4)
         expect(layout[2].type).toBe('fieldset')
-        expect(layout[2].props.className).toBe('editor-pick')
+        expect(layout[2].props.className).toBe('fieldset-full')
         expect(layout[3].type).toBe('h2')
         expect(layout[3].props.className).toBe('h-news')
         expect(layout[4].type).toBe('section')

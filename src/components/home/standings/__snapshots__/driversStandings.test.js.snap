@@ -13,16 +13,7 @@ exports[`Testing DriverStandings Render Component 1`] = `
   </div>
   <div
     className="standings-container"
-  >
-    <div
-      className="lds-ring"
-    >
-      <div />
-      <div />
-      <div />
-      <div />
-    </div>
-  </div>
+  />
   <a
     href="/standings"
     onClick={[Function]}

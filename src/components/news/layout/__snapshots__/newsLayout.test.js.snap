@@ -12,7 +12,7 @@ exports[`Testing NewsLayout Render Properly 1`] = `
       onClick={[Function]}
     >
       <div
-        className="main-container"
+        className="main-container-vertical"
         id="test-id"
         onClick={[Function]}
       >

@@ -2,7 +2,7 @@
 
 exports[`Testing news Component Testing News element 1`] = `
 <div
-  className="main-container"
+  className="main-container-vertical"
   id="test-id"
   onClick={[Function]}
 >
@@ -35,7 +35,7 @@ exports[`Testing news Component Testing News element 1`] = `
 
 exports[`Testing news Component Testing News elements with changed className 1`] = `
 <div
-  className="main-container"
+  className="main-container-vertical"
   id="test-id"
   onClick={[Function]}
 >
@@ -68,7 +68,7 @@ exports[`Testing news Component Testing News elements with changed className 1`]
 
 exports[`Testing news Component Testing News elements with changed className 2`] = `
 <div
-  className="main-container"
+  className="main-container-vertical"
   id="test-id"
   onClick={[Function]}
 >

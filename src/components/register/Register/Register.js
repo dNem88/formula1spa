@@ -7,6 +7,7 @@ function Register() {
 
     let context = useContext(userContext);
     const navigate = useNavigate()
+
     const [formdata, setFormdata] = useState({
         username: '',
         email: '',

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Fieldset Component render properly based on props 1`] = `
+<fieldset
+  className="fieldset-full"
+>
+  <legend
+    className="legend-test-color"
+  >
+    test-content
+  </legend>
+  CHILDREN
+</fieldset>
+`;

@@ -17,42 +17,49 @@ Array [
       className="links-container"
     >
       <a
+        className="desktop-link"
         href="#/"
         onClick={[Function]}
       >
         Home
       </a>
       <a
+        className="desktop-link"
         href="#/news"
         onClick={[Function]}
       >
         News
       </a>
       <a
+        className="desktop-link"
         href="#/videos"
         onClick={[Function]}
       >
         Videos
       </a>
       <a
+        className="desktop-link"
         href="#/schedule"
         onClick={[Function]}
       >
         Schedule
       </a>
       <a
+        className="desktop-link"
         href="#/standings"
         onClick={[Function]}
       >
         Standings
       </a>
       <a
+        className="desktop-link"
         href="#/drivers"
         onClick={[Function]}
       >
         Drivers
       </a>
       <a
+        className="desktop-link"
         href="#/teams"
         onClick={[Function]}
       >
@@ -89,10 +96,10 @@ Array [
       </div>
     </section>
     <fieldset
-      className="editor-pick"
+      className="fieldset-full"
     >
       <legend
-        className="editor-legend"
+        className="legend-black"
       >
         EDITOR'S PICK
       </legend>
@@ -145,16 +152,7 @@ Array [
         </div>
         <div
           className="standings-container"
-        >
-          <div
-            className="lds-ring"
-          >
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-        </div>
+        />
         <a
           href="#/standings"
           onClick={[Function]}
@@ -171,42 +169,49 @@ Array [
       className="footer-container"
     >
       <a
+        className="footer-link"
         href="#/"
         onClick={[Function]}
       >
         Home
       </a>
       <a
+        className="footer-link"
         href="#/news"
         onClick={[Function]}
       >
         News
       </a>
       <a
+        className="footer-link"
         href="#/videos"
         onClick={[Function]}
       >
         Videos
       </a>
       <a
+        className="footer-link"
         href="#/schedule"
         onClick={[Function]}
       >
         Schedule
       </a>
       <a
+        className="footer-link"
         href="#/standings"
         onClick={[Function]}
       >
         Standings
       </a>
       <a
+        className="footer-link"
         href="#/drivers"
         onClick={[Function]}
       >
         Drivers
       </a>
       <a
+        className="footer-link"
         href="#/teams"
         onClick={[Function]}
       >

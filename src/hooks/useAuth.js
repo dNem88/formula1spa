@@ -2,8 +2,9 @@ import userContext from '../context/userContext'
 import {useContext, useState} from 'react'
 import auth from '../utils/api/heroku_api/auth'
 
-function useAuth() {
 
+function useAuth() {
+   
     const context = useContext(userContext)
     const [user, setUser] = useState({...context,
             login: login,

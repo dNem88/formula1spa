@@ -24,7 +24,7 @@ function MobileNavigation() {
                         <img src={logo} alt='formula1-logo'/>
                     </div>
                     <div className={styles['profile-icon-container']}>
-                        {context.isLogged && context.user ? <Link to={'/profile'}><img src={profile} alt='profile-icon'/></Link> : ''} 
+                        {context.isLogged && context.user ? <Link to={'/auth/profile'}><img src={profile} alt='profile-icon'/></Link> : ''} 
                     </div>
                     {(navigation.active) ? <ActiveMobileNavigation click={clickHandler} isLogged={context.isLogged}/> : null}
                 </nav>
