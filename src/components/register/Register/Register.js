@@ -1,7 +1,10 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState,  useContext } from 'react';
 import userContext from '../../../context/userContext'
 import {useNavigate} from 'react-router-dom'
 import styles from './register.module.css'
+import Input from '../../common/input/Input'
+import Form from '../../common/form/Form'
+import SubmitButton from '../../common/submitButton/SubmitButton'
 
 function Register() {
 
@@ -15,7 +18,8 @@ function Register() {
         confirmPassword: '',
         errorMessage: ''
     })
-    const submitButton = useRef()
+    const submitBtn = React.createRef()
+
     function changeHandler(e) {
         setFormdata({
             ...formdata, [e.target.id]: e.target.value, errorMessage: ''
@@ -23,22 +27,22 @@ function Register() {
     }
     async function submitHandler(e) {
         e.preventDefault();
-        submitButton.current.disabled = true;
+        submitBtn.current.disabled = true;
         try {
             let response = await context.register(formdata)
             if (response.acknowledged && response.insertedId) {
                 navigate('/auth/login')
             }
             if (response.error) {
-                submitButton.current.disabled = false;
+                submitBtn.current.disabled = false;
                 throw new Error(response.error.message)
             }
             if (response.message) {
-                submitButton.current.disabled = false;
+                submitBtn.current.disabled = false;
                 throw new Error(response.message)
             }
         } catch(err) {
-            submitButton.current.disabled = false;
+            submitBtn.current.disabled = false;
             setFormdata({
                 ...formdata,
                 errorMessage: err.message
@@ -47,20 +51,11 @@ function Register() {
         }
     }
     return (
-        <form onSubmit = {
-            submitHandler
-        } >
-            <div>
-                <h2>CREATE ACCOUNT</h2>
-            </div>
-            <label htmlFor={'username'}>Username</label>
-            <input type='text' id='username' placeholder='username' value={formdata.username} onChange={changeHandler}></input>
-            <label htmlFor={'email'}>Email address</label>
-            <input type='text' id='email' placeholder='email' value={formdata.email} onChange={changeHandler}></input>
-            <label htmlFor={'password'}>Password</label>
-            <input type='password' id='password' placeholder='password' value={formdata.password} onChange={changeHandler}></input>
-            <label htmlFor={'confirmPassword'}>Confirm password</label>
-            <input type='password' id='confirmPassword' placeholder='confirm password' value={formdata.confirmPassword} onChange={changeHandler}></input>
+        <Form submitHandler={submitHandler} heading={'CREATE ACCOUNT'}>
+            <Input type={'text'} onChange={changeHandler} labelContent={'Username'} id={'username'} value={formdata.username}/>
+            <Input type={'text'} onChange={changeHandler} labelContent={'Email address'} id={'email'} value={formdata.email}/>
+            <Input type={'password'} onChange={changeHandler} labelContent={'Password'} id={'password'} value={formdata.password}/>
+            <Input type={'password'} onChange={changeHandler} labelContent={'Confirm password'} id={'confirmPassword'} value={formdata.confirmPassword}/>
             <section>
                 <p className={styles.error}>{formdata.errorMessage}</p>
                 <p >Password must contain</p>
@@ -71,8 +66,8 @@ function Register() {
                     <li>Number</li>
                 </ul>
             </section>
-            <button className={styles.button} type='submit' ref={submitButton}>REGISTER</button>
-        </form>
+            <SubmitButton text={'REGISTER'} ref={submitBtn}/>
+        </Form>
     )
 }
 

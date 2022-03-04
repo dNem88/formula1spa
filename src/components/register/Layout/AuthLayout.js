@@ -9,8 +9,8 @@ function AuthLayout() {
     const location = useLocation()
     const context = useContext(userContext)
     const navigate = useNavigate()
+    
     if (context.isLogged === true && location.pathname.includes('auth/login')) {
-        console.log('here')
         navigate('/')
     }
     if (context.isLogged === true && location.pathname.includes('auth/register')) {

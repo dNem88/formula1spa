@@ -1,0 +1,17 @@
+.submitBtn{
+    font-size: clamp(1rem, .8vw, 1.3rem);
+    padding: .5rem;
+    color: white;
+    background-color: var(--color-red);
+    width: clamp(7.5rem, 11vw, 15rem);
+    border-radius: .8rem;
+    border-color: transparent;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 2vw;
+}
+.submitBtn:hover{
+    border-color: var(--color-red);
+    color: var(--color-red);
+    background-color: white;
+}

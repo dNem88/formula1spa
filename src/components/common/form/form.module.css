@@ -1,0 +1,19 @@
+.form{
+    width: clamp(22rem, 40vw, 40rem);
+    padding: 2rem;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e1dd;
+    border: .7px solid #333;
+    border-radius: .8rem;
+}
+
+.heading{
+    color: #333;
+    padding-top: 0;
+    margin-top: 0;
+    font-style: bold;
+    margin-bottom: 0;
+}

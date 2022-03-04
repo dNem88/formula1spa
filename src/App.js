@@ -128,30 +128,30 @@ function App() {
             <Route path={'/drivers/:id'} element={<DriverPageLayout/>}/>
             <Route path={'/teams'} element={<TeamsLayout/>}/>
             <Route path={'/teams/:id'} element={<TeamPageLayout/>}/>
-            <Route path={'/auth'} element={
-                <userContext.Provider value={context}>
-                  <AuthLayout/>
-                </userContext.Provider>
-            }>
-              <Route path={'login'} element={
-                <userContext.Provider value={context}>
-                  <Login/>
-                </userContext.Provider>
+              <Route path={'/auth'} element={
+                  <userContext.Provider value={context}>
+                    <AuthLayout/>
+                  </userContext.Provider>
+              }>
+                <Route path={'login'} element={
+                  <userContext.Provider value={context}>
+                    <Login/>
+                  </userContext.Provider>
+                  }/>
+                <Route path={'register'} element={
+                  <userContext.Provider value={context}>
+                    <Register/>
+                  </userContext.Provider>
                 }/>
-              <Route path={'register'} element={
-                <userContext.Provider value={context}>
-                  <Register/>
-                </userContext.Provider>
+                <Route index element={<userContext.Provider value={context}>
+                    <Login/>
+                  </userContext.Provider>}/>
+                <Route path={'profile'} element={
+                  <userContext.Provider value={context}>
+                    <ProfileLayout/>
+                  </userContext.Provider>
               }/>
-              <Route index element={<userContext.Provider value={context}>
-                  <Login/>
-                </userContext.Provider>}/>
-              <Route path={'profile'} element={
-                <userContext.Provider value={context}>
-                  <ProfileLayout/>
-                </userContext.Provider>
-            }/>
-            </Route>
+              </Route>
             
           </Routes>
         </Suspense>

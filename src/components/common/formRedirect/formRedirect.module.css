@@ -1,0 +1,17 @@
+.link-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.link-container > p{
+    color: #333;
+}
+.link-container > a{
+    box-sizing: border-box;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2.2px solid var(--color-red);
+    margin-left: 1rem;
+}
