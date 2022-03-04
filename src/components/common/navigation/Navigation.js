@@ -27,7 +27,7 @@ function Navigation() {
                 </div>}
             {!location.pathname.startsWith('/auth') ? 
                 <div className={styles['auth-container']}>    
-                    {context.isLogged === false ?     <SignButton href={'/auth/login'} textContent= {'Sign in'}/> : null} 
+                    {context.isLogged === false ? <SignButton href={'/auth/login'} textContent= {'Sign in'}/> : null} 
                     {context.isLogged === false ? <SignButton href={'/auth/register'} textContent={'Register'}/> : null} 
                     {context.isLogged === true ? <SignButton href={'/auth/profile'} textContent={'Profile'}/> : null}
                 </div> : <div className={styles['auth-container']}></div>}

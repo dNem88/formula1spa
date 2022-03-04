@@ -46,6 +46,7 @@
     color: black;
     justify-self: flex-start;
     padding: 0;
+    font-family: 'Passion One', cursive;
 }
 .more-news{
     box-sizing: border-box;
@@ -60,6 +61,7 @@
     border-top: clamp(.45rem,.6vw, 3rem) solid var(--color-dark-blue);
     background-color: white;
     padding-bottom: 1rem;
+    
 }
 
 .standings{
