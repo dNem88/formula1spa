@@ -2,16 +2,16 @@
 
 ## [View it live](https://dnem88.github.io/formula1spa)
 ## Table of contents
-    - About The App
-    - Technologies
-    - Approach
-    - Credits
+    * About The App
+    * Technologies
+    * Approach
+    * Credits
 
 ### About The App
 
 "Formula 1 Official Website Clone" is created for learning purposes. It is supposed 
 to look like the Official F1 website (http://formula1.com/). It uses F1 Rest Api, which I created for
-this project, for fetching data (https://boiling-brushlands-51072.herokuapp.com/).
+this project, for fetching data (https://boiling-brushlands-51072.herokuapp.com/) or GitHub (https://github.com/dNem88/f1app).
 
 ### Technologies
     - React: 17.0.2
@@ -34,8 +34,11 @@ For styling I chose css modules. Next time I will try styled components.
 I implemented code-splitting with <code>React.lazy and React.Suspense</code> for different routes.
 
 ### Credits
- - (https://ergast.com/mrd/)  I used this api for most for the Formula1 data (on the server)
- - (http://formula1.com/) I was inspired from the official website and with small changes all the designs
+ * (https://ergast.com/mrd/)  I used this api for most for the Formula1 data (on the server)
+ * (http://formula1.com/) I was inspired from the official website and with small changes all the designs
  are from here 
+ * (https://newsapi.org/) While 'newsapi.org' is free only for 'localhost:' and the news-content
+ is not available for live-websites, I used it for the news section in this app. It worked
+ pretty well for me.
  
 
