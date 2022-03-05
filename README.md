@@ -2,10 +2,10 @@
 
 ## [View it live](https://dnem88.github.io/formula1spa)
 ## Table of contents
-    * About The App
-    * Technologies
-    * Approach
-    * Credits
+* About The App
+* Technologies
+* Approach
+* Credits
 
 ### About The App
 
