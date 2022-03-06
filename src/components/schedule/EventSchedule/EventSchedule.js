@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './eventSchedule.module.css'
-import flags from '../../../assets/images/flags/flag-images'
-import circuits from '../../../assets/images/circuits/circuit-images'
+
 
 function EventSchedule(props) {
     let dates = [];
@@ -17,7 +16,7 @@ function EventSchedule(props) {
                     <span>{props.month}</span>
                 </div>
                 <div className={styles['flag-container']}>
-                    <img src={flags[props.imageBase]} alt='national-flag' loading='lazy'/>
+                    <img src={`https://rtiovelu.sirv.com/Images/formula1/flags/${props.imageBase}.jpg`} alt='national-flag' loading='lazy'/>
                 </div>
             </div>
             <div className={styles['race-name-container']}>
@@ -27,7 +26,7 @@ function EventSchedule(props) {
                 </div>
             </div>
             <div className={styles['image-container']}>
-                <img src={circuits[props.imageBase]} alt='race-track-image' loading='lazy'/>
+                <img src={`https://rtiovelu.sirv.com/Images/formula1/circuits/${props.imageBase}.jpg`} alt='race-track-image' loading='lazy'/>
             </div>
         </section>
     )

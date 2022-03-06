@@ -4,7 +4,6 @@ import styles from './navigation.module.css'
 import userContext from '../../../context/userContext'
 import SignButton from '../authButton/SignButton'
 import logo from '../../../assets/images/logos/logo.svg'
-import authLogo from '../../../assets/images/logos/authLogo.svg'
 import navigation from '../../../utils/navigation/navigation'
 import NavLink from '../NavLink/NavLink';
 
@@ -17,7 +16,7 @@ function Navigation() {
         <nav className={!location.pathname.startsWith('/auth') ? styles['nav'] : styles['authNav']
         }>
              <div className={styles['logo-container']}>
-                <img src={location.pathname.startsWith('/auth') ? logo : authLogo} alt='logo'/>
+                <img src={location.pathname.startsWith('/auth') ? logo : "https://rtiovelu.sirv.com/Images/formula1/logos/authLogo.svg"} alt='logo'/>
             </div>
             {location.pathname.startsWith('/auth') ? null : 
                 <div className={styles['links-container']}>

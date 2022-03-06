@@ -2,10 +2,6 @@ import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
 import styles from './mobileNavigation.module.css'
 import userContext from '../../../context/userContext'
-import logo from '../../../assets/images/logos/logo.svg'
-import menu from '../../../assets/images/navigation/menu.svg'
-import profile from '../../../assets/images/navigation/profile.svg'
-import xicon from '../../../assets/images/navigation/xicon.svg'
 import ActiveMobileNavigation from '../activeMobileNavigation/ActiveMobileNavigation';
 
 function MobileNavigation() {
@@ -18,13 +14,13 @@ function MobileNavigation() {
         return (
                 <nav className={styles['nav']}>
                     <div onClick={clickHandler} className={styles['hamburger-icon-container']}>
-                        <img src={navigation.active ? xicon : menu} alt='menu-icon'/>
+                        <img src={navigation.active ? "https://rtiovelu.sirv.com/Images/formula1/navigation/xicon.svg" : "https://rtiovelu.sirv.com/Images/formula1/navigation/menu.svg"} alt='menu-icon'/>
                     </div>
                     <div className={styles['logo-container']}>
-                        <img src={logo} alt='formula1-logo'/>
+                        <img src={"https://rtiovelu.sirv.com/Images/formula1/logos/logo.svg"} alt='formula1-logo'/>
                     </div>
                     <div className={styles['profile-icon-container']}>
-                        {context.isLogged && context.user ? <Link to={'/auth/profile'}><img src={profile} alt='profile-icon'/></Link> : ''} 
+                        {context.isLogged && context.user ? <Link to={'/auth/profile'}><img src={"https://rtiovelu.sirv.com/Images/formula1/navigation/profile.svg"} alt='profile-icon'/></Link> : ''} 
                     </div>
                     {(navigation.active) ? <ActiveMobileNavigation click={clickHandler} isLogged={context.isLogged}/> : null}
                 </nav>

@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './teamDriver.module.css'
-import drivers from '../../../assets/images/drivers/driver-images'
 
 
 function TeamDriver({name, image}) {
@@ -11,7 +10,7 @@ function TeamDriver({name, image}) {
                 <p>{name.split(' ')[0]} <span>{name.split(' ')[1]}</span></p>
             </div>
             <div className={styles['driver-image-container']}>
-                <img src={drivers[image]} alt='driver-image' loading='lazy'/>
+                <img src={`https://rtiovelu.sirv.com/Images/formula1/drivers/${image}.jpg`} alt='driver-image' loading='lazy'/>
             </div>
         </div>
     )
