@@ -1,6 +1,6 @@
 async function getTeams() {
     try {
-        const response = await fetch('https://boiling-brushlands-51072.herokuapp.com/teams', {
+        const response = await fetch('https://calm-puce-kitten-fez.cyclic.app//teams', {
             headers: {
                 'Content-type': 'application/json'
             },
@@ -14,7 +14,7 @@ async function getTeams() {
 
 async function getTeamById(id) {
     try {
-        const response = await fetch(`https://boiling-brushlands-51072.herokuapp.com/teams/${id}`, {
+        const response = await fetch(`https://calm-puce-kitten-fez.cyclic.app//teams/${id}`, {
             headers: {
                 'Content-type': 'application/json'
             },

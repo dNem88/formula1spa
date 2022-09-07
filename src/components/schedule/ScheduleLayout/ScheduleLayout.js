@@ -8,7 +8,7 @@ import schedule from '../../../utils/api/heroku_api/schedule'
 import CommonHeader from '../../common/titleHeader/CommonHeader'
 const headerProps = {
     header: 'F1 Schedule 2022',
-    description: 'A record 23-race Formula 1 calendar for 2022, including the inaugural Miami Grand Prix*. Click on any Grand Prix for full F1 schedule details, dates, times & full weekend program. *Subject to circuit homologation.'
+    description: 'A record 23-race Formula 1 calendar for 2022, including the inaugural Miami Grand Prix.'
 }
 function ScheduleLayout() {
 

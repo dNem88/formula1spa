@@ -11,7 +11,7 @@
 
 "Formula 1 Official Website Clone" is created for learning purposes. It is supposed 
 to look like the Official F1 website (http://formula1.com/). It uses F1 Rest Api, which I created for
-this project, for fetching data (https://boiling-brushlands-51072.herokuapp.com/) or GitHub (https://github.com/dNem88/f1app).
+this project, for fetching data (https://calm-puce-kitten-fez.cyclic.app//) or GitHub (https://github.com/dNem88/f1app).
 
 ### Technologies
     - React: 17.0.2

@@ -1,4 +1,4 @@
-const heroku_api_url = 'https://boiling-brushlands-51072.herokuapp.com'
+const heroku_api_url = 'https://calm-puce-kitten-fez.cyclic.app/'
 
 async function getVideos(count=20) {
     try {

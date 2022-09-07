@@ -1,6 +1,6 @@
 async function getDrivers() {
     try {
-        const response = await fetch('https://boiling-brushlands-51072.herokuapp.com/drivers', {
+        const response = await fetch('https://calm-puce-kitten-fez.cyclic.app//drivers', {
             headers: {
                 'Content-type': 'application/json'
             },
@@ -14,7 +14,7 @@ async function getDrivers() {
 
 async function getDriverById(id) {
     try {
-        const response = await fetch(`https://boiling-brushlands-51072.herokuapp.com/drivers/${id}`, {
+        const response = await fetch(`https://calm-puce-kitten-fez.cyclic.app//drivers/${id}`, {
             headers: {
                 'Content-type': 'application/json'
             },
@@ -27,7 +27,7 @@ async function getDriverById(id) {
 }
 async function getDriverByName(name) {
     try {
-        const response = await fetch(`https://boiling-brushlands-51072.herokuapp.com/drivers?name=${encodeURI(name)}`, {
+        const response = await fetch(`https://calm-puce-kitten-fez.cyclic.app//drivers?name=${encodeURI(name)}`, {
             headers: {
                 'Content-type': 'application/json'
             },

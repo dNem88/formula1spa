@@ -2,7 +2,7 @@
 
 async function getDriversStandings() {
     try {
-        let response = await fetch('https://boiling-brushlands-51072.herokuapp.com/standings/drivers', {
+        let response = await fetch('https://calm-puce-kitten-fez.cyclic.app//standings/drivers', {
             headers: {
                 'content-type': 'application/json'
             },
@@ -15,7 +15,7 @@ async function getDriversStandings() {
 }
 async function getConstructorsStandings() {
     try {
-        let response = await fetch('https://boiling-brushlands-51072.herokuapp.com/standings/constructors', {
+        let response = await fetch('https://calm-puce-kitten-fez.cyclic.app//standings/constructors', {
             headers: {
                 'content-type': 'application/json'
             },
